@@ -1,0 +1,124 @@
+@import url(/css/min1000.css);
+
+:root {
+    --violet: #7D75EC;
+    --blue: #236FE3;
+    --black: #111111;
+    --white: #EFEFEF;
+    --liner1: linear-gradient(222.27deg, #FFFFFF 0%, #C8C8C8 48.15%, #FFFFFF 105.24%);
+    --liner2: linear-gradient(315.37deg, #FFFFFF 0%, #C8C8C8 41.89%, #C8C8C8 52.51%, #C8C8C8 60.81%, #FFFFFF 114.75%);
+    --gradient-line: linear-gradient(318.23deg, #FFFFFF 0%, #737373 29.87%, #FFFFFF 46.1%, #737373 64.93%, #FFFFFF 86.83%);
+    --liner3: linear-gradient(315deg, #FFFFFF 0%, #C8C8C8 75.37%);
+    --transition: .2s ease-in-out all;
+    --body-bg: #162630;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    color: var(--white);
+}
+
+body {
+    padding-top: 140px;
+    background: url(../img/body-bg.png) var(--body-bg) top center / cover repeat;
+}
+
+h1 {
+    font-size: clamp(40px, 8vh, 65px);
+    line-height: 100%;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: clamp(30px, 6vh, 42px);
+    line-height: 100%;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: clamp(23px, 4vh, 30px);
+    line-height: 100%;
+    font-weight: 500;
+}
+
+.text {
+    font-size: clamp(18px, 4vh, 22px);
+    font-weight: 400;
+    line-height: 100%;
+}   
+
+.text2 {
+    font-size: clamp(16px, 3vh, 18px);
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.text3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-size: clamp(18px, 4vh, 22px);
+    line-height: 100%;
+    padding: 20px 80px;
+    color: var(--white);
+    background: var(--violet);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid var(--violet);
+    text-decoration: none;
+}
+
+.btn--sing-in {
+    padding: 15px 37px;
+    background: var(--blue);
+}
+
+header .container {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1215px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+header #menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header .menu-item {
+    list-style: none;
+}
+
+header .menu-item a {
+    text-decoration: none;
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.container {
+    max-width: 1215px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+}

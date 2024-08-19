@@ -1,0 +1,12 @@
+@media (min-width: 1000px) {
+    .btn:hover {
+        color: var(--violet);
+        background: var(--white);
+    }
+
+    .btn--sing-in:hover {
+        color: var(--blue);
+        background: var(--white);
+        border: 1px solid var(--blue);
+    }
+}
