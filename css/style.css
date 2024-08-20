@@ -29,7 +29,7 @@ img {
 
 body {
     padding-top: 140px;
-    background: url(../img/body-bg.png) var(--body-bg) top center / cover repeat;
+    background: url(../img/body-bg.png) var(--body-bg) top center / contain no-repeat;
     overflow-x: hidden;
 }
 
@@ -547,6 +547,7 @@ footer .container {
     grid-template-columns: 310px 1fr;
     column-gap: 100px;
     row-gap: 50px;
+    align-items: start;
 }
 
 .footer__logo {
