@@ -9,4 +9,10 @@
         background: var(--white);
         border: 1px solid var(--blue);
     }
+
+    .btn--transparent:hover {
+        color: var(--white);
+        background: var(--blue);
+        border: 1px solid var(--blue);
+    }
 }
