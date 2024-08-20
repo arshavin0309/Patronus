@@ -15,4 +15,13 @@
         background: var(--blue);
         border: 1px solid var(--blue);
     }
+
+    .instruments__item:hover {
+        transform: translateY(-30px);
+        margin-top: 0;
+    }
+
+    .instruments__item:hover .btn {
+        display: block;
+    }
 }
