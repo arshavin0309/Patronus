@@ -146,7 +146,7 @@ header .container::before {
     width: 100%;
     height: calc(100% + 40px);
     background: url(../img/body-bg.png) var(--body-bg) center / cover no-repeat;
-    filter: blur(20px);
+    filter: blur(15px);
     border-radius: 50px;
 }
 
@@ -255,15 +255,15 @@ header .sub-menu .menu-item a::after {
     background: var(--white);
 }
 
-.header__corner:hover .header__active-language {
+.header__lang:hover .header__active-language {
     color: var(--violet);
 }
 
-.header__corner:hover .header__active-language::after {
+.header__lang:hover .header__active-language::after {
     transform: rotate(-180deg);
 }
 
-.header__corner:hover .header__languages {
+.header__lang:hover .header__languages {
     display: grid;
 }
 
@@ -439,6 +439,10 @@ footer::before {
     animation: rotate 20s linear 0s infinite normal none;
 }
 
+.join-us__img.reverse::after {
+    animation: rotate 20s linear 0s infinite reverse none;
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0);
@@ -562,6 +566,10 @@ footer::before {
     animation: rotate 20s linear 0s infinite normal none;
 }
 
+.how .container.reverse::before {
+    animation: rotate 20s linear 0s infinite reverse none;
+}
+
 .how .container::after {
     position: absolute;
     content: '';
@@ -571,6 +579,10 @@ footer::before {
     height: 470px;
     background: url(../img/join-us-decor.svg) center / contain no-repeat;
     animation: rotate 20s linear 0s infinite normal none;
+}
+
+.how .container.reverse::after {
+    animation: rotate 20s linear 0s infinite reverse none;
 }
 
 .how h2 {
@@ -718,6 +730,8 @@ footer::before {
 }
 
 .doors {
+    z-index: 2;
+    position: relative;
     background: var(--liner2);
     /* overflow: hidden; */
 }
@@ -774,6 +788,10 @@ footer::before {
     background: url(../img/join-us-decor.svg) center / contain no-repeat;
     animation: rotate 20s linear 0s infinite normal none;
     filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
+}
+
+.doors__decor.reverse::before {
+    animation: rotate 20s linear 0s infinite reverse none;
 }
 
 footer {
