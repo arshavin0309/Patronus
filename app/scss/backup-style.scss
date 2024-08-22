@@ -1,4 +1,6 @@
-@import url(/css/_min1000.css);
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../scss/_min1000';
 
 :root {
     --violet: #7D75EC;
@@ -37,7 +39,11 @@ img {
 
 body {
     padding-top: 140px;
-    background: url(../img/body-bg.png) var(--body-bg) top center / contain repeat;
+    background: image-set(
+        url(../images/body-bg.avif),
+        url(../images/body-bg.webp),
+        url(../images/body-bg.png))
+        var(--body-bg) top center / contain repeat;
     overflow-x: hidden;
 }
 
@@ -145,7 +151,7 @@ header .container::before {
     left: 0;
     width: 100%;
     height: calc(100% + 40px);
-    background: url(../img/body-bg.png) var(--body-bg) center / cover no-repeat;
+    background: url(../images/body-bg.avif) var(--body-bg) center / cover no-repeat;
     filter: blur(15px);
     border-radius: 50px;
 }
@@ -435,7 +441,7 @@ footer::before {
     left: -40px;
     width: calc(100% + 80px);
     height: calc(100% + 80px);
-    background: url(../img/join-us-decor.svg) center / contain no-repeat;
+    background: url(../images/join-us-decor.svg) center / contain no-repeat;
     animation: rotate 20s linear 0s infinite normal none;
 }
 
@@ -562,7 +568,7 @@ footer::before {
     top: -15%;
     width: 470px;
     height: 470px;
-    background: url(../img/join-us-decor.svg) center / contain no-repeat;
+    background: url(../images/join-us-decor.svg) center / contain no-repeat;
     animation: rotate 20s linear 0s infinite normal none;
 }
 
@@ -577,7 +583,7 @@ footer::before {
     top: -15%;
     width: 470px;
     height: 470px;
-    background: url(../img/join-us-decor.svg) center / contain no-repeat;
+    background: url(../images/join-us-decor.svg) center / contain no-repeat;
     animation: rotate 20s linear 0s infinite normal none;
 }
 
@@ -683,7 +689,7 @@ footer::before {
     left: 0;
     width: 280px;
     height: 100%;
-    background: url(../img/reviews-1-left.png) center / contain no-repeat;
+    background: url(../images/reviews-1-left.avif) center / contain no-repeat;
 }
 
 .reviews__item::after {
@@ -695,7 +701,7 @@ footer::before {
     right: 0;
     width: 280px;
     height: 100%;
-    background: url(../img/reviews-1-right.png) center / contain no-repeat;
+    background: url(../images/reviews-1-right.avif) center / contain no-repeat;
 }
 
 .calendar {
@@ -785,7 +791,7 @@ footer::before {
     height: 100%;
     top: 150px;
     left: 0;
-    background: url(../img/join-us-decor.svg) center / contain no-repeat;
+    background: url(../images/join-us-decor.svg) center / contain no-repeat;
     animation: rotate 20s linear 0s infinite normal none;
     filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
 }
