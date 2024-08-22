@@ -1,5 +1,6 @@
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/swiper/swiper-bundle';
+@import '../scss/keyframes';
 @import '../scss/_min1000';
 
 :root {
@@ -41,9 +42,7 @@ img {
 
 body {
     padding-top: 140px;
-    background: image-set(url(../images/body-bg.avif),
-            url(../images/body-bg.webp),
-            url(../images/body-bg.png)) var(--body-bg) top center / contain repeat;
+    background: image-set(url(../images/body-bg.avif), url(../images/body-bg.webp), url(../images/body-bg.png)) var(--body-bg) top center / contain repeat;
     overflow-x: hidden;
 
     &::before {
@@ -62,18 +61,21 @@ body {
 }
 
 h1 {
+    margin: 0;
     font-size: clamp(40px, 8vh, 65px);
     line-height: 100%;
     font-weight: 600;
 }
 
 h2 {
+    margin: 0;
     font-size: clamp(30px, 6vh, 42px);
     line-height: 100%;
     font-weight: 500;
 }
 
 h3 {
+    margin: 0;
     font-size: clamp(23px, 4vh, 30px);
     line-height: 100%;
     font-weight: 500;
@@ -142,7 +144,7 @@ header {
             left: 0;
             width: 100%;
             height: calc(100% + 40px);
-            background: url(../images/body-bg.avif) var(--body-bg) center / cover no-repeat;
+            background: image-set(url(../images/body-bg.avif), url(../images/body-bg.webp), url(../images/body-bg.png)) var(--body-bg) center / cover no-repeat;
             filter: blur(15px);
             border-radius: 50px;
         }
@@ -695,7 +697,7 @@ footer {
         left: 0;
         width: 280px;
         height: 100%;
-        background: url(../images/reviews-1-left.avif) center / contain no-repeat;
+        background: image-set(url(../images/reviews-1-left.avif), url(../images/reviews-1-left.webp), url(../images/reviews-1-left.png)) center / contain no-repeat;
     }
 
     &::after {
@@ -707,7 +709,7 @@ footer {
         right: 0;
         width: 280px;
         height: 100%;
-        background: url(../images/reviews-1-right.avif) center / contain no-repeat;
+        background: image-set(url(../images/reviews-1-right.avif), url(../images/reviews-1-right.webp), url(../images/reviews-1-right.png)) center / contain no-repeat;
     }
 }
 
@@ -903,33 +905,117 @@ footer {
     border: 3px solid var(--body-bg);
 }
 
-
-@keyframes rotate {
-    from {
-        transform: rotate(0);
+.acquaintance {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        align-items: center;
+        gap: 30px;
+        padding-top: 80px;
+        padding-bottom: 120px;
     }
 
-    to {
-        transform: rotate(360deg);
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        max-width: 600px;
+    }
+
+    &__image {
+        position: relative;
+
+        &::before {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            width: calc(100% + 80px);
+            height: calc(100% + 80px);
+            background: rgba(255, 255, 255, .4705882353);
+            -webkit-filter: blur(150px);
+            filter: blur(150px);
+            border-radius: 50%;
+        }
+
+        &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: calc(100% + 60px);
+            height: calc(100% + 60px);
+            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            -webkit-animation: rotate 20s linear 0s infinite normal none;
+            animation: rotate 20s linear 0s infinite normal none;
+            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
+        }
+
+        &.reverse::after {
+            animation: rotate 20s linear 0s infinite reverse none;
+        }
     }
 }
 
-@keyframes rotate-with-translate {
-    from {
-        transform: rotate(0) translateY(-50%);
+.tariffs {
+    h2 {
+        max-width: 740px;
+        margin: auto;
+        margin-bottom: 50px;
+        text-align: center;
     }
 
-    to {
-        transform: rotate(360deg) translateY(-50%);
-    }
-}
-
-@keyframes smoothBlock {
-    from {
-        height: 0;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 
-    to {
-        height: 260зч;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 60px 40px;
+        background: var(--liner1);
+        border-radius: 15px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        color: var(--blue);
+    }
+
+    p {
+        margin-bottom: 50px;
+        color: var(--black);
+    }
+
+    ul {
+        display: grid;
+        gap: 20px;
+    }
+
+    li {
+        display: flex;
+        gap: 10px;
+        color: var(--black);
+        list-style: none;
+
+        &::before {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 15px;
+            height: 2px;
+            transform: translateY(8px);
+            background: var(--blue);
+        }
+    }
+
+    .btn {
+        margin-top: 50px;
     }
 }
