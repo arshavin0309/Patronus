@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         slidesPerView: 3,
         spaceBetween: 20,
-        mousewheel: true,
+        // mousewheel: true,
+        mousewheel: { eventsTarget: 'body' },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
