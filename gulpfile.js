@@ -39,7 +39,7 @@ function images() {
 }
 
 function sprite() {
-    return src('app/images/*.svg')
+    return src('app/images/src/*.svg')
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -110,4 +110,4 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, scripts, pages, watching);
+exports.default = parallel(styles, images, sprite, scripts, pages, watching);
