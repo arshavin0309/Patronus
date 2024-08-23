@@ -47,3 +47,21 @@ $(window).scroll(function () {
 
     scrollPos = st;
 });
+
+let swiper = new Swiper(".swiper3", {
+    spaceBetween: 0,
+    slidesPerView: 2,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+let swiper4 = new Swiper(".swiper4", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});

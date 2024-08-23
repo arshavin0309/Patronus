@@ -52,7 +52,7 @@ function sprite() {
 }
 
 function scripts() {
-    return src(['node_modules/jquery/dist/jquery.js', 'node_modules/swiper/swiper-bundle.js', 'app/js/main.js'])
+    return src(['node_modules/jquery/dist/jquery.js', 'node_modules/swiper/swiper-bundle.js', 'node_modules/typograf/dist/typograf.js', 'app/js/main.js'])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
@@ -93,7 +93,7 @@ function building() {
         'app/css/style.min.css',
         '!app/images/**/*.html',
         'app/images/*.*',
-        '!app/images/*.svg',
+        // '!app/images/*.svg',
         'app/images/sprite.svg',
         'app/js/main.min.js',
         'app/**/*.html'
@@ -110,4 +110,4 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, sprite, scripts, pages, watching);
+exports.default = parallel(styles, images, scripts, pages, watching);
