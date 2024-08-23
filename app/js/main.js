@@ -74,7 +74,7 @@ let tableTr = document.querySelectorAll(".table__table tr");
 
 if (tableShow) {
     tableShow.addEventListener("click", () => {
-        if (tableShow.textContent === "Смотреть больше") {
+        if (tableShow.textContent === "Показать еще") {
             for (let i = 0; i < tableTr.length; i++) {
                 tableTr[i].classList.add("active");
             }
@@ -84,7 +84,7 @@ if (tableShow) {
             for (let i = 0; i < tableTr.length; i++) {
                 tableTr[i].classList.remove("active");
             }
-            tableShow.textContent = "Смотреть больше";
+            tableShow.textContent = "Показать еще";
             tableShow.classList.remove("active");
         }
     });
@@ -92,7 +92,7 @@ if (tableShow) {
 
 for (let i = 0; i < tableBtn.length; i++) {
     tableBtn[i].addEventListener("click", () => {
-        tableShow.textContent = "Смотреть больше";
+        tableShow.textContent = "Показать еще";
         tableShow.classList.remove('active');
 
         for (let i = 0; i < tableTr.length; i++) {
