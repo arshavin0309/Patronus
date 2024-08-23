@@ -351,6 +351,7 @@ footer {
     position: relative;
     padding-top: 130px;
     padding-bottom: 50px;
+    overflow: hidden;
 
     &::before {
         z-index: -1;
@@ -788,8 +789,6 @@ footer {
 }
 
 .doors {
-    z-index: 2;
-    position: relative;
     background: var(--liner2);
 
     .container {
@@ -1073,4 +1072,113 @@ footer {
 
 .swiper4 {
     padding-top: 50px;
+}
+
+.table {
+    h2 {
+        max-width: 720px;
+        margin-bottom: 20px;
+    }
+
+    h2+p {
+        margin-bottom: 50px;
+    }
+
+    &__box {
+        background: #414E57;
+        border-radius: 0 0 15px 15px;
+    }
+
+    &__table {
+        display: none;
+        width: 100%;
+        border-collapse: collapse;
+        border-bottom: 1px solid #253039;
+
+        &.active {
+            display: table;
+            animation-name: content;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+        }
+
+        th,
+        td {
+            padding: 25px 40px;
+            text-align: left;
+        }
+
+        tr {
+            background: #253039;
+        }
+
+        tr:nth-child(2n) {
+            background: #414E57;
+        }
+
+        & tr:nth-child(n+8) {
+            display: none;
+        }
+
+        & tr.active {
+            display: table-row;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        width: 100%;
+        gap: 1px;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 25px;
+        background: #414E57;
+        color: var(--white);
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+
+        &.active {
+            background: var(--violet);
+        }
+
+        &:first-child {
+            border-radius: 15px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 15px 0 0;
+        }
+    }
+
+    &__show {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        padding: 15px;
+        text-align: center;
+        color: var(--white);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            width: 10px;
+            height: 13px;
+            display: block;
+            background: url(../images/arrow-bottom.svg) center / contain no-repeat;
+        }
+
+        &.active::after {
+            transform: rotate(180deg);
+        }
+    }
 }

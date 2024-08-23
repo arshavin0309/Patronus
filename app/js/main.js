@@ -65,3 +65,61 @@ let swiper4 = new Swiper(".swiper4", {
         swiper: swiper,
     },
 });
+
+let tableBtn = document.querySelectorAll(".table__btn");
+let tableTable = document.querySelectorAll(".table__table");
+
+let tableShow = document.querySelector(".table__show");
+let tableTr = document.querySelectorAll(".table__table tr");
+
+if (tableShow) {
+    tableShow.addEventListener("click", () => {
+        if (tableShow.textContent === "Смотреть больше") {
+            for (let i = 0; i < tableTr.length; i++) {
+                tableTr[i].classList.add("active");
+            }
+            tableShow.textContent = "Скрыть";
+            tableShow.classList.add("active");
+        } else {
+            for (let i = 0; i < tableTr.length; i++) {
+                tableTr[i].classList.remove("active");
+            }
+            tableShow.textContent = "Смотреть больше";
+            tableShow.classList.remove("active");
+        }
+    });
+}
+
+for (let i = 0; i < tableBtn.length; i++) {
+    tableBtn[i].addEventListener("click", () => {
+        tableShow.textContent = "Смотреть больше";
+        tableShow.classList.remove('active');
+
+        for (let i = 0; i < tableTr.length; i++) {
+            tableTr[i].classList.remove("active");
+        }
+
+        for (let n = 0; n < tableBtn.length; n++) {
+            tableBtn[n].classList.remove("active");
+            tableTable[n].classList.remove("active");
+        }
+
+        tableBtn[i].classList.add("active");
+        tableTable[i].classList.add("active");
+    });
+}
+
+// $(function () {
+//     $("#accordion").accordion({
+//         active: false,
+//         collapsible: true,
+//         heightStyle: "content",
+//     });
+// });
+
+for (let table of document.getElementsByTagName("table")) {
+    let tableOverflow = document.createElement("div");
+    tableOverflow.className = "table-overflow";
+    table.parentElement.replaceChild(tableOverflow, table);
+    tableOverflow.appendChild(table);
+}
