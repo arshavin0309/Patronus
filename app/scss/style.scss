@@ -1831,3 +1831,89 @@ footer {
         text-align: center;
     }
 }
+
+.state-of-the-market {
+    background: var(--liner3);
+
+    &::before {
+        display: none;
+    }
+
+    .container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: var(--black);
+    }
+
+    p {
+        max-width: 745px;
+        margin-bottom: 50px;
+        color: var(--black);
+    }
+}
+
+.quotes-online {
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        max-width: 720px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+}
+
+.charts {
+    margin-top: 120px;
+    margin-bottom: 200px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    &__item {
+        padding: 80px 60px;
+        border-radius: 20px;
+        background: var(--liner3);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--black);
+    }
+
+    p {
+        margin-bottom: 40px;
+        text-align: center;
+        color: var(--black);
+    }
+}
+
+.widget-box {
+    width: 100%;
+
+    & * {
+        color: initial;
+    }
+
+    &>div {
+        margin: auto;
+    }
+}
