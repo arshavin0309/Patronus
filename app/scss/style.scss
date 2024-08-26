@@ -656,18 +656,18 @@ footer {
         left: 50%;
         transform: translateX(-50%);
     }
-}
 
-.how__list {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
+    &__list {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
 
-.how__item {
-    list-style: none;
+    &__item {
+        list-style: none;
+    }
 }
 
 .reviews {
@@ -1554,7 +1554,23 @@ footer {
             height: 100%;
             background: image-set(url(../images/platforms-item-3.avif),
                     url(../images/platforms-item-3.webp),
-                    url(../images/platforms-item-3.png)) right 120px top 90px / 335px 375px no-repeat;
+                    url(../images/platforms-item-3.png)) right 70px bottom / 460px 400px no-repeat;
+        }
+
+        &:nth-child(3)::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            width: 530px;
+            height: 530px;
+            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            animation: rotate 20s linear 0s infinite normal none;
+            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
+        }
+
+        &:nth-child(3).reverse::after {
+            animation: rotate 20s linear 0s infinite reverse none;
         }
 
         &:nth-child(1) .platforms__content {
@@ -1605,5 +1621,169 @@ footer {
     &__links {
         display: grid;
         gap: 10px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__webtrader::before {
+        content: '';
+        width: 27px;
+        height: 27px;
+        display: block;
+        flex: 0 0 auto;
+        background: url(../images/platforms-btn-webtrader.svg) center / contain no-repeat;
+    }
+
+    &__windows::before {
+        content: '';
+        width: 27px;
+        height: 27px;
+        display: block;
+        flex: 0 0 auto;
+        background: url(../images/platforms-btn-windows.svg) center / contain no-repeat;
+    }
+
+    &__appstore::before {
+        content: '';
+        width: 27px;
+        height: 27px;
+        display: block;
+        flex: 0 0 auto;
+        background: url(../images/platforms-btn-appstore.svg) center / contain no-repeat;
+    }
+
+    &__googleplay::before {
+        content: '';
+        width: 27px;
+        height: 27px;
+        display: block;
+        flex: 0 0 auto;
+        background: url(../images/platforms-btn-googleplay.svg) center / contain no-repeat;
+    }
+}
+
+.how-white {
+    margin-top: 120px;
+    background: var(--liner1);
+
+    &::before {
+        z-index: initial;
+        position: absolute;
+        content: '';
+        left: -270px;
+        top: 120px;
+        width: 470px;
+        height: 470px;
+        background: url(../images/join-us-decor.svg) center / contain no-repeat;
+        animation: rotate 20s linear 0s infinite normal none;
+        border-radius: initial;
+        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+    }
+
+    &.reverse::before,
+    &.reverse::after {
+        animation: rotate 20s linear 0s infinite reverse none;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        right: -270px;
+        top: 120px;
+        width: 470px;
+        height: 470px;
+        background: url(../images/join-us-decor.svg) center / contain no-repeat;
+        animation: rotate 20s linear 0s infinite normal none;
+        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+    }
+
+    .container {
+        padding-top: 180px;
+        padding-bottom: 180px;
+
+        &.reverse {
+            &::before {
+                animation: rotate 20s linear 0s infinite reverse none;
+            }
+
+            &::after {
+                animation: rotate 20s linear 0s infinite reverse none;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 60px;
+        text-align: center;
+        color: var(--black);
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        color: var(--violet);
+    }
+
+    p {
+        color: #111111CC;
+    }
+
+    .btn {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__list {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    img {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+    }
+}
+
+.successful-path {
+    .container {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 1fr 495px;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    &__image {
+        position: relative;
+
+        &::before {
+            z-index: -1;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF78;
+            border-radius: 50%;
+            filter: blur(150px);
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 60px;
     }
 }

@@ -31,6 +31,8 @@ let doorsDecor = document.querySelector('.doors__decor');
 let acquaintanceImage = document.querySelector('.acquaintance__image');
 let banner = document.querySelector('.banner');
 let traidingPlatformImage = document.querySelector('.traiding-platform__image');
+let platformsItem = document.querySelector('.platforms__item:nth-child(3)');
+let howWhite = document.querySelector('.how-white');
 
 $(window).scroll(function () {
     var st = $(this).scrollTop();
@@ -42,6 +44,8 @@ $(window).scroll(function () {
         if (acquaintanceImage) { acquaintanceImage.classList.remove('reverse'); };
         if (banner) { banner.classList.remove('reverse'); };
         if (traidingPlatformImage) { traidingPlatformImage.classList.remove('reverse'); };
+        if (platformsItem) { platformsItem.classList.remove('reverse'); };
+        if (howWhite) { howWhite.classList.remove('reverse'); };
     } else {
         if (joinUsImg) { joinUsImg.classList.add('reverse'); };
         if (howContainer) { howContainer.classList.add('reverse'); };
@@ -49,6 +53,8 @@ $(window).scroll(function () {
         if (acquaintanceImage) { acquaintanceImage.classList.add('reverse'); };
         if (banner) { banner.classList.add('reverse'); };
         if (traidingPlatformImage) { traidingPlatformImage.classList.add('reverse'); };
+        if (platformsItem) { platformsItem.classList.add('reverse'); };
+        if (howWhite) { howWhite.classList.add('reverse'); };
     };
 
     scrollPos = st;
