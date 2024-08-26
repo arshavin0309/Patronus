@@ -29,6 +29,8 @@ let joinUsImg = document.querySelector('.join-us__img');
 let howContainer = document.querySelector('.how .container');
 let doorsDecor = document.querySelector('.doors__decor');
 let acquaintanceImage = document.querySelector('.acquaintance__image');
+let banner = document.querySelector('.banner');
+let traidingPlatformImage = document.querySelector('.traiding-platform__image');
 
 $(window).scroll(function () {
     var st = $(this).scrollTop();
@@ -38,11 +40,15 @@ $(window).scroll(function () {
         if (howContainer) { howContainer.classList.remove('reverse'); };
         if (doorsDecor) { doorsDecor.classList.remove('reverse'); };
         if (acquaintanceImage) { acquaintanceImage.classList.remove('reverse'); };
+        if (banner) { banner.classList.remove('reverse'); };
+        if (traidingPlatformImage) { traidingPlatformImage.classList.remove('reverse'); };
     } else {
         if (joinUsImg) { joinUsImg.classList.add('reverse'); };
         if (howContainer) { howContainer.classList.add('reverse'); };
         if (doorsDecor) { doorsDecor.classList.add('reverse'); };
         if (acquaintanceImage) { acquaintanceImage.classList.add('reverse'); };
+        if (banner) { banner.classList.add('reverse'); };
+        if (traidingPlatformImage) { traidingPlatformImage.classList.add('reverse'); };
     };
 
     scrollPos = st;
