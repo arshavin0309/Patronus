@@ -13,6 +13,11 @@ const newer = require('gulp-newer'); // кэш
 const svgSprite = require('gulp-svg-sprite');
 const include = require('gulp-include');
 
+// function resources() {
+//     return src('app/upload/**/*')
+//     .pipe(dest('dist/upload'))
+// }
+
 function pages() {
     return src('app/pages/*.html')
         .pipe(include({
@@ -81,6 +86,7 @@ function watching() {
     watch(['app/js/main.js'], scripts)
     watch(['app/components/**/*.html', 'app/pages/**/*.html'], pages)
     watch(['app/*.html']).on('change', browserSync.reload)
+    // watch(['app/upload/**/*'], resources)
 }
 
 function cleanDist() {
