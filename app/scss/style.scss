@@ -1075,11 +1075,13 @@ footer {
 }
 
 .table {
-    &::after {
+    padding-bottom: 120px;
+
+    & .container::before {
         z-index: -1;
         position: absolute;
         content: '';
-        top: -90px;
+        top: 50px;
         left: 0;
         width: 100%;
         height: 570px;
@@ -1216,5 +1218,181 @@ footer {
         &.active::after {
             transform: rotate(180deg);
         }
+    }
+}
+
+.payment-methods {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: image-set(url(../images/payment-methods-image.avif), url(../images/payment-methods-image.webp), url(../images/payment-methods-image.png)) center / cover no-repeat;
+
+    &:before {
+        z-index: 1;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #42515BE0;
+        border-radius: initial;
+        filter: initial;
+    }
+
+    .container {
+        z-index: 2;
+        position: relative;
+    }
+
+    h2 {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.advantages {
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+
+    &__item {
+        padding: 35px 30px;
+        background: var(--liner1);
+        border-radius: 10px;
+
+        &:nth-child(1)::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../images/advantages-item-1.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(2)::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../images/advantages-item-2.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(3) {
+            background: image-set(url(../images/advantages-item-3.avif), url(../images/advantages-item-3.webp), url(../images/advantages-item-3.png)) center / cover no-repeat;
+        }
+
+        &:nth-child(4) {
+            background: image-set(url(../images/advantages-item-4.avif), url(../images/advantages-item-4.webp), url(../images/advantages-item-4.png)) center / cover no-repeat;
+        }
+
+        &:nth-child(5)::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../images/advantages-item-5.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(6)::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../images/advantages-item-6.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(7)::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../images/advantages-item-7.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(8) {
+            background: image-set(url(../images/advantages-item-8.avif), url(../images/advantages-item-8.webp), url(../images/advantages-item-8.png)) center / cover no-repeat;
+        }
+
+        &:nth-child(9)::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../images/advantages-item-9.svg) center / contain no-repeat;
+        }
+    }
+
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: var(--blue);
+    }
+
+    p {
+        color: var(--black);
+    }
+}
+
+.banner {
+    background: var(--liner1);
+
+    &::before {
+        z-index: 1;
+        position: absolute;
+        content: "";
+        left: -400px;
+        top: 30px;
+        width: 640px;
+        height: 640px;
+        background: url(../images/join-us-decor.svg) center / contain no-repeat;
+        animation: rotate 20s linear 0s infinite normal none;
+        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+    }
+
+    &::after {
+        z-index: 1;
+        position: absolute;
+        content: "";
+        right: -400px;
+        top: 30px;
+        width: 640px;
+        height: 640px;
+        background: url(../images/join-us-decor.svg) center / contain no-repeat;
+        animation: rotate 20s linear 0s infinite normal none;
+        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 445px;
+        background: url(../images/banner-image.avif) center bottom / 1216px 415px no-repeat;
+    }
+
+    h2 {
+        color: var(--black);
     }
 }
