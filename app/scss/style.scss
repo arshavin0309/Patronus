@@ -857,6 +857,12 @@ footer {
             }
         }
     }
+
+    &__analytics {
+        img {
+            margin: auto;
+        }
+    }
 }
 
 .footer {
@@ -1915,5 +1921,28 @@ footer {
 
     &>div {
         margin: auto;
+    }
+}
+
+.open-doors {
+    background: var(--liner2);
+
+    &::before {
+        display: none;
+    }
+
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: var(--black);
+    }
+
+    p {
+        margin-bottom: 40px;
+        color: #000;
     }
 }

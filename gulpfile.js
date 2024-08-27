@@ -13,10 +13,10 @@ const newer = require('gulp-newer'); // кэш
 const svgSprite = require('gulp-svg-sprite');
 const include = require('gulp-include');
 
-// function resources() {
-//     return src('app/upload/**/*')
-//     .pipe(dest('dist/upload'))
-// }
+function resources() {
+    return src('app/upload/**/*')
+    .pipe(dest('dist/upload'))
+}
 
 function pages() {
     return src('app/pages/*.html')
@@ -86,7 +86,7 @@ function watching() {
     watch(['app/js/main.js'], scripts)
     watch(['app/components/**/*.html', 'app/pages/**/*.html'], pages)
     watch(['app/*.html']).on('change', browserSync.reload)
-    // watch(['app/upload/**/*'], resources)
+    watch(['app/upload/**/*'], resources)
 }
 
 function cleanDist() {
@@ -102,7 +102,8 @@ function building() {
         // '!app/images/*.svg',
         'app/images/sprite.svg',
         'app/js/main.min.js',
-        'app/**/*.html'
+        'app/**/*.html',
+        'app/upload/**/*'
     ], { base: 'app' })
         .pipe(dest('dist'))
 }
@@ -116,4 +117,4 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, scripts, pages, watching);
+exports.default = parallel(styles, images, scripts, pages, resources, watching);
