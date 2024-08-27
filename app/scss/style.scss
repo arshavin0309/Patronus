@@ -59,21 +59,24 @@ body {
     }
 }
 
-h1 {
+h1,
+.h1 {
     margin: 0;
     font-size: clamp(40px, 8vh, 65px);
     line-height: 100%;
     font-weight: 600;
 }
 
-h2 {
+h2,
+.h2 {
     margin: 0;
     font-size: clamp(30px, 6vh, 42px);
     line-height: 100%;
     font-weight: 500;
 }
 
-h3 {
+h3,
+.h3 {
     margin: 0;
     font-size: clamp(23px, 4vh, 30px);
     line-height: 100%;
@@ -1850,7 +1853,7 @@ footer {
 .analytics {
     padding-top: 240px;
     padding-bottom: 140px;
-    background: url(../images/analytics-decor.svg) center / cover no-repeat;
+    background: url(../images/analytics-decor.svg) center bottom / cover no-repeat;
 
     .container {
         display: flex;
@@ -1986,5 +1989,95 @@ footer {
     .container {
         padding-top: 120px;
         padding-bottom: 120px;
+    }
+}
+
+.contacts {
+    z-index: 1;
+    position: relative;
+
+    .container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+
+        &>div {
+            border-radius: 15px;
+        }
+    }
+
+    &__form {
+        padding: 60px 50px;
+        background: var(--liner1);
+        grid-row: 1/3;
+    }
+
+    &__box {
+        padding: 60px 50px;
+        background: var(--liner2);
+    }
+
+    &__mail {
+        &::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url(../images/contacts-mail.svg);
+        }
+    }
+
+    &__tel {
+        &::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url(../images/contacts-tel.svg);
+        }
+    }
+
+    &__map {
+        iframe {
+            border-radius: 15px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        color: var(--black);
+
+        &+p {
+            margin-bottom: 30px;
+        }
+    }
+
+    p {
+        color: var(--black);
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    address {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        color: var(--black);
+        font-style: normal;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: url(../images/contacts-address.svg);
+        }
     }
 }
