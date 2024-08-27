@@ -392,7 +392,6 @@ section {
 }
 
 footer {
-    z-index: 1;
     position: relative;
     padding-top: 130px;
     padding-bottom: 50px;
@@ -861,6 +860,36 @@ footer {
     &__analytics {
         img {
             margin: auto;
+        }
+    }
+
+    &--news {
+        background: none;
+
+        .news & .container {
+            padding-top: 0;
+        }
+
+        .doors__box {
+            padding-top: 65px;
+            padding-bottom: 105px;
+        }
+
+        .doors__img img {
+            object-position: bottom;
+        }
+
+        .doors__decor {
+            top: -10px;
+            left: 60px;
+
+            &::before {
+                width: calc(100% + 30px);
+                height: calc(100% + 30px);
+                top: 110px;
+                right: 0px;
+                left: initial;
+            }
         }
     }
 }
@@ -1944,5 +1973,18 @@ footer {
     p {
         margin-bottom: 40px;
         color: #000;
+    }
+}
+
+.news {
+    background: var(--liner3);
+
+    &::before {
+        display: none;
+    }
+
+    .container {
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 }
