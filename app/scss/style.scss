@@ -2252,6 +2252,7 @@ footer {
 
     .accordion {
         h3 {
+            position: relative;
             width: 100%;
             display: flex;
             align-items: center;
@@ -2262,6 +2263,7 @@ footer {
             border-radius: 10px;
 
             div {
+                position: relative;
                 width: 100%;
                 display: flex;
                 gap: 10px;
@@ -2280,13 +2282,27 @@ footer {
                 }
             }
 
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                top: 0;
+                left: 0;
+                background: var(--white);
+                opacity: 0;
+                transition: var(--transition);
+            }
+
             &::after {
+                position: relative;
                 content: '';
                 display: block;
                 width: 45px;
                 height: 45px;
                 border-radius: 50%;
-                background: #11111112;
+                background: url(../images/accordion-bottom.svg) #11111112 center / 20px 10px no-repeat;
                 flex: 0 0 auto;
                 transition: var(--transition);
             }
@@ -2296,15 +2312,23 @@ footer {
             }
 
             &:hover {
-                background: var(--white);
+                &::before {
+                    opacity: 1;
+                }
 
                 &::after {
-                    background: var(--blue);
+                    background: url(../images/accordion-bottom-white.svg) var(--blue) center / 20px 10px no-repeat;
                 }
             }
 
             &.ui-accordion-header-active {
-                background: var(--white);
+                &::before {
+                    opacity: 1;
+                }
+
+                &::after {
+                    transform: rotate(180deg);
+                }
             }
         }
 
