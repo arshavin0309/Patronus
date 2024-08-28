@@ -121,17 +121,17 @@ for (let i = 0; i < tableBtn.length; i++) {
     });
 }
 
-// $(function () {
-//     $("#accordion").accordion({
-//         active: false,
-//         collapsible: true,
-//         heightStyle: "content",
-//     });
-// });
-
 for (let table of document.getElementsByTagName("table")) {
     let tableOverflow = document.createElement("div");
     tableOverflow.className = "table-overflow";
     table.parentElement.replaceChild(tableOverflow, table);
     tableOverflow.appendChild(table);
 }
+
+$(function () {
+    $("#accordion").accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: "content",
+    });
+});
