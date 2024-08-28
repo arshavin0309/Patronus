@@ -33,6 +33,7 @@ let banner = document.querySelector('.banner');
 let traidingPlatformImage = document.querySelector('.traiding-platform__image');
 let platformsItem = document.querySelector('.platforms__item:nth-child(3)');
 let howWhite = document.querySelector('.how-white');
+let whatAreCryptocurrenciesImage = document.querySelector('.what-are-cryptocurrencies__image');
 
 $(window).scroll(function () {
     var st = $(this).scrollTop();
@@ -46,6 +47,7 @@ $(window).scroll(function () {
         if (traidingPlatformImage) { traidingPlatformImage.classList.remove('reverse'); };
         if (platformsItem) { platformsItem.classList.remove('reverse'); };
         if (howWhite) { howWhite.classList.remove('reverse'); };
+        if (whatAreCryptocurrenciesImage) { whatAreCryptocurrenciesImage.classList.remove('reverse'); };
     } else {
         if (joinUsImg) { joinUsImg.classList.add('reverse'); };
         if (howContainer) { howContainer.classList.add('reverse'); };
@@ -55,6 +57,7 @@ $(window).scroll(function () {
         if (traidingPlatformImage) { traidingPlatformImage.classList.add('reverse'); };
         if (platformsItem) { platformsItem.classList.add('reverse'); };
         if (howWhite) { howWhite.classList.add('reverse'); };
+        if (whatAreCryptocurrenciesImage) { whatAreCryptocurrenciesImage.classList.add('reverse'); };
     };
 
     scrollPos = st;

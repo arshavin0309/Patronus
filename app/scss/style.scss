@@ -2354,3 +2354,123 @@ footer {
         }
     }
 }
+
+.cryptocurrencies {
+    .doors--news {
+        background: var(--liner2);
+    }
+}
+
+.cryptocurrencies-hero {
+    padding-top: 240px;
+    padding-bottom: 120px;
+    background: url(../images/analytics-decor.svg) center bottom / cover no-repeat;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    h1+p {
+        max-width: 1090px;
+        margin: auto;
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 185px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 20px;
+        align-items: start;
+        padding: 40px 30px;
+        background: var(--liner3);
+        border-radius: 20px;
+
+        p {
+            color: var(--black);
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            background: var(--violet);
+            transform: translateY(5px) rotate(45deg);
+            flex: 0 0 auto;
+        }
+
+        &:nth-child(2n)::before {
+            background: var(--blue);
+        }
+    }
+}
+
+.what-are-cryptocurrencies {
+    background: var(--liner3);
+
+    &::before {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        gap: 20px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        color: var(--black);
+    }
+
+    p {
+        color: #000;
+    }
+
+    &__item {
+        &-1 {
+            display: grid;
+            grid-template-columns: 1fr 425px;
+            gap: 120px;
+            align-items: center;
+
+            .what-are-cryptocurrencies__image {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -30px;
+                    left: -60px;
+                    width: calc(100% + 60px);
+                    height: calc(100% + 60px);
+                    background: url(../images/join-us-decor.svg) center / contain no-repeat;
+                    animation: rotate 20s linear 0s infinite normal none;
+                    filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
+                }
+
+                &.reverse::before {
+                    animation: rotate 20s linear 0s infinite reverse none;
+                }
+            }
+        }
+
+        &-2 {
+            display: grid;
+            grid-template-columns: 540px 1fr;
+            gap: 85px;
+            align-items: center;
+        }
+    }
+}
