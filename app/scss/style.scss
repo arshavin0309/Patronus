@@ -2249,4 +2249,71 @@ footer {
     h2 {
         margin-bottom: 50px;
     }
+
+    .accordion {
+        h3 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 30px;
+            background: var(--liner3);
+            border-radius: 10px;
+
+            div {
+                width: 100%;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                color: var(--black);
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: var(--blue);
+                    border-radius: 3px;
+                    transform: rotate(45deg);
+                    flex: 0 0 auto;
+                }
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: #11111112;
+                flex: 0 0 auto;
+                transition: var(--transition);
+            }
+
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+
+            &:hover {
+                background: var(--white);
+
+                &::after {
+                    background: var(--blue);
+                }
+            }
+
+            &.ui-accordion-header-active {
+                background: var(--white);
+            }
+        }
+
+        p {
+            margin-top: -10px;
+            padding: 20px 30px 40px;
+            background: var(--white);
+            border-radius: 0 0 10px 10px;
+            color: var(--black);
+        }
+    }
 }
