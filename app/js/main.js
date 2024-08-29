@@ -159,3 +159,18 @@ $(function () {
         heightStyle: "content",
     });
 });
+
+// Установка title, для wp не понадобиться
+if(document.URL === 'http://localhost:3000/') {document.title = 'Главная'};
+if(document.URL === 'http://localhost:3000/404.html') {document.title = 'Страница не найдена'};
+if(document.URL === 'http://localhost:3000/terms-of-trade.html') {document.title = 'Условия торговли'};
+if(document.URL === 'http://localhost:3000/platform.html') {document.title = 'Платформа'};
+if(document.URL === 'http://localhost:3000/analytics.html') {document.title = 'Аналитика рынка'};
+if(document.URL === 'http://localhost:3000/news.html') {document.title = 'Новости рынка'};
+if(document.URL === 'http://localhost:3000/forecasts.html') {document.title = 'Прогнозы рынка'};
+if(document.URL === 'http://localhost:3000/currencies.html') {document.title = 'Валюты'};
+if(document.URL === 'http://localhost:3000/cryptocurrencies.html') {document.title = 'Криптовалюты'};
+if(document.URL === 'http://localhost:3000/stocks.html') {document.title = 'Акции'};
+if(document.URL === 'http://localhost:3000/indexes.html') {document.title = 'Индексы'};
+if(document.URL === 'http://localhost:3000/about.html') {document.title = 'О Patronus Investments'};
+if(document.URL === 'http://localhost:3000/contacts.html') {document.title = 'Контакты'};
