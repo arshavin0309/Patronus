@@ -2837,16 +2837,14 @@ footer {
     }
 
     &__item {
-        padding: 85px 30px 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 285px;
+        padding: 30px;
         background: var(--liner3);
         border-radius: 15px;
-
-        img {
-            height: 80px;
-            margin: auto;
-            object-fit: contain;
-            margin-bottom: 30px;
-        }
 
         p {
             margin-bottom: 15px;
@@ -2856,6 +2854,53 @@ footer {
         h3 {
             color: var(--black);
         }
+
+        &--hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            height: 100%;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            text-decoration: none;
+            opacity: 0;
+            transition: var(--transition);
+
+            h3 {
+                color: var(--blue);
+            }
+
+            .major-stock-indexes__image {
+                height: 80px;
+                margin: auto;
+                object-fit: contain;
+                margin-bottom: 30px;
+            }
+        }
+
+        &:hover {
+            .major-stock-indexes__item--hover {
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__image {
+        height: 80px;
+        margin: auto;
+        object-fit: contain;
+        margin-bottom: 30px;
+    }
+
+    &__arrow {
+        width: 34px;
+        height: 18px;
+        margin-bottom: 15px;
     }
 }
 
