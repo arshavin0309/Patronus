@@ -2907,3 +2907,40 @@ footer {
 .swiper5 {
     overflow: visible;
 }
+
+.about-hero {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 490px;
+        align-items: center;
+        padding-top: 175px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+
+        &+p {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__image {
+        position: relative;
+
+        img {
+            position: relative;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFFFFF78;
+            width: 400px;
+            height: 400px;
+            filter: blur(150px);
+        }
+    }
+}
