@@ -1,17 +1,17 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss = require('gulp-sass')(require('sass'));
-const concat = require('gulp-concat');
+const scss = require('gulp-sass')(require('sass')); //преобразование scss/sass в css
+const concat = require('gulp-concat'); // объединение файлов
 const uglify = require('gulp-uglify-es').default;
-const browserSync = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer');
-const clean = require('gulp-clean');
-const avif = require('gulp-avif');
-const webp = require('gulp-webp');
-const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync').create(); // запускает локальный сервер
+const autoprefixer = require('gulp-autoprefixer'); // приводит css к кросбраузерности
+const clean = require('gulp-clean'); // удаление папок
+const avif = require('gulp-avif'); // конвертер в avif
+const webp = require('gulp-webp'); // конвертер в webp
+const imagemin = require('gulp-imagemin'); // сжимание картинок
 const newer = require('gulp-newer'); // кэш
-const svgSprite = require('gulp-svg-sprite');
-const include = require('gulp-include');
+const svgSprite = require('gulp-svg-sprite'); // объединение svg картинок в 1 файл
+const include = require('gulp-include'); // подключение html к html
 
 function resources() {
     return src('app/upload/**/*')
