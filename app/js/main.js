@@ -67,6 +67,7 @@ let whatAreCryptocurrenciesImage = document.querySelector('.what-are-cryptocurre
 let whatAreStocksImage = document.querySelector('.what-are-stocks__image');
 let startInvestingImage = document.querySelector('.start-investing__image');
 let whatAreIndexesImage = document.querySelector('.what-are-indexes__image');
+let aboutImage = document.querySelector('.about__image');
 
 $(window).scroll(function () {
     var st = $(this).scrollTop();
@@ -84,6 +85,7 @@ $(window).scroll(function () {
         if (whatAreStocksImage) { whatAreStocksImage.classList.remove('reverse'); };
         if (startInvestingImage) { startInvestingImage.classList.remove('reverse'); };
         if (whatAreIndexesImage) { whatAreIndexesImage.classList.remove('reverse'); };
+        if (aboutImage) { aboutImage.classList.remove('reverse'); };
     } else {
         if (joinUsImg) { joinUsImg.classList.add('reverse'); };
         if (howContainer) { howContainer.classList.add('reverse'); };
@@ -97,6 +99,7 @@ $(window).scroll(function () {
         if (whatAreStocksImage) { whatAreStocksImage.classList.add('reverse'); };
         if (startInvestingImage) { startInvestingImage.classList.add('reverse'); };
         if (whatAreIndexesImage) { whatAreIndexesImage.classList.add('reverse'); };
+        if (aboutImage) { aboutImage.classList.add('reverse'); };
     };
 
     scrollPos = st;
