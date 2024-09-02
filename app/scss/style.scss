@@ -1895,6 +1895,26 @@ footer {
     }
 }
 
+.error-hero {
+    padding-top: 240px;
+    padding-bottom: 260px;
+    background: url(../images/error-bg.svg) center bottom / cover no-repeat;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    p {
+        max-width: 1090px;
+        margin: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
 .state-of-the-market {
     z-index: 1;
     position: relative;
@@ -2023,8 +2043,8 @@ footer {
 
 .contacts-hero {
     padding-top: 240px;
-    padding-bottom: 140px;
-    background: url(../images/contacts-hero-bg.svg) center bottom / cover no-repeat;
+    padding-bottom: 260px;
+    background: url(../images/contacts-bg.svg) center bottom / cover no-repeat;
 
     .container {
         display: flex;
@@ -2791,12 +2811,10 @@ footer {
     }
 }
 
-
-
 .indexes-hero {
     padding-top: 240px;
     padding-bottom: 120px;
-    background: url(../images/analytics-decor.svg) center bottom / cover no-repeat;
+    background: url(../images/indexes-bg.svg) center bottom 220px / cover no-repeat;
 
     .container {
         display: flex;
