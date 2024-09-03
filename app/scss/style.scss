@@ -1028,6 +1028,16 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+
+        &:nth-child(2) {
+            ul {
+                height: 340px;
+
+                &.active {
+                    height: auto;
+                }
+            }
+        }
     }
 
     &__item {
@@ -1043,6 +1053,42 @@ footer {
         &:hover {
             transform: translateY(-20px);
         }
+
+        &.active {
+            height: auto;
+        }
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: -40px;
+        padding-top: 70px;
+        text-align: center;
+        border: none;
+        background: none;
+        color: #11111180;
+        transition: var(--transition);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--violet);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 10px;
+            height: 13px;
+            background: url(../images/tariffs-more.svg) center / contain no-repeat;
+        }
+
+        &.active::after {
+            transform: rotate(180deg);
+        }
     }
 
     h3 {
@@ -1056,11 +1102,12 @@ footer {
     }
 
     ul {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 20px;
         height: 410px;
-        overflow: auto;
+        overflow: hidden;
     }
 
     li {
@@ -1878,7 +1925,47 @@ footer {
 .analytics {
     padding-top: 240px;
     padding-bottom: 140px;
-    background: url(../images/analytics-decor.svg) center bottom / cover no-repeat;
+    background: url(../images/analytics-decor.svg) center bottom -120px/ 100% 100% no-repeat;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    p {
+        max-width: 1090px;
+        margin: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.news-hero {
+    padding-top: 240px;
+    padding-bottom: 140px;
+    background: url(../images/analytics-decor.svg) center bottom -120px/ 100% 100% no-repeat;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    p {
+        max-width: 1090px;
+        margin: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.forecasts-hero {
+    padding-top: 240px;
+    padding-bottom: 140px;
+    background: url(../images/analytics-decor.svg) center bottom -120px/ 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -1898,7 +1985,7 @@ footer {
 .error-hero {
     padding-top: 240px;
     padding-bottom: 260px;
-    background: url(../images/error-bg.svg) center bottom / cover no-repeat;
+    background: url(../images/error-bg.svg) center bottom / 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -2044,7 +2131,7 @@ footer {
 .contacts-hero {
     padding-top: 240px;
     padding-bottom: 260px;
-    background: url(../images/contacts-bg.svg) center bottom / cover no-repeat;
+    background: url(../images/contacts-bg.svg) center bottom / 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -2241,7 +2328,7 @@ footer {
 .currencies {
     padding-top: 240px;
     padding-bottom: 140px;
-    background: url(../images/currencies-bg.svg) center bottom / cover no-repeat;
+    background: url(../images/currencies-bg.svg) center bottom -60px / 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -2476,7 +2563,7 @@ footer {
 .cryptocurrencies-hero {
     padding-top: 240px;
     padding-bottom: 120px;
-    background: url(../images/currencies-bg.svg) center bottom 280px / 100% 100% no-repeat;
+    background: url(../images/currencies-bg.svg) center bottom 250px / 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -2598,7 +2685,7 @@ footer {
 .stocks-hero {
     padding-top: 240px;
     padding-bottom: 120px;
-    background: url(../images/analytics-decor.svg) center bottom / cover no-repeat;
+    background: url(../images/stocks-bg.svg) center bottom 220px / 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -2814,7 +2901,7 @@ footer {
 .indexes-hero {
     padding-top: 240px;
     padding-bottom: 120px;
-    background: url(../images/indexes-bg.svg) center bottom 220px / cover no-repeat;
+    background: url(../images/indexes-bg.svg) center bottom 200px / 100% 100% no-repeat;
 
     .container {
         display: flex;
@@ -3306,9 +3393,22 @@ footer {
     }
 
     &__list {
+        position: relative;
         display: grid;
         gap: 65px;
         background: url(../images/values-line.svg) center / contain no-repeat;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            bottom: 110px;
+            right: calc(100% + 200px);
+            background: #FFFFFF78;
+            border-radius: 50%;
+            filter: blur(150px);
+        }
     }
 
     &__item {
