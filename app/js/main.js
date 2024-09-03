@@ -124,6 +124,8 @@ if (tableShow) {
                 tableTr[i].classList.remove("active");
             }
             tableShow.textContent = "Показать еще";
+            document.getElementById('table').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
             tableShow.classList.remove("active");
         }
     });
