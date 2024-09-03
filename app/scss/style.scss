@@ -1033,8 +1033,16 @@ footer {
             ul {
                 height: 340px;
 
+                li:nth-child(n+8) {
+                    color: #adadad;
+                }
+
                 &.active {
                     height: auto;
+
+                    li:nth-child(n+8) {
+                        color: initial;
+                    }
                 }
             }
         }
@@ -1075,6 +1083,10 @@ footer {
 
         &:hover {
             color: var(--violet);
+
+            &::after {
+                background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
+            }
         }
 
         &::after {
