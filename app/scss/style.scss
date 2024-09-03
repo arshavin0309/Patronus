@@ -1030,7 +1030,16 @@ footer {
         gap: 20px;
 
         &:nth-child(2) {
+            h3 {
+                color: var(--violet);
+
+                &::after {
+                    background: var(--violet);
+                }
+            }
+
             ul {
+
                 li:nth-child(n+8) {
                     color: #adadad;
                 }
@@ -1110,8 +1119,22 @@ footer {
     }
 
     h3 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
         margin-bottom: 10px;
         color: var(--blue);
+
+        &::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            transform: rotate(45deg);
+            background: var(--blue);
+        }
     }
 
     p {
@@ -1297,6 +1320,10 @@ footer {
     }
 
     &__btn {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         padding: 25px;
         background: #414E57;
@@ -1311,10 +1338,46 @@ footer {
 
         &:first-child {
             border-radius: 15px 0 0 0;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../images/table-btn-1.svg) center / contain no-repeat;
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../images/table-btn-2.svg) center / contain no-repeat;
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../images/table-btn-3.svg) center / contain no-repeat;
+            }
         }
 
         &:last-child {
             border-radius: 0 15px 0 0;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../images/table-btn-4.svg) center / contain no-repeat;
+            }
         }
     }
 
@@ -1773,40 +1836,68 @@ footer {
         gap: 10px;
     }
 
-    &__webtrader::before {
-        content: '';
-        width: 27px;
-        height: 27px;
-        display: block;
-        flex: 0 0 auto;
-        background: url(../images/platforms-btn-webtrader.svg) center / contain no-repeat;
+    &__webtrader {
+        &::before {
+            content: '';
+            width: 27px;
+            height: 27px;
+            display: block;
+            flex: 0 0 auto;
+            transition: var(--transition);
+            background: url(../images/platforms-btn-webtrader.svg) center / contain no-repeat;
+        }
+
+        &:hover::before {
+            background: url(../images/platforms-btn-webtrader-hover.svg) center / contain no-repeat;
+        }
     }
 
-    &__windows::before {
-        content: '';
-        width: 27px;
-        height: 27px;
-        display: block;
-        flex: 0 0 auto;
-        background: url(../images/platforms-btn-windows.svg) center / contain no-repeat;
+    &__windows {
+        &::before {
+            content: '';
+            width: 27px;
+            height: 27px;
+            display: block;
+            flex: 0 0 auto;
+                transition: var(--transition);
+            background: url(../images/platforms-btn-windows.svg) center / contain no-repeat;
+        }
+
+        &:hover::before {
+            background: url(../images/platforms-btn-windows-hover.svg) center / contain no-repeat;
+        }
     }
 
-    &__appstore::before {
-        content: '';
-        width: 27px;
-        height: 27px;
-        display: block;
-        flex: 0 0 auto;
-        background: url(../images/platforms-btn-appstore.svg) center / contain no-repeat;
+    &__appstore {
+        &::before {
+            content: '';
+            width: 27px;
+            height: 27px;
+            display: block;
+            flex: 0 0 auto;
+                transition: var(--transition);
+            background: url(../images/platforms-btn-appstore.svg) center / contain no-repeat;
+        }
+
+        &:hover::before {
+            background: url(../images/platforms-btn-appstore-hover.svg) center / contain no-repeat;
+        }
     }
 
-    &__googleplay::before {
-        content: '';
-        width: 27px;
-        height: 27px;
-        display: block;
-        flex: 0 0 auto;
-        background: url(../images/platforms-btn-googleplay.svg) center / contain no-repeat;
+    &__googleplay {
+        &::before {
+            content: '';
+            width: 27px;
+            height: 27px;
+            display: block;
+            flex: 0 0 auto;
+                transition: var(--transition);
+            background: url(../images/platforms-btn-googleplay.svg) center / contain no-repeat;
+        }
+
+        &:hover::before {
+            background: url(../images/platforms-btn-googleplay-hover.svg) center / contain no-repeat;
+        }
     }
 }
 
