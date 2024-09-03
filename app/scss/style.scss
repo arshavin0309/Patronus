@@ -140,7 +140,14 @@ h3,
 
     &--sing-in {
         padding: 15px 37px;
-        background: var(--blue);
+        background: transparent;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+
+        &:hover {
+            color: var(--white);
+            background: var(--blue);
+        }
     }
 }
 
@@ -579,7 +586,7 @@ footer {
 
         .btn {
             display: none;
-            max-width: 130px;
+            max-width: 240px;
             margin-top: 30px;
             margin-left: auto;
             padding: 15px 22px;
@@ -893,7 +900,7 @@ footer {
         }
 
         .doors__box {
-            padding-top: 65px;
+            padding-top: 105px;
             padding-bottom: 105px;
         }
 
@@ -908,8 +915,8 @@ footer {
             &::before {
                 width: calc(100% + 30px);
                 height: calc(100% + 30px);
-                top: 110px;
-                right: 0px;
+                top: 135px;
+                right: 15px;
                 left: initial;
             }
         }
@@ -1368,6 +1375,16 @@ footer {
             }
         }
 
+        &:nth-child(4) {
+            &::before {
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../images/table-btn-4.svg) center / contain no-repeat;
+            }
+        }
+
         &:last-child {
             border-radius: 0 15px 0 0;
 
@@ -1376,7 +1393,7 @@ footer {
                 display: block;
                 width: 27px;
                 height: 27px;
-                background: url(../images/table-btn-4.svg) center / contain no-repeat;
+                background: url(../images/table-btn-5.svg) center / contain no-repeat;
             }
         }
     }
@@ -1397,6 +1414,7 @@ footer {
         color: var(--white);
         background: transparent;
         border: none;
+        transition: var(--transition);
         cursor: pointer;
 
         &::after {
@@ -1404,11 +1422,20 @@ footer {
             width: 10px;
             height: 13px;
             display: block;
+            transition: var(--transition);
             background: url(../images/arrow-bottom.svg) center / contain no-repeat;
         }
 
         &.active::after {
             transform: rotate(180deg);
+        }
+
+        &:hover {
+            color: var(--violet);
+
+            &::after {
+                background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
+            }
         }
     }
 }
@@ -1826,8 +1853,15 @@ footer {
     }
 
     &__links {
+        width: 100%;
         display: grid;
         gap: 10px;
+
+        .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 13px 65px;
+        }
     }
 
     .btn {
@@ -1859,7 +1893,7 @@ footer {
             height: 27px;
             display: block;
             flex: 0 0 auto;
-                transition: var(--transition);
+            transition: var(--transition);
             background: url(../images/platforms-btn-windows.svg) center / contain no-repeat;
         }
 
@@ -1875,7 +1909,7 @@ footer {
             height: 27px;
             display: block;
             flex: 0 0 auto;
-                transition: var(--transition);
+            transition: var(--transition);
             background: url(../images/platforms-btn-appstore.svg) center / contain no-repeat;
         }
 
@@ -1891,7 +1925,7 @@ footer {
             height: 27px;
             display: block;
             flex: 0 0 auto;
-                transition: var(--transition);
+            transition: var(--transition);
             background: url(../images/platforms-btn-googleplay.svg) center / contain no-repeat;
         }
 
@@ -2180,9 +2214,16 @@ footer {
     }
 
     p {
+        max-width: 410px;
+        margin: auto;
         margin-bottom: 40px;
         text-align: center;
         color: var(--black);
+    }
+
+    .widget-box {
+        max-width: 450px;
+        margin: auto;
     }
 }
 
@@ -2360,6 +2401,9 @@ footer {
     }
 
     &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 60px 50px;
         background: var(--liner2);
     }
@@ -2558,13 +2602,28 @@ footer {
     .container {
         padding-top: 120px;
         padding-bottom: 200px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -160px;
+            left: -470px;
+            width: 550px;
+            height: 550px;
+            background: #FFFFFF78;
+            border-radius: 50%;
+            filter: blur(150px);
+        }
     }
 
     h2 {
+        position: relative;
         margin-bottom: 50px;
     }
 
     .accordion {
+        position: relative;
+
         h3 {
             position: relative;
             width: 100%;
@@ -2581,7 +2640,7 @@ footer {
                 position: relative;
                 width: 100%;
                 display: flex;
-                gap: 10px;
+                gap: 15px;
                 align-items: center;
                 color: var(--black);
 
@@ -2663,8 +2722,18 @@ footer {
 }
 
 .cryptocurrencies {
-    .doors--news {
-        background: var(--liner2);
+    .doors {
+        &--news {
+            background: var(--liner2);
+
+            .doors__decor {
+                top: -7px;
+            }
+        }
+
+        &__img {
+            margin-top: -70px;
+        }
     }
 }
 

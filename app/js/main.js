@@ -170,17 +170,24 @@ let tariffsBtn = document.querySelectorAll('.tariffs__btn');
 
 for (let i = 0; i < tariffsMore.length; i++) {
     tariffsMore[i].addEventListener('click', () => {
+        if (tariffsMore[i].textContent === 'Подробнее') {
+            tariffsMore[i].textContent = 'Скрыть';
+        } else {
+            tariffsMore[i].textContent = 'Подробнее';
+        };
+
         tariffsMore[i].classList.toggle('active');
         tariffsUl[i].classList.toggle('active');
-
-        for (let n = 0; n < tariffsItem.length; n++) {
-            tariffsItem[n].classList.add('active');
-        };
+        tariffsItem[i].classList.toggle('active');
     });
 };
 
 for (let i = 0; i < tariffsBtn.length; i++) {
     tariffsBtn[i].addEventListener('click', () => {
+
+        for (let n = 0; n < tariffsMore.length; n++) {
+            tariffsMore[n].textContent = 'Подробнее';
+        }
 
         for (let n = 0; n < tariffsItem.length; n++) {
             tariffsMore[n].classList.remove('active');
@@ -191,16 +198,16 @@ for (let i = 0; i < tariffsBtn.length; i++) {
 };
 
 // Установка title, для wp не понадобиться
-if (document.URL === 'http://localhost:3000/') { document.title = 'Главная' };
-if (document.URL === 'http://localhost:3000/404.html') { document.title = 'Страница не найдена' };
-if (document.URL === 'http://localhost:3000/terms-of-trade.html') { document.title = 'Условия торговли' };
-if (document.URL === 'http://localhost:3000/platform.html') { document.title = 'Платформа' };
-if (document.URL === 'http://localhost:3000/analytics.html') { document.title = 'Аналитика рынка' };
-if (document.URL === 'http://localhost:3000/news.html') { document.title = 'Новости рынка' };
-if (document.URL === 'http://localhost:3000/forecasts.html') { document.title = 'Прогнозы рынка' };
-if (document.URL === 'http://localhost:3000/currencies.html') { document.title = 'Валюты' };
-if (document.URL === 'http://localhost:3000/cryptocurrencies.html') { document.title = 'Криптовалюты' };
-if (document.URL === 'http://localhost:3000/stocks.html') { document.title = 'Акции' };
-if (document.URL === 'http://localhost:3000/indexes.html') { document.title = 'Индексы' };
-if (document.URL === 'http://localhost:3000/about.html') { document.title = 'О Patronus Investments' };
-if (document.URL === 'http://localhost:3000/contacts.html') { document.title = 'Контакты' };
+if (document.location.pathname === '/') { document.title = 'Главная' };
+if (document.location.pathname === '/404.html') { document.title = 'Страница не найдена' };
+if (document.location.pathname === '/terms-of-trade.html') { document.title = 'Условия торговли' };
+if (document.location.pathname === '/platform.html') { document.title = 'Платформа' };
+if (document.location.pathname === '/analytics.html') { document.title = 'Аналитика рынка' };
+if (document.location.pathname === '/news.html') { document.title = 'Новости рынка' };
+if (document.location.pathname === '/forecasts.html') { document.title = 'Прогнозы рынка' };
+if (document.location.pathname === '/currencies.html') { document.title = 'Валюты' };
+if (document.location.pathname === '/cryptocurrencies.html') { document.title = 'Криптовалюты' };
+if (document.location.pathname === '/stocks.html') { document.title = 'Акции' };
+if (document.location.pathname === '/indexes.html') { document.title = 'Индексы' };
+if (document.location.pathname === '/about.html') { document.title = 'О Patronus Investments' };
+if (document.location.pathname === '/contacts.html') { document.title = 'Контакты' };
