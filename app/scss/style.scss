@@ -1031,10 +1031,12 @@ footer {
 
         &:nth-child(2) {
             ul {
-                height: 340px;
-
                 li:nth-child(n+8) {
                     color: #adadad;
+                }
+
+                li:nth-child(n+9) {
+                    display: none;
                 }
 
                 &.active {
@@ -1042,6 +1044,10 @@ footer {
 
                     li:nth-child(n+8) {
                         color: initial;
+                    }
+
+                    li:nth-child(n+9) {
+                        display: flex;
                     }
                 }
             }
@@ -1118,7 +1124,6 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        height: 410px;
         overflow: hidden;
     }
 
