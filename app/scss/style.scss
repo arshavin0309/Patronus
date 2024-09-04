@@ -1,7 +1,6 @@
 @import '../../node_modules/normalize.css/normalize';
 @import '../../node_modules/swiper/swiper-bundle';
 @import '../scss/keyframes';
-@import '../scss/_min1000';
 
 :root {
     --violet: #7D75EC;
@@ -151,7 +150,17 @@ h3,
     }
 }
 
-header {
+.header {
+    &__burger {
+        display: none;
+        width: 20px;
+        height: 15px;
+        background: url(../images/burger.svg) transparent center / contain no-repeat;
+        border: none;
+        flex: 0 0 auto;
+        cursor: pointer;
+    }
+
     .container {
         position: fixed;
         z-index: 10;
@@ -247,9 +256,7 @@ header {
             }
         }
     }
-}
 
-.header {
     &__box {
         position: relative;
         z-index: 10;
@@ -3818,3 +3825,9 @@ footer {
         text-align: center;
     }
 }
+
+@import '../scss/_min1000';
+@import '../scss/_1200';
+@import '../scss/_992';
+@import '../scss/_768';
+@import '../scss/_500';

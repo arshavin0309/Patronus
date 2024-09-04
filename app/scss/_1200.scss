@@ -1,0 +1,29 @@
+@media (max-width: 1200px) {
+    .header {
+        .menu {
+            display: none;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        &__lang {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
+        }
+    }
+
+    h1, .h1 {
+        font-size: 40px;
+    }
+
+    .hero {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
