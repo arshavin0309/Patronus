@@ -1,2 +1,12 @@
 @media (max-width: 768px) {
+    .footer {
+        .menu {
+            grid-template-columns: 1fr;
+
+            &>.menu-item:nth-child(3) {
+                grid-row: initial;
+                grid-column: initial;
+            }
+        }
+    }
 }

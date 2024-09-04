@@ -91,4 +91,14 @@
             text-align: center;
         }
     }
+
+    .footer {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        &__copyright {
+            grid-column: initial;
+        }
+    }
 }
