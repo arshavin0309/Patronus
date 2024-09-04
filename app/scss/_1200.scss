@@ -1,5 +1,9 @@
 @media (max-width: 1200px) {
     .header {
+        .container {
+            top: 30px;
+        }
+        
         .menu {
             display: none;
         }
@@ -24,6 +28,10 @@
     .hero {
         .container {
             grid-template-columns: 1fr;
+        }
+
+        &__img {
+            margin: auto;
         }
     }
 }

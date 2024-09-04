@@ -1,7 +1,31 @@
 @media (max-width: 500px) {
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+
     .header {
         &__logo {
             max-width: 95px;
+        }
+    }
+
+    .hero {
+        &__item {
+            max-width: 300px;
+
+            img {
+                max-width: 145px;
+            }
+        }
+
+        h1 {
+            margin-bottom: 50px;
+        }
+
+        &__number {
+            margin-bottom: 0;
+            font-size: 18px;
         }
     }
 }
