@@ -43,10 +43,6 @@
 
 a {
     transition: var(--transition);
-
-    &:hover {
-        color: var(--violet);
-    }
 }
 
 img {
@@ -203,20 +199,6 @@ h3,
                 display: inline-block;
                 margin-left: 5px;
                 font-size: 14px;
-            }
-        }
-
-        &:hover {
-            a {
-                color: var(--violet);
-
-                &::after {
-                    transform: rotate(-180deg);
-                }
-            }
-
-            .sub-menu {
-                display: grid;
             }
         }
     }
@@ -581,6 +563,10 @@ footer {
         color: #111111CC;
     }
 
+    &__list {
+        display: none;
+    }
+
     &__item {
         padding: 40px 30px;
         border-radius: 20px;
@@ -640,6 +626,10 @@ footer {
 
 .how {
     padding-bottom: 180px;
+
+    picture {
+        flex: 0 0 auto;
+    }
 
     .container {
         &::before {
@@ -3824,6 +3814,10 @@ footer {
     p {
         text-align: center;
     }
+}
+
+.for-mobile {
+    display: none;
 }
 
 @import '../scss/_min1000';

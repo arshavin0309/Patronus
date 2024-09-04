@@ -3,7 +3,7 @@
         .container {
             top: 30px;
         }
-        
+
         .menu {
             display: none;
         }
@@ -21,7 +21,8 @@
         }
     }
 
-    h1, .h1 {
+    h1,
+    .h1 {
         font-size: 40px;
     }
 
@@ -32,6 +33,62 @@
 
         &__img {
             margin: auto;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+    }
+
+    .for-desktop {
+        display: none;
+    }
+
+    .for-mobile {
+        display: block;
+    }
+
+    .join-us {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        &__img {
+            order: 1;
+        }
+    }
+
+    .instruments {
+        height: auto;
+
+        &__list {
+            display: grid;
+        }
+
+        &__item {
+            position: relative;
+            margin-top: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .swiper1 {
+            display: none;
+        }
+    }
+
+    .how {
+        &__list {
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            text-align: center;
         }
     }
 }
