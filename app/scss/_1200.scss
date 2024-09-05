@@ -26,6 +26,22 @@
         font-size: 40px;
     }
 
+    h2, .h2 {
+        font-size: 30px;
+    }
+
+    h3, .h3 {
+        font-size: 23px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
     .hero {
         .container {
             grid-template-columns: 1fr;
@@ -89,6 +105,22 @@
 
         &__item {
             text-align: center;
+        }
+    }
+
+    .calendar {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        &__img {
+            order: 1;
+        }
+    }
+
+    .doors {
+        .container {
+            grid-template-columns: 1fr;
         }
     }
 

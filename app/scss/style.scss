@@ -846,6 +846,10 @@ section {
     padding-top: 130px;
     padding-bottom: 50px;
 
+    &__accordion {
+        display: none;
+    }
+
     &::before {
         z-index: -1;
         position: absolute;

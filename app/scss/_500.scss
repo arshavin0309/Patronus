@@ -28,4 +28,39 @@
             font-size: 18px;
         }
     }
+
+    .footer {
+        .container {
+            gap: 40px;
+        }
+
+        &__logo {
+            max-width: 160px;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            gap: 25px;
+        }
+
+        &__links {
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .menu-item {
+            a {
+                font-size: 18px;
+            }
+        }
+
+        .sub-menu {
+            .menu-item {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }
