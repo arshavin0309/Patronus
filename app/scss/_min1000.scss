@@ -9,6 +9,31 @@
         .menu-item {
             &:hover {
                 a {
+                    &::after {
+                        color: var(--violet);
+                        transform: rotate(-180deg);
+                    }
+                }
+
+                .sub-menu {
+                    display: grid;
+                }
+            }
+        }
+
+        .sub-menu {
+            .menu-item {
+                a {
+                    &:hover {
+                        color: var(--violet);
+                    }
+                }
+            }
+        }
+
+        &__lang {
+            &:hover {
+                .header__active-language {
                     color: var(--violet);
 
                     &::after {
@@ -16,8 +41,16 @@
                     }
                 }
 
-                .sub-menu {
+                .header__languages {
                     display: grid;
+                }
+            }
+        }
+
+        &__languages {
+            a {
+                &:hover {
+                    color: var(--violet);
                 }
             }
         }
@@ -36,6 +69,13 @@
                 border: 1px solid var(--blue);
             }
         }
+
+        &--sing-in {
+            &:hover {
+                color: var(--white);
+                background: var(--blue);
+            }
+        }
     }
 
     .instruments {
@@ -46,6 +86,48 @@
 
                 .btn {
                     display: block;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .sub-menu {
+            .menu-item {
+                a {
+                    &:hover {
+                        color: var(--violet);
+                    }
+                }
+            }
+        }
+    }
+
+    .tariffs {
+        &__item {
+            &:hover {
+                transform: translateY(-20px);
+            }
+        }
+
+        &__more {
+            &:hover {
+                color: var(--violet);
+    
+                &::after {
+                    background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
+                }
+            }
+        }
+    }
+
+    .table {
+        &__show {
+            &:hover {
+                color: var(--violet);
+    
+                &::after {
+                    background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
                 }
             }
         }

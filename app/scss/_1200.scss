@@ -1,4 +1,8 @@
 @media (max-width: 1200px) {
+    body {
+        overflow: initial;
+    }
+
     .header {
         .container {
             top: 30px;
@@ -26,11 +30,13 @@
         font-size: 40px;
     }
 
-    h2, .h2 {
+    h2,
+    .h2 {
         font-size: 30px;
     }
 
-    h3, .h3 {
+    h3,
+    .h3 {
         font-size: 23px;
     }
 
@@ -97,6 +103,16 @@
     }
 
     .how {
+        .container {
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
         &__list {
             flex-direction: column;
             gap: 30px;
@@ -131,6 +147,22 @@
 
         &__copyright {
             grid-column: initial;
+        }
+    }
+
+    .reviews {
+        &__item {
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__box {
+            max-width: 100%;
         }
     }
 }

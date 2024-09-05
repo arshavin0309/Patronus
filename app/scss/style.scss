@@ -138,11 +138,6 @@ h3,
         background: transparent;
         color: var(--blue);
         border: 1px solid var(--blue);
-
-        &:hover {
-            color: var(--white);
-            background: var(--blue);
-        }
     }
 }
 
@@ -228,10 +223,6 @@ h3,
                 color: var(--black);
                 white-space: nowrap;
 
-                &:hover {
-                    color: var(--violet);
-                }
-
                 &::after {
                     display: none;
                 }
@@ -270,20 +261,6 @@ h3,
 
     &__lang {
         position: relative;
-
-        &:hover {
-            .header__active-language {
-                color: var(--violet);
-
-                &::after {
-                    transform: rotate(-180deg);
-                }
-            }
-
-            .header__languages {
-                display: grid;
-            }
-        }
     }
 
     &__languages {
@@ -311,10 +288,6 @@ h3,
             color: var(--black);
             text-decoration: none;
             transition: var(--transition);
-
-            &:hover {
-                color: var(--violet);
-            }
         }
     }
 }
@@ -914,10 +887,6 @@ section {
                 font-size: 18px;
                 font-weight: 400;
                 color: #EFEFEFCC;
-
-                &:hover {
-                    color: var(--violet);
-                }
             }
         }
     }
@@ -1078,10 +1047,6 @@ section {
         border-radius: 15px;
         transition: var(--transition);
 
-        &:hover {
-            transform: translateY(-20px);
-        }
-
         &.active {
             height: auto;
         }
@@ -1100,14 +1065,6 @@ section {
         color: #11111180;
         transition: var(--transition);
         cursor: pointer;
-
-        &:hover {
-            color: var(--violet);
-
-            &::after {
-                background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
-            }
-        }
 
         &::after {
             content: '';
@@ -1426,14 +1383,6 @@ section {
 
         &.active::after {
             transform: rotate(180deg);
-        }
-
-        &:hover {
-            color: var(--violet);
-
-            &::after {
-                background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
-            }
         }
     }
 }
