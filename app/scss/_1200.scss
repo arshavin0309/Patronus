@@ -78,6 +78,11 @@
 
         &__img {
             order: 1;
+            overflow: hidden;
+
+            &::before {
+                display: none;
+            }
         }
     }
 

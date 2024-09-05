@@ -362,6 +362,7 @@ section {
     position: relative;
 
     &::before {
+        z-index: -1;
         position: absolute;
         content: '';
         width: 100%;
@@ -432,6 +433,7 @@ section {
             left: 0;
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
+            border-radius: 50%;
         }
 
         &.reverse {
@@ -589,6 +591,10 @@ section {
 
     &__item {
         list-style: none;
+
+        p {
+            color: #EFEFEFCC;
+        }
     }
 }
 
