@@ -92,9 +92,23 @@
     }
 
     .footer {
+        .menu {
+            &>.menu-item {
+                a {
+                    cursor: initial;
+
+                    &:hover {
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+
         .sub-menu {
             .menu-item {
                 a {
+                    cursor: pointer;
+
                     &:hover {
                         color: var(--violet);
                     }
@@ -113,7 +127,7 @@
         &__more {
             &:hover {
                 color: var(--violet);
-    
+
                 &::after {
                     background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
                 }
@@ -125,7 +139,7 @@
         &__show {
             &:hover {
                 color: var(--violet);
-    
+
                 &::after {
                     background: url(../images/tariffs-more-hover.svg) center / contain no-repeat;
                 }

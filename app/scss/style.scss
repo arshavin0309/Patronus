@@ -362,7 +362,6 @@ section {
     position: relative;
 
     &::before {
-        z-index: -1;
         position: absolute;
         content: '';
         width: 100%;
