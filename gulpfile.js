@@ -12,16 +12,20 @@ const imagemin = require('gulp-imagemin'); // сжимание картинок
 const newer = require('gulp-newer'); // кэш
 const svgSprite = require('gulp-svg-sprite'); // объединение svg картинок в 1 файл
 const include = require('gulp-include'); // подключение html к html
+const typograf = require('gulp-typograf');
 
 function resources() {
     return src('app/upload/**/*')
-    .pipe(dest('dist/upload'))
+        .pipe(dest('dist/upload'))
 }
 
 function pages() {
     return src('app/pages/*.html')
         .pipe(include({
             includePaths: 'app/components'
+        }))
+        .pipe(typograf({
+            locale: ['ru', 'en-US']
         }))
         .pipe(dest('app'))
         .pipe(browserSync.stream())
