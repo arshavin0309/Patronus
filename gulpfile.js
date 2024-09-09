@@ -68,9 +68,17 @@ function styles() {
     return src('app/scss/style.scss')
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
         .pipe(concat('style.min.css'))
+
+        // без минификации
+        // .pipe(scss({
+        //     outputStyle: 'expanded'
+        // }))
+
+        // с минификацией
         .pipe(scss({
             outputStyle: 'compressed'
         }))
+
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
@@ -82,7 +90,6 @@ function watching() {
         }
     });
     watch(['app/scss/**/*.scss'], styles)
-    // watch(['app/scss/style.scss'], styles)
     watch(['app/images/src'], images)
     watch(['app/js/main.js'], scripts)
     watch(['app/components/**/*.html', 'app/pages/**/*.html'], pages)
@@ -97,7 +104,8 @@ function cleanDist() {
 
 function building() {
     return src([
-        'app/css/style.min.css',
+        // 'app/css/style.min.css',
+        'app/css/**/*.css',
         '!app/images/**/*.html',
         'app/images/*.*',
         // '!app/images/*.svg',
