@@ -5,6 +5,12 @@
     }
 
     .header {
+        .container {
+            &::before {
+                height: calc(100% + 50px);
+            }
+        }
+
         &__logo {
             max-width: 95px;
         }

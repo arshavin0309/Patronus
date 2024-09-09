@@ -3,4 +3,23 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+    
+    .header {
+        .container {
+            top: 15px;
+            
+            &::before {
+                top: -40px;
+                height: calc(100% + 70px);
+                left: -40px;
+                width: calc(100% + 80px);
+            }
+        }
+    }
+
+    .contacts {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
 }
