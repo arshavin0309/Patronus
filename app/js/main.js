@@ -213,3 +213,74 @@ if (document.location.pathname === '/stocks.html') { document.title = 'Акци�
 if (document.location.pathname === '/indexes.html') { document.title = 'Индексы' };
 if (document.location.pathname === '/about.html') { document.title = 'О Patronus Investments' };
 if (document.location.pathname === '/contacts.html') { document.title = 'Контакты' };
+
+// окно с предупреждением о куки
+function getCookie(name) {
+    let matches = document.cookie.match(
+        new RegExp(
+            '(?:^|; )' +
+            name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') +
+            '=([^;]*)'
+        )
+    )
+    return matches ? decodeURIComponent(matches[1]) : undefined
+}
+
+function setCookie(name, value, options = {}) {
+    options = {
+        path: '/',
+        ...options,
+    }
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString()
+    }
+
+    let updatedCookie =
+        encodeURIComponent(name) + '=' + encodeURIComponent(value)
+
+    for (let optionKey in options) {
+        updatedCookie += '; ' + optionKey
+        let optionValue = options[optionKey]
+        if (optionValue !== true) {
+            updatedCookie += '=' + optionValue
+        }
+    }
+
+    document.cookie = updatedCookie
+}
+
+if (!getCookie('cookies')) {
+    document.querySelector('.cookies').style = 'display: flex'
+}
+
+document.querySelector('.cookies .btn').addEventListener('click', () => {
+    document.querySelector('.cookies').style = 'display: none'
+    setCookie('cookies', 'true', { 'max-age': 3600 * 24 * 365 })
+})
+
+// кнопка вверх
+document.addEventListener('DOMContentLoaded', () => {
+    let goTopBtn = document.querySelector('.upButton');
+
+    window.addEventListener('scroll', trackScroll);
+    goTopBtn.addEventListener('click', backToTop);
+
+    function trackScroll() {
+        let scrolled = window.pageYOffset;
+
+        if (scrolled > 100) {
+            goTopBtn.classList.add('show');
+        }
+        if (scrolled < 100) {
+            goTopBtn.classList.remove('show');
+        };
+    };
+
+    function backToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+});

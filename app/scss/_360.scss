@@ -1,5 +1,6 @@
 @media (max-width: 360px) {
     .widget-box {
+        width: calc(100% + 20px);
         margin-left: -10px;
         margin-right: -10px;
     }

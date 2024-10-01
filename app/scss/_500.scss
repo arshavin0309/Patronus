@@ -178,4 +178,19 @@
             }
         }
     }
+
+    .cookies {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .btn {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
 }
