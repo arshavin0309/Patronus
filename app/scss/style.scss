@@ -51,6 +51,11 @@ img {
     object-fit: contain;
 }
 
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 body {
     background: image-set(url(../images/body-bg.avif), url(../images/body-bg.webp), url(../images/body-bg.png)) var(--body-bg) top center / contain repeat;
     overflow-x: hidden;
@@ -84,6 +89,7 @@ h2,
     font-size: clamp(30px, 6vh, 42px);
     line-height: 100%;
     font-weight: 500;
+    color: var(--liner2);
 }
 
 h3,
@@ -358,6 +364,11 @@ h3,
 
 section {
     position: relative;
+
+    .container {
+        z-index: 1;
+        position: relative;
+    }
 
     &::before {
         position: absolute;

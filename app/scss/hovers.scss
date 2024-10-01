@@ -7,8 +7,16 @@
 
     .header {
         .menu-item {
+            a {
+                &::after {
+                    transition: var(--transition);
+                }
+            }
+
             &:hover {
-                a {
+                &>a {
+                    color: var(--violet);
+
                     &::after {
                         color: var(--violet);
                         transform: rotate(-180deg);
@@ -39,6 +47,7 @@
                     color: var(--violet);
 
                     &::after {
+                        color: var(--violet);
                         transform: rotate(-180deg);
                     }
                 }
@@ -56,6 +65,16 @@
                 &:hover {
                     color: var(--violet);
                 }
+            }
+
+            &::after {
+                transition: var(--transition);
+            }
+        }
+
+        &__active-language {
+            &::after {
+                transition: var(--transition);
             }
         }
     }
