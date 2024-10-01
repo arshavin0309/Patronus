@@ -3779,9 +3779,14 @@ section {
     display: none;
 }
 
-@import '../scss/_min1000';
+@import '../scss/hovers';
+@import '../scss/_1400';
+@import '../scss/_1300';
 @import '../scss/_1200';
+@import '../scss/_1024';
 @import '../scss/_992';
+@import '../scss/_900';
 @import '../scss/_768';
+@import '../scss/_600';
 @import '../scss/_500';
 @import '../scss/_360';

@@ -25,7 +25,10 @@ function pages() {
             includePaths: 'app/components'
         }))
         .pipe(typograf({
-            locale: ['ru', 'en-US']
+            locale: ['ru', 'en-US'],
+            safeTags: [
+                ['<no-typography>', '</no-typography>']
+            ]
         }))
         .pipe(dest('app'))
         .pipe(browserSync.stream())
@@ -34,7 +37,7 @@ function pages() {
 function images() {
     return src(['app/images/src/*.*', '!app/images/src/*.svg'])
         .pipe(newer('app/images/'))
-        .pipe(avif({ quality: 50 }))
+        .pipe(avif({ quality: 90 }))
 
         .pipe(src('app/images/src/*.*'))
         .pipe(newer('app/images/'))
@@ -102,7 +105,7 @@ function watching() {
 }
 
 function cleanDist() {
-    return src('dist')
+    return src('dist/**/*')
         .pipe(clean())
 }
 
@@ -113,7 +116,7 @@ function building() {
         '!app/images/**/*.html',
         'app/images/*.*',
         // '!app/images/*.svg',
-        'app/images/sprite.svg',
+        // 'app/images/sprite.svg',
         'app/js/main.min.js',
         'app/**/*.html',
         'app/upload/**/*'
@@ -130,4 +133,5 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, scripts, pages, watching);
+// exports.default = parallel(styles, images, scripts, pages, watching);
+exports.default = series(styles, images, scripts, pages, watching);
