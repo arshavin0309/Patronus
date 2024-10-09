@@ -533,6 +533,7 @@ section {
     padding-bottom: 180px;
 
     picture {
+        margin: auto;
         flex: 0 0 auto;
     }
 
@@ -580,7 +581,7 @@ section {
         display: flex;
         gap: 50px;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         margin-bottom: 50px;
     }
 
