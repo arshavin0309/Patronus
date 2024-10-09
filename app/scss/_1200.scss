@@ -1,7 +1,4 @@
 @media (max-width: 1200px) {
-    body {
-        overflow: initial;
-    }
 
     .header {
         .container {
@@ -166,6 +163,37 @@
 
         &__burger {
             display: block;
+        }
+    }
+
+    .contacts {
+        &-hero {
+            padding-top: 110px;
+            padding-bottom: 100px;
+        }
+
+        &__item {
+            padding: 40px 25px;
+        }
+
+        &__map {
+            height: 350px;
+        }
+
+        &__form {
+            form {
+                gap: 10px;
+            }
+
+            input {
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    .successful-path {
+        .container {
+            grid-template-columns: 1fr 1fr;
         }
     }
 

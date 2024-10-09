@@ -52,13 +52,14 @@ img {
 }
 
 html {
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
     background: image-set(url(../images/body-bg.avif), url(../images/body-bg.webp), url(../images/body-bg.png)) var(--body-bg) top center / contain repeat;
     overflow-x: hidden;
+    overflow-y: auto;
 
     &::before {
         z-index: 1;
@@ -2191,29 +2192,29 @@ section {
     }
 }
 
-.contacts-hero {
-    padding-top: 240px;
-    padding-bottom: 260px;
-    background: url(../images/contacts-bg.svg) center bottom / 100% 100% no-repeat;
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    p {
-        max-width: 1090px;
-        margin: auto;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-}
-
 .contacts {
     z-index: 1;
     position: relative;
+
+    &-hero {
+        padding-top: 240px;
+        padding-bottom: 260px;
+        background: url(../images/contacts-bg.svg) center bottom / 100% 100% no-repeat;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        p {
+            max-width: 1090px;
+            margin: auto;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
 
     .container {
         display: grid;
@@ -2317,6 +2318,7 @@ section {
     &__box {
         display: flex;
         flex-direction: column;
+        gap: 20px;
         justify-content: center;
         padding: 60px 50px;
         background: var(--liner2);
@@ -2328,7 +2330,8 @@ section {
             display: block;
             width: 40px;
             height: 40px;
-            background: url(../images/contacts-mail.svg);
+            background: url(../images/contacts-mail.svg) center / contain no-repeat;
+            flex: 0 0 auto;
         }
     }
 
@@ -2338,7 +2341,8 @@ section {
             display: block;
             width: 40px;
             height: 40px;
-            background: url(../images/contacts-tel.svg);
+            background: url(../images/contacts-tel.svg) center / contain no-repeat;
+            flex: 0 0 auto;
         }
     }
 
@@ -2367,7 +2371,6 @@ section {
         display: flex;
         align-items: center;
         gap: 20px;
-        margin-bottom: 20px;
         color: var(--black);
         text-decoration: none;
     }
@@ -2384,7 +2387,8 @@ section {
             display: block;
             width: 40px;
             height: 40px;
-            background: url(../images/contacts-address.svg);
+            background: url(../images/contacts-address.svg) center / contain no-repeat;
+            flex: 0 0 auto;
         }
     }
 }

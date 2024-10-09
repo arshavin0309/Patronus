@@ -219,4 +219,51 @@
             margin-right: -15px;
         }
     }
+
+    .successful-path {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        &__image {
+            margin-right: -140px;
+        }
+    }
+
+    .contacts {
+        a {
+            gap: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        &__box {
+            gap: 10px;
+        }
+
+        &__tel {
+            &::before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__mail {
+            &::before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        address {
+            gap: 10px;
+
+            &::before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
 }

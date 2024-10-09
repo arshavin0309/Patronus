@@ -66,4 +66,14 @@
             height: auto;
         }
     }
+
+    .successful-path {
+        .container {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        &__image {
+            order: 1;
+        }
+    }
 }
