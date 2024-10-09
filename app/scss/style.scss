@@ -248,6 +248,10 @@ h3,
         display: flex;
         align-items: center;
         gap: 30px;
+
+        &.mobile {
+            display: none;
+        }
     }
 
     &__active-language {

@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let headerBurger = document.querySelector('.header__burger');
-let headerMenu = document.querySelector('.header .menu');
+let headerMenu = document.querySelector('.header__mobile-box');
 let headerMenuItem = document.querySelectorAll('.header .menu > .menu-item');
 let headerContainer = document.querySelector('.header > .container');
 
@@ -255,10 +255,14 @@ headerBurger.addEventListener('click', () => {
 
 for (let i = 0; i < headerMenuItem.length; i++) {
     headerMenuItem[i].addEventListener('click', () => {
-        for (let n = 0; n < headerMenuItem.length; n++) {
-            headerMenuItem[n].classList.remove('active');
-        };
+        if (headerMenuItem[i].classList.contains('active')) {
+            headerMenuItem[i].classList.remove('active');
+        } else {
+            for (let n = 0; n < headerMenuItem.length; n++) {
+                headerMenuItem[n].classList.remove('active');
+            };
 
-        headerMenuItem[i].classList.toggle('active');
+            headerMenuItem[i].classList.toggle('active');
+        };
     });
 };

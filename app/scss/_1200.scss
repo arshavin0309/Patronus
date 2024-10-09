@@ -13,61 +13,68 @@
                     height: calc(100% + 50px);
                     background: var(--body-bg);
                     filter: none;
-                    border-radius: 0;
                     transition: var(--transition);
+                    border-radius: 0;
                 }
             }
         }
 
         .menu {
+            .sub-menu {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        &__mobile-box {
             display: none;
 
             &.active {
-                display: flex;
                 position: absolute;
                 top: 80px;
                 left: -30px;
                 width: calc(100% + 60px);
-                background: var(--body-bg);
-                height: calc(100vh - 45px);
+                height: calc(100vh - 80px);
+                display: flex;
                 flex-direction: column;
-                align-items: start;
                 gap: 25px;
-                padding: 20px;
+                padding: 30px 40px;
+                background: var(--body-bg);
                 animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
-            }
 
-            &>.menu-item {
-                &.active {
-                    &>a {
-                        &::after {
-                            transition: var(--transition);
-                            transform: rotate(-180deg);
-                        }
-                    }
+                .menu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    align-items: start;
 
-                    .sub-menu {
-                        display: flex;
-                        position: initial;
-                        background: none;
-                        flex-direction: column;
-                        padding: 20px 30px 0;
-                        animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
+                    &-item {
+                        &.active {
+                            .sub-menu {
+                                position: initial;
+                                display: flex;
+                                flex-direction: column;
+                                background: none;
+                                padding: 20px 30px 0;
+                                animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
 
-                        a {
-                            color: rgba(239, 239, 239, .5019607843);
+                                a {
+                                    color: rgba(239,239,239,.5019607843);
+                                }
+                            }
                         }
                     }
                 }
             }
         }
 
-        .btn {
+        &__corner {
             display: none;
-        }
 
-        &__lang {
-            display: none;
+            &.mobile {
+                display: flex;
+            }
         }
 
         &__burger {

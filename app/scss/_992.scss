@@ -16,10 +16,11 @@
             }
         }
 
-        .menu {
+        &__mobile-box {
             &.active {
                 left: -10px;
                 width: calc(100% + 20px);
+                padding: 20px;
             }
         }
     }
