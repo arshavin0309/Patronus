@@ -254,6 +254,7 @@ headerBurger.addEventListener('click', () => {
     for (let i = 0; i < headerMenuItem.length; i++) {
         headerMenuItem[i].classList.remove('active');
     };
+    headerLang.classList.remove('active');
 });
 
 for (let i = 0; i < headerMenuItem.length; i++) {
@@ -264,7 +265,7 @@ for (let i = 0; i < headerMenuItem.length; i++) {
             for (let n = 0; n < headerMenuItem.length; n++) {
                 headerMenuItem[n].classList.remove('active');
             };
-            
+
             headerLang.classList.remove('active');
             headerMenuItem[i].classList.toggle('active');
         };

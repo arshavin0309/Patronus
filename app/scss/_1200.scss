@@ -51,6 +51,13 @@
 
                     &-item {
                         &.active {
+                            a {
+                                &::after {
+                                    transform: rotate(-180deg);
+                                    transition: var(--transition);
+                                }
+                            }
+
                             .sub-menu {
                                 position: initial;
                                 display: flex;
@@ -80,6 +87,13 @@
 
                     a {
                         color: rgba(239, 239, 239, .5019607843);
+                    }
+                }
+
+                .header__active-language {
+                    &::after {
+                        transform: rotate(-180deg);
+                        transition: var(--transition);
                     }
                 }
             }
