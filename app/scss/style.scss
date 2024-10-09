@@ -443,12 +443,6 @@ section {
             animation: rotate 20s linear 0s infinite normal none;
             border-radius: 50%;
         }
-
-        &.reverse {
-            &::after {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
-        }
     }
 }
 
@@ -549,16 +543,6 @@ section {
             height: 470px;
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-        }
-
-        &.reverse {
-            &::before {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
-
-            &::after {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
         }
 
         &::after {
@@ -786,12 +770,6 @@ section {
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
-
-        &.reverse {
-            &::before {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
-        }
     }
 
     &__analytics {
@@ -997,10 +975,6 @@ section {
             -webkit-animation: rotate 20s linear 0s infinite normal none;
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
-        }
-
-        &.reverse::after {
-            animation: rotate 20s linear 0s infinite reverse none;
         }
     }
 }
@@ -1566,11 +1540,6 @@ section {
         filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
     }
 
-    &.reverse::before,
-    &.reverse::after {
-        animation: rotate 20s linear 0s infinite reverse none;
-    }
-
     .container {
         display: flex;
         flex-direction: column;
@@ -1636,10 +1605,6 @@ section {
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             -webkit-animation: rotate 20s linear 0s infinite normal none;
             animation: rotate 20s linear 0s infinite normal none;
-        }
-
-        &.reverse::after {
-            animation: rotate 20s linear 0s infinite reverse none;
         }
     }
 }
@@ -1753,10 +1718,6 @@ section {
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
-        }
-
-        &:nth-child(3).reverse::after {
-            animation: rotate 20s linear 0s infinite reverse none;
         }
 
         &:nth-child(1) .platforms__content {
@@ -1919,11 +1880,6 @@ section {
         filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
     }
 
-    &.reverse::before,
-    &.reverse::after {
-        animation: rotate 20s linear 0s infinite reverse none;
-    }
-
     &::after {
         position: absolute;
         content: '';
@@ -1939,16 +1895,6 @@ section {
     .container {
         padding-top: 180px;
         padding-bottom: 180px;
-
-        &.reverse {
-            &::before {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
-
-            &::after {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
-        }
     }
 
     h2 {
@@ -2799,10 +2745,6 @@ section {
                     animation: rotate 20s linear 0s infinite normal none;
                     filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
                 }
-
-                &.reverse::before {
-                    animation: rotate 20s linear 0s infinite reverse none;
-                }
             }
 
             p {
@@ -2926,10 +2868,6 @@ section {
                 animation: rotate 20s linear 0s infinite normal none;
                 filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
             }
-
-            &.reverse::before {
-                animation: rotate 20s linear 0s infinite reverse none;
-            }
         }
     }
 }
@@ -3031,10 +2969,6 @@ section {
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
-        }
-
-        &.reverse::before {
-            animation: rotate 20s linear 0s infinite reverse none;
         }
     }
 }
@@ -3164,10 +3098,6 @@ section {
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
-        }
-
-        &.reverse::before {
-            animation: rotate 20s linear 0s infinite reverse none;
         }
     }
 }
@@ -3332,10 +3262,6 @@ section {
             height: calc(100% + 70px);
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-        }
-
-        &.reverse::after {
-            animation: rotate 20s linear 0s infinite reverse none;
         }
     }
 

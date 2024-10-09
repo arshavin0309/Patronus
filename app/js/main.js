@@ -1,9 +1,14 @@
 let swiper1 = new Swiper('.swiper1', {
     loop: true,
-
     slidesPerView: 3,
     spaceBetween: 20,
-    mousewheel: { eventsTarget: 'body' },
+    // mousewheel: { eventsTarget: 'body' },
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -52,57 +57,6 @@ let swiper5 = new Swiper(".swiper5", {
         disableOnInteraction: false,
         pauseOnMouseEnter: true
     },
-});
-
-let scrollPos = 0;
-let joinUsImg = document.querySelector('.join-us__img');
-let howContainer = document.querySelector('.how .container');
-let doorsDecor = document.querySelector('.doors__decor');
-let acquaintanceImage = document.querySelector('.acquaintance__image');
-let banner = document.querySelector('.banner');
-let traidingPlatformImage = document.querySelector('.traiding-platform__image');
-let platformsItem = document.querySelector('.platforms__item:nth-child(3)');
-let howWhite = document.querySelector('.how-white');
-let whatAreCryptocurrenciesImage = document.querySelector('.what-are-cryptocurrencies__image');
-let whatAreStocksImage = document.querySelector('.what-are-stocks__image');
-let startInvestingImage = document.querySelector('.start-investing__image');
-let whatAreIndexesImage = document.querySelector('.what-are-indexes__image');
-let aboutImage = document.querySelector('.about__image');
-
-$(window).scroll(function () {
-    var st = $(this).scrollTop();
-
-    if (st > scrollPos) {
-        if (joinUsImg) { joinUsImg.classList.remove('reverse'); };
-        if (howContainer) { howContainer.classList.remove('reverse'); };
-        if (doorsDecor) { doorsDecor.classList.remove('reverse'); };
-        if (acquaintanceImage) { acquaintanceImage.classList.remove('reverse'); };
-        if (banner) { banner.classList.remove('reverse'); };
-        if (traidingPlatformImage) { traidingPlatformImage.classList.remove('reverse'); };
-        if (platformsItem) { platformsItem.classList.remove('reverse'); };
-        if (howWhite) { howWhite.classList.remove('reverse'); };
-        if (whatAreCryptocurrenciesImage) { whatAreCryptocurrenciesImage.classList.remove('reverse'); };
-        if (whatAreStocksImage) { whatAreStocksImage.classList.remove('reverse'); };
-        if (startInvestingImage) { startInvestingImage.classList.remove('reverse'); };
-        if (whatAreIndexesImage) { whatAreIndexesImage.classList.remove('reverse'); };
-        if (aboutImage) { aboutImage.classList.remove('reverse'); };
-    } else {
-        if (joinUsImg) { joinUsImg.classList.add('reverse'); };
-        if (howContainer) { howContainer.classList.add('reverse'); };
-        if (doorsDecor) { doorsDecor.classList.add('reverse'); };
-        if (acquaintanceImage) { acquaintanceImage.classList.add('reverse'); };
-        if (banner) { banner.classList.add('reverse'); };
-        if (traidingPlatformImage) { traidingPlatformImage.classList.add('reverse'); };
-        if (platformsItem) { platformsItem.classList.add('reverse'); };
-        if (howWhite) { howWhite.classList.add('reverse'); };
-        if (whatAreCryptocurrenciesImage) { whatAreCryptocurrenciesImage.classList.add('reverse'); };
-        if (whatAreStocksImage) { whatAreStocksImage.classList.add('reverse'); };
-        if (startInvestingImage) { startInvestingImage.classList.add('reverse'); };
-        if (whatAreIndexesImage) { whatAreIndexesImage.classList.add('reverse'); };
-        if (aboutImage) { aboutImage.classList.add('reverse'); };
-    };
-
-    scrollPos = st;
 });
 
 let tableBtn = document.querySelectorAll(".table__btn");
