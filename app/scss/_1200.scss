@@ -46,12 +46,35 @@
                 .menu {
                     display: flex;
                     flex-direction: column;
-                    gap: 25px;
+                    gap: 0;
                     align-items: start;
 
-                    &-item {
+                    &>.menu-item {
+                        width: 100%;
+
+                        &:last-child {
+                            &>a {
+                                border-bottom: 1px solid #EFEFEF80;
+                            }
+                        }
+
+                        &>a {
+                            border-top: 1px solid #EFEFEF80;
+                        }
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 20px;
+                            width: 100%;
+                            padding: 13px 0;
+                        }
+
                         &.active {
-                            a {
+                            &>a {
+                                background: var(--violet);
+
                                 &::after {
                                     transform: rotate(-180deg);
                                     transition: var(--transition);
@@ -62,11 +85,14 @@
                                 position: initial;
                                 display: flex;
                                 flex-direction: column;
-                                background: none;
-                                padding: 20px 30px 0;
-                                animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
+                                padding: 0;
+                                gap: 0;
+                                background: var(--body-bg);
+                                border-radius: 0;
+                                animation: show-sub-item .3s ease-in-out 0s 1 normal none;
 
                                 a {
+                                    padding: 13px 10px;
                                     color: rgba(239, 239, 239, .5019607843);
                                 }
                             }
