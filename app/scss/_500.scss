@@ -35,6 +35,7 @@
 
         &__mobile-box {
             &.active {
+                height: calc(100vh - 80px);
                 top: 50px;
                 padding: 20px 10px;
             }
