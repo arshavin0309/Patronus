@@ -28,6 +28,12 @@
     .contacts {
         .container {
             grid-template-columns: 1fr;
+            grid-template-rows: initial;
+        }
+
+        &__form {
+            order: 1;
+            grid-row: initial;
         }
     }
 }
