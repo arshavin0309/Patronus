@@ -6,7 +6,7 @@
     
     .header {
         .container {
-            top: 30px;
+            top: 0;
             
             &::before {
                 top: -40px;
@@ -14,6 +14,11 @@
                 left: -40px;
                 width: calc(100% + 80px);
             }
+        }
+
+        &__box {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         &__mobile-box {

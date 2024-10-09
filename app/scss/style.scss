@@ -157,6 +157,7 @@ h3,
         border: none;
         flex: 0 0 auto;
         cursor: pointer;
+        transition: var(--transition);
     }
 
     .container {

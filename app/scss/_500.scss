@@ -30,14 +30,14 @@
         }
 
         &__logo {
-            max-width: 95px;
+            max-width: 98px;
         }
 
         &__mobile-box {
             &.active {
-                height: calc(100vh - 80px);
+                height: calc(100vh - 50px);
                 top: 50px;
-                padding: 20px 10px;
+                padding: 0 10px 40px;
             }
         }
     }

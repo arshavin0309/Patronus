@@ -13,6 +13,10 @@
                     transition: var(--transition);
                     border-radius: 0;
                 }
+
+                .header__burger {
+                    background: url(../images/close.svg) center / contain no-repeat;
+                }
             }
         }
 
@@ -53,10 +57,23 @@
                             &>a {
                                 border-bottom: 1px solid #EFEFEF80;
                             }
+
+                            &.active {
+                                &>a {
+                                    border-bottom: 1px solid var(--violet);
+                                }
+                            }
                         }
 
                         &>a {
                             border-top: 1px solid #EFEFEF80;
+
+                            &::after {
+                                content: '';
+                                width: 11px;
+                                height: 5px;
+                                background: url(../images/bottom.svg) center / contain no-repeat;
+                            }
                         }
 
                         a {
@@ -70,6 +87,7 @@
 
                         &.active {
                             &>a {
+                                border-top: 1px solid var(--violet);
                                 background: var(--violet);
 
                                 &::after {
@@ -82,7 +100,7 @@
                                 position: initial;
                                 display: flex;
                                 flex-direction: column;
-                                padding: 0;
+                                padding: 10px 0;
                                 gap: 0;
                                 background: var(--body-bg);
                                 border-radius: 0;
@@ -90,7 +108,7 @@
 
                                 a {
                                     padding: 13px 10px;
-                                    color: rgba(239, 239, 239, .5019607843);
+                                    color: var(--white);
                                 }
                             }
                         }
@@ -129,6 +147,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 40px;
             padding: 0;
             background: none;
 
