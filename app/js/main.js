@@ -7,6 +7,7 @@ let swiper1 = new Swiper('.swiper1', {
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
 
     pagination: {
@@ -21,6 +22,7 @@ let swiper2 = new Swiper(".swiper2", {
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
     pagination: {
         el: ".swiper-pagination",
@@ -243,6 +245,7 @@ let headerBurger = document.querySelector('.header__burger');
 let headerMenu = document.querySelector('.header__mobile-box');
 let headerMenuItem = document.querySelectorAll('.header .menu > .menu-item');
 let headerContainer = document.querySelector('.header > .container');
+let headerLang = document.querySelector('.header__lang');
 
 headerBurger.addEventListener('click', () => {
     headerMenu.classList.toggle('active');
@@ -261,8 +264,17 @@ for (let i = 0; i < headerMenuItem.length; i++) {
             for (let n = 0; n < headerMenuItem.length; n++) {
                 headerMenuItem[n].classList.remove('active');
             };
-
+            
+            headerLang.classList.remove('active');
             headerMenuItem[i].classList.toggle('active');
         };
     });
 };
+
+headerLang.addEventListener('click', () => {
+    for (let n = 0; n < headerMenuItem.length; n++) {
+        headerMenuItem[n].classList.remove('active');
+    };
+
+    headerLang.classList.toggle('active');
+})

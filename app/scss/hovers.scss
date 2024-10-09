@@ -106,6 +106,7 @@
             &:hover {
                 transform: translateY(-30px);
                 margin-top: 0;
+                transition: var(--transition);
 
                 .btn {
                     display: block;

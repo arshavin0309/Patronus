@@ -60,10 +60,26 @@
                                 animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
 
                                 a {
-                                    color: rgba(239,239,239,.5019607843);
+                                    color: rgba(239, 239, 239, .5019607843);
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        &__lang {
+            &.active {
+                .header__languages {
+                    position: initial;
+                    display: flex;
+                    flex-direction: column;
+                    background: none;
+                    animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
+
+                    a {
+                        color: rgba(239, 239, 239, .5019607843);
                     }
                 }
             }
@@ -74,6 +90,8 @@
 
             &.mobile {
                 display: flex;
+                flex-direction: column;
+                align-items: start;
             }
         }
 
