@@ -6,10 +6,60 @@
     .header {
         .container {
             top: 30px;
+
+            &.active {
+                &::before {
+                    top: -30px;
+                    height: calc(100% + 50px);
+                    background: var(--body-bg);
+                    filter: none;
+                    border-radius: 0;
+                    transition: var(--transition);
+                }
+            }
         }
 
         .menu {
             display: none;
+
+            &.active {
+                display: flex;
+                position: absolute;
+                top: 80px;
+                left: -30px;
+                width: calc(100% + 60px);
+                background: var(--body-bg);
+                height: calc(100vh - 45px);
+                flex-direction: column;
+                align-items: start;
+                gap: 25px;
+                padding: 20px;
+                animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
+            }
+
+            &>.menu-item {
+                &.active {
+                    &>a {
+                        &::after {
+                            transition: var(--transition);
+                            transform: rotate(-180deg);
+                        }
+                    }
+
+                    .sub-menu {
+                        display: flex;
+                        position: initial;
+                        background: none;
+                        flex-direction: column;
+                        padding: 20px 30px 0;
+                        animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
+
+                        a {
+                            color: rgba(239, 239, 239, .5019607843);
+                        }
+                    }
+                }
+            }
         }
 
         .btn {

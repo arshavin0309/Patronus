@@ -11,6 +11,12 @@
             }
         }
 
+        .menu {
+            &.active {
+                top: 45px;
+            }
+        }
+
         &__logo {
             max-width: 95px;
         }
