@@ -72,11 +72,36 @@
         }
     }
 
+    .calendar {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .join-us {
         .container {
             padding-top: 80px;
             padding-bottom: 20px;
             gap: 30px;
+            grid-template-columns: 1fr;
+        }
+
+        &__box {
+            min-width: initial;
+        }
+
+        &__img {
+            &::before {
+                display: none;
+            }
+        }
+
+        .for-desktop {
+            display: none;
+        }
+
+        .for-mobile {
+            display: block;
         }
 
         h2 {

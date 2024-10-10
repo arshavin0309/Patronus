@@ -60,6 +60,12 @@
         }
     }
 
+    .calendar {
+        .container {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
     .join-us {
         .container {
             align-items: start;

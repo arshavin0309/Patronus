@@ -17,13 +17,16 @@ let swiper1 = new Swiper('.swiper1', {
 });
 
 let swiper2 = new Swiper(".swiper2", {
+    loop: true,
     spaceBetween: 30,
     centeredSlides: true,
+
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
