@@ -40,7 +40,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 70px;
-                padding: 30px 40px;
+                padding: 30px 40px 40px;
                 background: var(--body-bg);
                 animation: show-sub-menu .2s ease-in-out 0s 1 normal none;
 
@@ -66,6 +66,7 @@
                         }
 
                         &>a {
+                            height: 49px;
                             border-top: 1px solid #EFEFEF80;
 
                             &::after {
@@ -86,7 +87,13 @@
                         }
 
                         &.active {
+
                             &>a {
+                                width: calc(100% + 80px);
+                                margin-left: -40px;
+                                padding-left: 40px;
+                                margin-right: -40px;
+                                padding-right: 40px;
                                 border-top: 1px solid var(--violet);
                                 background: var(--violet);
 
@@ -241,39 +248,25 @@
 
     .hero {
         .container {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         &__img {
             margin: auto;
         }
-
-        .btn {
-            margin-top: 30px;
-        }
-    }
-
-    .for-desktop {
-        display: none;
-    }
-
-    .for-mobile {
-        display: block;
     }
 
     .join-us {
         .container {
-            grid-template-columns: 1fr;
-            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
         &__img {
             order: 1;
-            overflow: hidden;
-
-            &::before {
-                display: none;
-            }
+            width: auto;
+            height: auto;
         }
     }
 
@@ -295,29 +288,6 @@
 
         .swiper1 {
             display: none;
-        }
-    }
-
-    .how {
-        .container {
-            &::before {
-                display: none;
-            }
-
-            &::after {
-                display: none;
-            }
-        }
-
-        &__list {
-            flex-direction: column;
-            gap: 30px;
-            margin-bottom: 30px;
-            align-items: center;
-        }
-
-        &__item {
-            text-align: center;
         }
     }
 

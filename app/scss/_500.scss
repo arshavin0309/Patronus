@@ -15,18 +15,6 @@
             a {
                 font-size: 16px;
             }
-
-            &>.menu-item {
-                &.active {
-                    &>a {
-                        margin-left: -10px;
-                        margin-right: -10px;
-                        width: calc(100% + 20px);
-                        padding-left: 10px;
-                        padding-right: 10px;
-                    }
-                }
-            }
         }
 
         &__logo {
@@ -47,10 +35,11 @@
 
         .container {
             padding-bottom: 0;
+            grid-template-columns: 1fr;
         }
 
         &__item {
-            max-width: 300px;
+            max-width: 100%;
 
             img {
                 max-width: 145px;
@@ -61,9 +50,25 @@
             margin-bottom: 50px;
         }
 
-        &__number {
-            margin-bottom: 0;
-            font-size: 18px;
+        &__box {
+            min-width: 100%;
+        }
+
+        &__item {
+            margin-bottom: 10px;
+        }
+
+        &__img {
+            min-width: 100%;
+        }
+
+        .for-desktop {
+            display: none;
+        }
+
+        .for-mobile {
+            display: block;
+            margin-top: 30px;
         }
     }
 
@@ -103,6 +108,11 @@
     .how {
         padding-top: 10px;
         padding-bottom: 100px;
+
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
         h2 {
             max-width: 300px;

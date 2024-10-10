@@ -1,0 +1,33 @@
+@media (max-width: 1800px) {
+    .how {
+        &__before {
+            width: 185px;
+            height: 185px;
+            left: -135px;
+            top: 150px;
+        }
+
+        &__after {
+            width: 185px;
+            height: 185px;
+            right: -135px;
+            top: 150px;
+        }
+    }
+
+    .how-white {
+        &::before {
+            width: 185px;
+            height: 185px;
+            left: -135px;
+            top: calc(50% - 67px);
+        }
+
+        &::after {
+            width: 185px;
+            height: 185px;
+            right: -135px;
+            top: calc(50% - 67px);
+        }
+    }
+}

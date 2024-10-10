@@ -423,7 +423,7 @@ section {
         img {
             position: relative;
             margin: auto;
-            padding: 40px;
+            padding: 7%;
         }
 
         &::before {
@@ -532,6 +532,7 @@ section {
 }
 
 .how {
+    position: relative;
     padding-bottom: 180px;
 
     picture {
@@ -539,28 +540,24 @@ section {
         flex: 0 0 auto;
     }
 
-    .container {
-        &::before {
-            position: absolute;
-            content: '';
-            left: -570px;
-            top: -15%;
-            width: 470px;
-            height: 470px;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
-            animation: rotate 20s linear 0s infinite normal none;
-        }
+    &__before {
+        position: absolute;
+        left: -250px;
+        top: -60px;
+        width: 470px;
+        height: 470px;
+        background: url(../images/join-us-decor.svg) center / contain no-repeat;
+        animation: rotate 20s linear 0s infinite normal none;
+    }
 
-        &::after {
-            position: absolute;
-            content: '';
-            right: -570px;
-            top: -15%;
-            width: 470px;
-            height: 470px;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
-            animation: rotate 20s linear 0s infinite normal none;
-        }
+    &__after {
+        position: absolute;
+        right: -250px;
+        top: -60px;
+        width: 470px;
+        height: 470px;
+        background: url(../images/join-us-decor.svg) center / contain no-repeat;
+        animation: rotate 20s linear 0s infinite normal none;
     }
 
     h2 {
@@ -3783,6 +3780,7 @@ section {
 }
 
 @import '../scss/hovers';
+@import '../scss/_1800';
 @import '../scss/_1400';
 @import '../scss/_1300';
 @import '../scss/_1200';

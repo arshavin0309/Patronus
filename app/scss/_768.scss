@@ -61,6 +61,14 @@
     }
 
     .join-us {
+        .container {
+            align-items: start;
+        }
+
+        &__box {
+            min-width: 290px;
+        }
+
         &__img {
             width: 100%;
             height: auto;
@@ -74,6 +82,30 @@
 
         &__image {
             order: 1;
+        }
+    }
+
+    .hero {
+        &__box {
+            min-width: 290px;
+        }
+
+        &__img {
+            min-width: 350px;
+        }
+
+        &__number {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+
+        &__info {
+            max-width: 110px;
+        }
+
+        &__item {
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
     }
 }
