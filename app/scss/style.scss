@@ -3201,6 +3201,11 @@ section {
         padding-top: 175px;
     }
 
+    &__box {
+        z-index: 1;
+        position: relative;
+    }
+
     h1 {
         margin-bottom: 20px;
 
