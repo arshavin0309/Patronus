@@ -272,6 +272,10 @@
 
         h2 {
             margin-bottom: 20px;
+
+            &+p {
+                font-size: 16px;
+            }
         }
 
         &__box {
@@ -289,6 +293,22 @@
             &::before {
                 width: 30px;
                 height: 30px;
+            }
+        }
+
+        &__form {
+            input {
+                font-size: 16px;
+            }
+
+            textarea {
+                height: 130px;
+                font-size: 16px;
+            }
+
+            label[for=checkbox] {
+                font-size: 14px;
+                line-height: 17px;
             }
         }
 

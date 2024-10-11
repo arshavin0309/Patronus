@@ -2194,8 +2194,8 @@ section {
     position: relative;
 
     &-hero {
-        padding-top: 240px;
-        padding-bottom: 260px;
+        padding-top: 290px;
+        padding-bottom: 310px;
         background: url(../images/contacts-bg.svg) center bottom / 100% 100% no-repeat;
 
         .container {
@@ -2208,7 +2208,6 @@ section {
         p {
             max-width: 1090px;
             margin: auto;
-            margin-bottom: 20px;
             text-align: center;
         }
     }
@@ -2319,6 +2318,11 @@ section {
         justify-content: center;
         padding: 60px 50px;
         background: var(--liner2);
+
+        a,
+        address {
+            font-size: clamp(15px, 5vw, 18px);
+        }
     }
 
     &__mail {

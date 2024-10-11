@@ -213,12 +213,18 @@
 
             input {
                 padding: 10px 20px;
+
+                &[type=submit] {
+                    margin-top: 20px;
+                }
             }
         }
     }
 
     .successful-path {
         .container {
+            padding-top: 100px;
+            padding-bottom: 50px;
             grid-template-columns: 1fr 1fr;
         }
     }
@@ -314,6 +320,8 @@
     }
 
     .footer {
+        padding-top: 50px;
+
         .container {
             grid-template-columns: 1fr;
         }
