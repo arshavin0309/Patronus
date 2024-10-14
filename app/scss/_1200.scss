@@ -360,4 +360,65 @@
             gap: 80px;
         }
     }
+
+    .acquaintance {
+        margin-top: 0;
+
+        .container {
+            padding-top: 110px;
+            padding-bottom: 100px;
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    .swiper {
+        &4 {
+            padding-top: 30px;
+        }
+    }
+
+    .tariffs {
+        margin-bottom: 100px;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            height: 600px;
+            padding: 30px 25px;
+        }
+
+        ul {
+            gap: 10px;
+        }
+
+        .btn {
+            margin-top: 40px;
+            padding: 15px;
+        }
+    }
+
+    .table {
+        margin-top: 100px;
+        padding-bottom: 100px;
+
+        h2 {
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                display: block;
+            }
+
+            &+p {
+                margin-bottom: 40px;
+            }
+        }
+    }
 }

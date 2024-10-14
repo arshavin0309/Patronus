@@ -31,6 +31,18 @@
         }
     }
 
+    .acquaintance {
+        h1 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .tariffs {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .contacts {
         .container {
             display: flex;

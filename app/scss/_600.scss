@@ -1,3 +1,7 @@
 @media (max-width: 600px) {
-    
+    .acquaintance {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
 }

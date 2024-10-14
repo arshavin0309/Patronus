@@ -931,7 +931,7 @@ section {
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 420px;
+        grid-template-columns: 1fr 480px;
         align-items: center;
         gap: 30px;
         padding-top: 80px;
@@ -951,6 +951,8 @@ section {
 
         img {
             position: relative;
+            margin: auto;
+            padding: 7%;
         }
 
         &::before {
@@ -960,6 +962,10 @@ section {
             left: -40px;
             width: calc(100% + 80px);
             height: calc(100% + 80px);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
             background: rgba(255, 255, 255, .4705882353);
             -webkit-filter: blur(150px);
             filter: blur(150px);
@@ -969,10 +975,10 @@ section {
         &::after {
             content: "";
             position: absolute;
-            top: -30px;
-            left: -30px;
-            width: calc(100% + 60px);
-            height: calc(100% + 60px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             -webkit-animation: rotate 20s linear 0s infinite normal none;
             animation: rotate 20s linear 0s infinite normal none;
@@ -1124,6 +1130,7 @@ section {
 
     .btn {
         margin-top: 50px;
+        padding: 20px;
     }
 
     &__btn {
@@ -1200,10 +1207,14 @@ section {
     h2 {
         max-width: 720px;
         margin-bottom: 20px;
-    }
 
-    h2+p {
-        margin-bottom: 50px;
+        &.mobile {
+            display: none;
+        }
+
+        &+p {
+            margin-bottom: 50px;
+        }
     }
 
     &__box {

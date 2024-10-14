@@ -66,6 +66,12 @@
         }
     }
 
+    .acquaintance {
+        .container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
     .join-us {
         .container {
             align-items: start;
