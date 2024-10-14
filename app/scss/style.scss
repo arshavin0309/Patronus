@@ -1425,6 +1425,7 @@ section {
         align-items: center;
         gap: 45px;
         justify-content: center;
+        flex-wrap: wrap;
 
         img {
             max-width: 100%;
@@ -1559,11 +1560,11 @@ section {
         gap: 30px;
         align-items: center;
         padding-top: 120px;
-        padding-bottom: 445px;
-        background: url(../images/banner-image.avif) center bottom / 1216px 415px no-repeat;
+        padding-bottom: 0;
     }
 
     h2 {
+        text-align: center;
         color: var(--black);
     }
 }

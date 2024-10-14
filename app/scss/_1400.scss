@@ -32,4 +32,14 @@
             text-align: center;
         }
     }
+
+    .banner {
+        &::before {
+            left: -500px;
+        }
+
+        &::after {
+            right: -500px;
+        }
+    }
 }
