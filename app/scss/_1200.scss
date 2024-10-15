@@ -422,9 +422,23 @@
         }
 
         &__table {
-            th,
-            td  {
+
+            th {
+                padding: 23px 30px;
+                font-size: 16px;
+            }
+
+            td {
                 padding: 10px 30px;
+                font-size: 16px;
+
+                span {
+                    font-size: 16px;
+
+                    &:first-child {
+                        font-size: 18px;
+                    }
+                }
             }
         }
 

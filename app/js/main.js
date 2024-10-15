@@ -308,12 +308,14 @@ for (let i = 0; i < partnersItem.length; i++) {
 
         partnersItem[i].style = "display: none";
 
+        if (partnersItem[i].classList.contains('no-btn')) {
+            tableShow.style = 'display: none;';
+        } else {
+            tableShow.style = 'display: flex;';
+        }
+
         partnersBtn.innerHTML = partnersItem[i].innerHTML;
         partnersBtn.classList.toggle("active");
-
-        if (partnersBtn.innerHTML === 'Акции') {
-            console.log('1')
-        }
 
         $(".table-select__dropdown").slideToggle();
         $(".table-select").toggleClass('active');

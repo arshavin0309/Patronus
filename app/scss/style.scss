@@ -1258,47 +1258,54 @@ section {
             animation-timing-function: ease-in-out;
         }
 
+        th {
+            color: var(--white);
+        }
+
         th,
         td {
             padding: 25px 40px;
             font-size: 18px;
             font-weight: 400;
             line-height: 100%;
-            color: #EFEFEFCC;
             text-align: left;
             white-space: nowrap;
         }
 
-        td span {
-            display: block;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 100%;
-            color: #EFEFEFCC;
-        }
-
-        td span:first-child {
-            margin-bottom: 2px;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 130%;
+        td {
             color: var(--white);
+
+            span {
+                display: block;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 100%;
+                color: #EFEFEFCC;
+
+                &:first-child {
+                    margin-bottom: 2px;
+                    font-size: 22px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    color: var(--white);
+                }
+            }
         }
 
         tr {
             background: #253039;
-        }
 
-        tr:nth-child(2n) {
-            background: #414E57;
-        }
+            &:nth-child(2n) {
+                background: #414E57;
+            }
 
-        & tr:nth-child(n+8) {
-            display: none;
-        }
+            &:nth-child(n+8) {
+                display: none;
+            }
 
-        & tr.active {
-            display: table-row;
+            &.active {
+                display: table-row;
+            }
         }
     }
 
