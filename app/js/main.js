@@ -310,6 +310,11 @@ for (let i = 0; i < partnersItem.length; i++) {
 
         partnersBtn.innerHTML = partnersItem[i].innerHTML;
         partnersBtn.classList.toggle("active");
+
+        if (partnersBtn.innerHTML === 'Акции') {
+            console.log('1')
+        }
+
         $(".table-select__dropdown").slideToggle();
         $(".table-select").toggleClass('active');
 
