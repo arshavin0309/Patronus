@@ -278,14 +278,16 @@ for (let i = 0; i < headerMenuItem.length; i++) {
 
 
 
-$(".responsibility__tab").on("click", function () {
-    $(".responsibility__dropdown").slideToggle();
-    document.querySelector(".responsibility__tab").classList.toggle("active");
+$(".table-select__tab").on("click", function () {
+    $(".table-select").toggleClass('active');
+    $(".table-select__dropdown").slideToggle();
+    document.querySelector(".table-select__tab").classList.toggle("active");
 });
 
-let partnersBtn = document.querySelector(".responsibility__tab");
-let partnersItem = document.querySelectorAll(".responsibility__item");
-let partnersContainer = document.querySelectorAll(".responsibility__box");
+let partnersBox = document.querySelector('.table-select')
+let partnersBtn = document.querySelector(".table-select__tab");
+let partnersItem = document.querySelectorAll(".table-select__item");
+let partnersContainer = document.querySelectorAll(".table__table");
 
 for (let i = 0; i < partnersItem.length; i++) {
     if (partnersItem[i].innerHTML === partnersBtn.innerHTML) {
@@ -303,7 +305,8 @@ for (let i = 0; i < partnersItem.length; i++) {
 
         partnersBtn.innerHTML = partnersItem[i].innerHTML;
         partnersBtn.classList.toggle("active");
-        $(".responsibility__dropdown").slideToggle();
+        $(".table-select__dropdown").slideToggle();
+        $(".table-select").toggleClass('active');
 
         for (let m = 0; m < partnersContainer.length; m++) {
             partnersContainer[m].classList.remove("active");

@@ -3834,11 +3834,16 @@ section {
 
 
 
-.responsibility {
+.table-select {
     display: none;
     margin-bottom: 20px;
     background: var(--white);
     border-radius: 10px;
+    transition: var(--transition);
+
+    &.active {
+        border-radius: 0;
+    }
 
     &__tab {
         position: relative;
@@ -3846,18 +3851,23 @@ section {
         align-items: center;
         gap: 10px;
         width: 100%;
-        padding: 20px 15px;
+        padding: 12px 20px;
         padding-right: 45px;
         border: none;
         border-radius: 10px;
         text-align: left;
         background: var(--violet);
+        transition: var(--transition);
+
+        &.active {
+            border-radius: 0;
+        }
 
         &::after {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 11px;
+            height: 5px;
             right: 15px;
             top: 50%;
             transform: translateY(-50%);
@@ -3882,27 +3892,22 @@ section {
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 10px 15px;
+        padding: 12px 20px;
         text-align: left;
         list-style: none;
         color: var(--black);
 
         span {
+            width: 20px;
+            height: 20px;
             color: var(--black);
-        }
-
-        &:first-child {
-            padding-top: 0;
-        }
-
-        &:last-child {
-            padding-bottom: 20px;
+            filter: brightness(0) saturate(100%) invert(0%) sepia(42%) saturate(5323%) hue-rotate(21deg) brightness(99%) contrast(87%);
         }
     }
 }
 
-@media (max-width: 992px) {
-    .responsibility {
+@media (max-width: 900px) {
+    .table-select {
         display: block;
     }
 }
