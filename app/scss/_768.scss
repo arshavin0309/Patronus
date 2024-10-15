@@ -124,4 +124,45 @@
             padding-bottom: 5px;
         }
     }
+
+    .banner {
+        .container {
+            padding: 100px 10px;
+        }
+
+        &__before {
+            display: none;
+        }
+
+        &__after {
+            display: none;
+        }
+
+        h2 {
+            margin-bottom: 15%;
+            font-size: clamp(23px, 5vw, 30px);
+        }
+
+        .btn {
+            order: 1;
+            margin-top: -5px;
+        }
+
+        picture {
+            position: relative;
+
+            &::before {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                width: 60%;
+                height: 180%;
+                left: 20%;
+                top: -40%;
+                background: url(../images/join-us-decor.svg) center / contain no-repeat;
+                animation: rotate 20s linear 0s infinite normal none;
+                filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+            }
+        }
+    }
 }

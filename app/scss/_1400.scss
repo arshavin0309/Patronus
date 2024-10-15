@@ -34,12 +34,9 @@
     }
 
     .banner {
-        &::before {
-            left: -500px;
-        }
-
-        &::after {
-            right: -500px;
+        .container {
+            padding-left: 12%;
+            padding-right: 12%;
         }
     }
 }

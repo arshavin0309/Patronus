@@ -1529,29 +1529,55 @@ section {
     background: var(--liner1);
 
     &::before {
-        z-index: 1;
-        position: absolute;
-        content: "";
-        left: -400px;
-        top: 30px;
-        width: 640px;
-        height: 640px;
-        background: url(../images/join-us-decor.svg) center / contain no-repeat;
-        animation: rotate 20s linear 0s infinite normal none;
-        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+        display: none;
     }
 
-    &::after {
+    &__before {
         z-index: 1;
         position: absolute;
-        content: "";
-        right: -400px;
-        top: 30px;
+        left: -400px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 640px;
         height: 640px;
-        background: url(../images/join-us-decor.svg) center / contain no-repeat;
-        animation: rotate 20s linear 0s infinite normal none;
-        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+
+        width: 45%;
+        height: 90%;
+        left: -30%;
+
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            animation: rotate 20s linear 0s infinite normal none;
+            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+        }
+    }
+
+    &__after {
+        z-index: 1;
+        position: absolute;
+        right: -400px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 640px;
+        height: 640px;
+
+        width: 45%;
+        height: 90%;
+        right: -30%;
+
+        &::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            animation: rotate 20s linear 0s infinite normal none;
+            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+        }
     }
 
     .container {
