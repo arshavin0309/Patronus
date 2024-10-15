@@ -271,3 +271,44 @@ for (let i = 0; i < headerMenuItem.length; i++) {
         };
     });
 };
+
+
+
+
+
+
+
+$(".responsibility__tab").on("click", function () {
+    $(".responsibility__dropdown").slideToggle();
+    document.querySelector(".responsibility__tab").classList.toggle("active");
+});
+
+let partnersBtn = document.querySelector(".responsibility__tab");
+let partnersItem = document.querySelectorAll(".responsibility__item");
+let partnersContainer = document.querySelectorAll(".responsibility__box");
+
+for (let i = 0; i < partnersItem.length; i++) {
+    if (partnersItem[i].innerHTML === partnersBtn.innerHTML) {
+        partnersItem[i].style = "display: none;";
+    }
+}
+
+for (let i = 0; i < partnersItem.length; i++) {
+    partnersItem[i].addEventListener("click", () => {
+        for (let e = 0; e < partnersItem.length; e++) {
+            partnersItem[e].style = "display: flex";
+        }
+
+        partnersItem[i].style = "display: none";
+
+        partnersBtn.innerHTML = partnersItem[i].innerHTML;
+        partnersBtn.classList.toggle("active");
+        $(".responsibility__dropdown").slideToggle();
+
+        for (let m = 0; m < partnersContainer.length; m++) {
+            partnersContainer[m].classList.remove("active");
+        }
+
+        partnersContainer[i].classList.add("active");
+    });
+}
