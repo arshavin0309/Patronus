@@ -92,22 +92,33 @@ if (tableShow) {
 
 for (let i = 0; i < tableBtn.length; i++) {
     tableBtn[i].addEventListener("click", () => {
+        if (tableBtn[i].textContent === 'Акции') {
+            tableShow.style = 'display: none;'
+            tableTable[i].classList.add('no-btn');
+        } else {
+            tableShow.style = 'display: flex;';
+
+            for (let b = 0; b < tableTable.length; b++) {
+                tableTable[b].classList.remove('no-btn');
+            };
+        };
+
         tableShow.textContent = "Показать еще";
         tableShow.classList.remove('active');
 
         for (let i = 0; i < tableTr.length; i++) {
             tableTr[i].classList.remove("active");
-        }
+        };
 
         for (let n = 0; n < tableBtn.length; n++) {
             tableBtn[n].classList.remove("active");
             tableTable[n].classList.remove("active");
-        }
+        };
 
         tableBtn[i].classList.add("active");
         tableTable[i].classList.add("active");
     });
-}
+};
 
 for (let table of document.getElementsByTagName("table")) {
     let tableOverflow = document.createElement("div");
@@ -271,12 +282,6 @@ for (let i = 0; i < headerMenuItem.length; i++) {
         };
     });
 };
-
-
-
-
-
-
 
 $(".table-select__tab").on("click", function () {
     $(".table-select").toggleClass('active');

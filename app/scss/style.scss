@@ -1232,6 +1232,24 @@ section {
         border-collapse: collapse;
         border-bottom: 1px solid #253039;
 
+        &.no-btn {
+            border-bottom: none;
+
+            tr {
+                &:last-child {
+                    td {
+                        &:first-child {
+                            border-radius: 0 0 0 15px;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 0 15px 0;
+                        }
+                    }
+                }
+            }
+        }
+
         &.active {
             display: table;
             animation-name: content;
@@ -1248,6 +1266,7 @@ section {
             line-height: 100%;
             color: #EFEFEFCC;
             text-align: left;
+            white-space: nowrap;
         }
 
         td span {

@@ -420,6 +420,17 @@
                 margin-bottom: 40px;
             }
         }
+
+        &__table {
+            th,
+            td  {
+                padding: 10px 30px;
+            }
+        }
+
+        &__btn {
+            padding: 10px;
+        }
     }
 
     .advantages {
