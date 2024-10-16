@@ -32,7 +32,7 @@ function pages() {
         }))
         .pipe(dest('app'))
         .pipe(browserSync.stream())
-}
+}   
 
 function images() {
     return src(['app/images/src/*.*', '!app/images/src/*.svg'])
@@ -48,6 +48,7 @@ function images() {
         .pipe(imagemin())
 
         .pipe(dest('app/images/'))
+        .pipe(browserSync.stream())
 }
 
 function sprite() {
@@ -136,5 +137,4 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
-// exports.default = parallel(styles, images, scripts, pages, watching);
 exports.default = series(styles, images, scripts, pages, watching);
