@@ -568,14 +568,21 @@
 
             &:nth-child(3) {
                 .platforms__content {
-                    max-width: 60%;
+                    max-width: 100%;
                 }
 
-                &::before {
-                    background: image-set(
-                        url(../images/platforms-item-3.avif),
-                        url(../images/platforms-item-3.webp),
-                        url(../images/platforms-item-3.png)) right bottom / 40% no-repeat;
+                .platforms__links {
+                    max-width: 45%;
+                }
+                
+                .platforms__image {
+                    bottom: 0;
+                    height: 70%;
+                    transform: translateY(15%);
+                }
+
+                .btn {
+                    padding: 13px 10px;
                 }
             }
         }
