@@ -171,4 +171,49 @@
             grid-template-columns: 1fr 1fr;
         }
     }
+
+    .platforms {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        &__item {
+            padding: 40px 20px;
+            height: 710px;
+
+            &:nth-child(1) {
+                &::before {
+                    background: image-set(url(../images/platforms-item-1.avif),
+                            url(../images/platforms-item-1.webp),
+                            url(../images/platforms-item-1.png)) left -105px bottom / calc(100% + 150px) 300px no-repeat;
+                }
+
+                .platforms__content {
+                    max-width: 100%;
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    background: image-set(url(../images/platforms-item-2.avif),
+                            url(../images/platforms-item-2.webp),
+                            url(../images/platforms-item-2.png)) center bottom / contain no-repeat;
+                }
+
+                .platforms__content {
+                    max-width: 100%;
+                }
+            }
+
+            .btn {
+                padding: 15px;
+                font-size: 18px;
+            }
+        }
+
+        &__content {
+            justify-content: start;
+            align-items: center;
+        }
+    }
 }
