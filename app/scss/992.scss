@@ -3,11 +3,11 @@
         padding-left: 10px;
         padding-right: 10px;
     }
-    
+
     .header {
         .container {
             top: 0;
-            
+
             &::before {
                 top: -40px;
                 height: calc(100% + 70px);
@@ -36,27 +36,35 @@
             &:nth-child(1) {
                 order: 1;
             }
+
             &:nth-child(2) {
                 order: 2;
             }
+
             &:nth-child(3) {
                 order: 3;
             }
+
             &:nth-child(4) {
                 order: 6;
             }
+
             &:nth-child(5) {
                 order: 4;
             }
+
             &:nth-child(6) {
                 order: 5;
             }
+
             &:nth-child(7) {
                 order: 7;
             }
+
             &:nth-child(8) {
                 order: 9;
             }
+
             &:nth-child(9) {
                 order: 8;
             }
@@ -85,6 +93,26 @@
         &__form {
             order: 1;
             grid-row: initial;
+        }
+    }
+
+    .perform-operations {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            padding: 40px 20px;
+
+            &:nth-child(1) {
+                p {
+                    max-width: 100%;
+                }
+            }
+
+            p {
+                max-width: 100%;
+            }
         }
     }
 }

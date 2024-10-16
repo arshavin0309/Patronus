@@ -194,14 +194,22 @@
         }
     }
 
-    .swiper2 {
-        .swiper-pagination {
-            margin-top: 30px;
+    .swiper {
+        &2 {
+            .swiper-pagination {
+                margin-top: 30px;
+            }
+    
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+            }
         }
 
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
+        &3 {
+            .swiper-slide {
+                width: 100px !important;
+            }
         }
     }
 
@@ -319,6 +327,12 @@
                 width: 30px;
                 height: 30px;
             }
+        }
+    }
+
+    .traiding-platform {
+        .container {
+            grid-template-columns: 1fr;
         }
     }
 }

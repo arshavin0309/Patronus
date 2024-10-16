@@ -1631,7 +1631,7 @@ section {
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 420px;
+        grid-template-columns: 1fr 495px;
         align-items: center;
         gap: 30px;
     }
@@ -1647,12 +1647,15 @@ section {
 
     &__image {
         position: relative;
+        padding: 7%;
 
         img {
             position: relative;
+            margin: auto;
         }
 
         &::before {
+            z-index: -1;
             content: "";
             position: absolute;
             top: -40px;
@@ -1668,10 +1671,10 @@ section {
         &::after {
             content: "";
             position: absolute;
-            top: -30px;
-            left: -30px;
-            width: calc(100% + 60px);
-            height: calc(100% + 60px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             -webkit-animation: rotate 20s linear 0s infinite normal none;
             animation: rotate 20s linear 0s infinite normal none;
@@ -3939,14 +3942,15 @@ section {
 }
 
 @import '../scss/hovers';
-@import '../scss/_1800';
-@import '../scss/_1400';
-@import '../scss/_1300';
-@import '../scss/_1200';
-@import '../scss/_1024';
-@import '../scss/_992';
-@import '../scss/_900';
-@import '../scss/_768';
-@import '../scss/_600';
-@import '../scss/_500';
-@import '../scss/_360';
+@import '../scss/1800';
+@import '../scss/1400';
+@import '../scss/1300';
+@import '../scss/1200';
+@import '../scss/1024';
+@import '../scss/992';
+@import '../scss/900';
+@import '../scss/768';
+@import '../scss/700';
+@import '../scss/600';
+@import '../scss/500';
+@import '../scss/360';
