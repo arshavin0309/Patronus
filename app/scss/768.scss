@@ -197,11 +197,22 @@
                 &::before {
                     background: image-set(url(../images/platforms-item-2.avif),
                             url(../images/platforms-item-2.webp),
-                            url(../images/platforms-item-2.png)) center bottom / contain no-repeat;
+                            url(../images/platforms-item-2.png)) right -105px bottom / contain no-repeat;
                 }
 
                 .platforms__content {
                     max-width: 100%;
+                }
+            }
+
+            &:nth-child(3) {
+                .platforms__links {
+                    max-width: 100%;
+                }
+
+                .platforms__image {
+                    height: 330px;
+                    right: -25px;
                 }
             }
 
