@@ -69,13 +69,32 @@
         }
 
         h2 {
+            font-size: clamp(29px, 7vw, 30px);
+
             &+p {
                 margin-bottom: 0;
             }
         }
 
         &__image {
-            margin-left: -55px;
+            max-height: 365px;
+            width: calc(100% + 20px);
+            margin-left: -10px;
+            margin-right: -10px;
+            justify-content: end;
+
+            img {
+                margin-left: 0;
+                margin-right: 15px;
+                max-height: 365px;
+            }
+
+            &::before {
+                width: initial;
+                height: 88%;
+                left: auto;
+                right: 0;
+            }
         }
     }
 

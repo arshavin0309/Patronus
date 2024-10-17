@@ -227,4 +227,13 @@
             align-items: center;
         }
     }
+
+    .banner-2 {
+        &__image {
+            &::before {
+                top: auto;
+                bottom: -10%;
+            }
+        }
+    }
 }
