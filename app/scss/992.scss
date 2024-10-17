@@ -121,4 +121,32 @@
             padding: 40px 25px;
         }
     }
+
+    .stocks-hero {
+        &__list {
+            width: 100%;
+            gap: 10px;
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            padding: 30px 20px;
+            gap: 10px;
+            border-radius: 15px;
+        }
+    }
+
+    .indexes-hero {
+        &__list {
+            width: 100%;
+            gap: 10px;
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            padding: 30px 20px;
+            gap: 10px;
+            border-radius: 15px;
+        }
+    }
 }
