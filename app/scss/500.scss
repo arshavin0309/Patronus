@@ -199,7 +199,7 @@
             .swiper-pagination {
                 margin-top: 30px;
             }
-    
+
             .swiper-pagination-bullet {
                 width: 12px;
                 height: 12px;
@@ -333,6 +333,36 @@
     .traiding-platform {
         .container {
             grid-template-columns: 1fr;
+        }
+    }
+
+    .platforms {
+        &__item {
+            &:nth-child(2) {
+                &:before {
+                    background: image-set(url(../images/platforms-item-2.avif),
+                            url(../images/platforms-item-2.webp),
+                            url(../images/platforms-item-2.png)) right -140px bottom 60px / 440px no-repeat;
+                }
+            }
+
+            &:nth-child(3) {
+                .platforms__image {
+                    height: 300px;
+                    right: -25px;
+                    padding: 6%;
+                }
+
+                .btn {
+                    &.desktop {
+                        display: none;
+                    }
+
+                    &.mobile {
+                        display: flex;
+                    }
+                }
+            }
         }
     }
 }

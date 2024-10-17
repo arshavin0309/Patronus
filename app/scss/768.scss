@@ -194,10 +194,10 @@
             }
 
             &:nth-child(2) {
-                &::before {
+                &::before {                            
                     background: image-set(url(../images/platforms-item-2.avif),
-                            url(../images/platforms-item-2.webp),
-                            url(../images/platforms-item-2.png)) right -105px bottom / contain no-repeat;
+                    url(../images/platforms-item-2.webp),
+                    url(../images/platforms-item-2.png)) center bottom 60px / 440px no-repeat;
                 }
 
                 .platforms__content {
@@ -211,8 +211,8 @@
                 }
 
                 .platforms__image {
-                    height: 330px;
-                    right: -25px;
+                    height: 400px;
+                    padding: 5%;
                 }
             }
 

@@ -1743,6 +1743,7 @@ section {
         padding: 50px 60px;
         border-radius: 20px;
         background: var(--liner1);
+        overflow: hidden;
 
         &:nth-child(1) {
             &::before {
@@ -1805,6 +1806,12 @@ section {
                     background: url(../images/join-us-decor.svg) center / contain no-repeat;
                     animation: rotate 20s linear 0s infinite normal none;
                     filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
+                }
+            }
+
+            .btn {
+                &.mobile {
+                    display: none;
                 }
             }
 
