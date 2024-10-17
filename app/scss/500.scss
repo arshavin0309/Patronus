@@ -385,4 +385,11 @@
             margin: auto;
         }
     }
+
+    .quotes-online {
+        &__box {
+            flex-direction: column;
+            margin-bottom: 45px;
+        }
+    }
 }

@@ -527,10 +527,6 @@ section {
     }
 }
 
-.swiper1 {
-    overflow: visible;
-}
-
 .how {
     position: relative;
     padding-bottom: 180px;
@@ -662,23 +658,6 @@ section {
         font-weight: 500;
         line-height: 100%;
         color: var(--black);
-    }
-}
-
-.swiper2 {
-    .swiper-pagination-bullet {
-        width: 20px;
-        height: 20px;
-        margin: 0 5px;
-    }
-
-    .swiper-pagination-bullet-active {
-        background: var(--violet);
-    }
-
-    .swiper-pagination {
-        position: initial;
-        margin-top: 45px;
     }
 }
 
@@ -1146,42 +1125,69 @@ section {
             height: 3px;
             background: #EFEFEF99;
         }
-    }
 
-    &__btn:nth-child(1)::after {
-        border-radius: 50px 0 0 50px;
-    }
+        &:nth-child(1)::after {
+            border-radius: 50px 0 0 50px;
+        }
 
-    &__btn:nth-child(2)::after {
-        border-radius: 0 50px 50px 0;
-    }
+        &:nth-child(2)::after {
+            border-radius: 0 50px 50px 0;
+        }
 
-    &__btn.swiper-slide-thumb-active::after {
-        height: 5px;
-        transform: translateY(-1px);
-        background: var(--violet);
-        border-radius: 50px;
-    }
-}
-
-.swiper3 {
-    .swiper-slide {
-        width: 145px !important;
-        color: #EFEFEF99;
-    }
-
-    .swiper-slide-thumb-active {
-        color: var(--white);
-    }
-
-    .swiper-wrapper {
-        justify-content: center;
-        text-align: center;
+        &.swiper-slide-thumb-active::after {
+            height: 5px;
+            transform: translateY(-1px);
+            background: var(--violet);
+            border-radius: 50px;
+        }
     }
 }
 
-.swiper4 {
-    padding-top: 50px;
+.swiper {
+    &1 {
+        overflow: visible;
+    }
+
+    &2 {
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--violet);
+        }
+
+        .swiper-pagination {
+            position: initial;
+            margin-top: 45px;
+        }
+    }
+
+    &3 {
+        .swiper-slide {
+            width: 145px !important;
+            color: #EFEFEF99;
+        }
+
+        .swiper-slide-thumb-active {
+            color: var(--white);
+        }
+
+        .swiper-wrapper {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &4 {
+        padding-top: 50px;
+    }
+
+    &5 {
+        overflow: visible;
+    }
 }
 
 .table {
@@ -2207,8 +2213,10 @@ section {
 }
 
 .quotes-online {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    .container {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 
     h2 {
         margin-bottom: 20px;
@@ -2228,13 +2236,15 @@ section {
 }
 
 .charts {
-    margin-top: 120px;
-    margin-bottom: 200px;
-
     .container {
+        padding-bottom: 200px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+
+        &.mobile {
+            display: none;
+        }
     }
 
     &__item {
@@ -2260,6 +2270,38 @@ section {
     .widget-box {
         max-width: 450px;
         margin: auto;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        cursor: pointer;
+        line-height: 19px;
+        text-align: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #EFEFEF99;
+        }
+
+        &:nth-child(1)::after {
+            border-radius: 50px 0 0 50px;
+        }
+
+        &:nth-child(2)::after {
+            border-radius: 0 50px 50px 0;
+        }
+
+        &.swiper-slide-thumb-active::after {
+            height: 5px;
+            transform: translateY(-1px);
+            background: var(--violet);
+            border-radius: 50px;
+        }
     }
 }
 
@@ -3311,10 +3353,6 @@ section {
         height: 18px;
         margin-bottom: 15px;
     }
-}
-
-.swiper5 {
-    overflow: visible;
 }
 
 .about-hero {

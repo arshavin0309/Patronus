@@ -6,4 +6,16 @@
             margin-bottom: 0;
         }
     }
+
+    .charts {
+        .container {
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                display: block;
+            }
+        }
+    }
 }

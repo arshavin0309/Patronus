@@ -10,4 +10,13 @@
             padding: 20px 60px;
         }
     }
+
+    .quotes-online {
+        &__box {
+            p {
+                max-width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    }
 }

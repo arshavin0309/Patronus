@@ -38,7 +38,7 @@
     </section>
 
     <section class="charts">
-        <div class="container">
+        <div class="container desktop">
             <div class="charts__item">
                 <h2>Графики Online</h2>
                 <p class="text">Используйте главный инструмент трейдеров&nbsp;&mdash; технический анализ на&nbsp;графике финансового инструмента</p>
@@ -54,6 +54,37 @@
 
                 <div class="widget-box">
                     <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"ru","period":"all","multipleIndicators":true,"adaptive":true,"devSource":"WDT"}'></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mobile">
+            <div class="swiper swiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text2 charts__btn">Графики<br>Online</div>
+                    <div class="swiper-slide text2 charts__btn">Важные<br>события</div>
+                </div>
+            </div>
+
+            <div class="swiper swiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide charts__item">
+                        <h2>Графики Online</h2>
+                        <p class="text">Используйте главный инструмент трейдеров&nbsp;&mdash; технический анализ на&nbsp;графике финансового инструмента</p>
+
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"ru","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD","devSource":"WDT"}'></script>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide charts__item">
+                        <h2>Важные события</h2>
+                        <p class="text">Узнавайте первыми о&nbsp;главных экономических событиях мира и&nbsp;реакции рынка в&nbsp;реальном времени</p>
+
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"ru","period":"all","multipleIndicators":true,"adaptive":true,"devSource":"WDT"}'></script>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
