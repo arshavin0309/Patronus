@@ -1,33 +1,31 @@
 @media (max-width: 1800px) {
     .how {
         &__before {
-            width: 185px;
-            height: 185px;
-            left: -135px;
-            top: 150px;
+            width: 360px;
+            height: 360px;
+            left: -230px;
+            top: 40px;
         }
 
         &__after {
-            width: 185px;
-            height: 185px;
-            right: -135px;
-            top: 150px;
+            width: 360px;
+            height: 360px;
+            right: -230px;
+            top: 40px;
         }
     }
 
     .how-white {
-        &::before {
-            width: 185px;
-            height: 185px;
-            left: -135px;
-            top: calc(50% - 67px);
+        &__before {
+            width: 360px;
+            height: 360px;
+            left: -230px;
         }
 
-        &::after {
-            width: 185px;
-            height: 185px;
-            right: -135px;
-            top: calc(50% - 67px);
+        &__after {
+            width: 360px;
+            height: 360px;
+            right: -230px;
         }
     }
 }

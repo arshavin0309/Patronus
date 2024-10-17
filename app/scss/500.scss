@@ -365,4 +365,24 @@
             }
         }
     }
+
+    .how-white {
+        &__before {
+            top: 40%;
+        }
+
+        &__after {
+            top: 40%;
+        }
+
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &__item {
+            max-width: 270px;
+            margin: auto;
+        }
+    }
 }

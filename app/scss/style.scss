@@ -743,31 +743,20 @@ section {
         padding-bottom: 105px;
     }
 
-    &__img {
+    &__image {
         position: relative;
-        margin-top: -85px;
         height: calc(100% + 85px);
-
-        img {
-            z-index: 1;
-            position: relative;
-        }
-    }
-
-    &__decor {
-        position: absolute;
-        left: -10px;
-        width: 100%;
-        height: 100%;
+        margin-top: -85px;
         overflow: hidden;
 
         &::before {
+            z-index: -1;
             position: absolute;
+            top: 20%;
+            left: 0;
             content: '';
             width: 100%;
-            height: 100%;
-            top: 150px;
-            left: 0;
+            aspect-ratio: 1/1;
             background: url(../images/join-us-decor.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
@@ -1955,29 +1944,51 @@ section {
     background: var(--liner1);
 
     &::before {
-        z-index: initial;
-        position: absolute;
-        content: '';
-        left: -270px;
-        top: 120px;
-        width: 470px;
-        height: 470px;
-        background: url(../images/join-us-decor.svg) center / contain no-repeat;
-        animation: rotate 20s linear 0s infinite normal none;
-        border-radius: initial;
-        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+        display: none;
     }
 
-    &::after {
+    &__before {
+        z-index: initial;
         position: absolute;
-        content: '';
-        right: -270px;
-        top: 120px;
+        left: -270px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 470px;
         height: 470px;
-        background: url(../images/join-us-decor.svg) center / contain no-repeat;
-        animation: rotate 20s linear 0s infinite normal none;
-        filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            animation: rotate 20s linear 0s infinite normal none;
+            border-radius: initial;
+            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+        }
+    }
+
+    &__after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -270px;
+        width: 470px;
+        height: 470px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            animation: rotate 20s linear 0s infinite normal none;
+            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
+        }
     }
 
     .container {
@@ -2006,11 +2017,19 @@ section {
         transform: translateX(-50%);
     }
 
+    picture {
+        flex: 0 0 auto;
+
+        img {
+            width: 62px;
+            height: 120px;
+        }
+    }
+
     &__list {
         display: flex;
         gap: 50px;
         justify-content: center;
-        align-items: center;
         margin-bottom: 50px;
     }
 
@@ -3958,6 +3977,7 @@ section {
 
 @import '../scss/hovers';
 @import '../scss/1800';
+@import '../scss/1600';
 @import '../scss/1400';
 @import '../scss/1300';
 @import '../scss/1200';
