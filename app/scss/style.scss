@@ -761,6 +761,11 @@ section {
             animation: rotate 20s linear 0s infinite normal none;
             filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__analytics {
@@ -796,6 +801,12 @@ section {
                 right: 15px;
                 left: initial;
             }
+        }
+    }
+
+    .btn {
+        &.mobile {
+            display: none;
         }
     }
 }
