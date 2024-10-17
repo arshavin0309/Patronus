@@ -1,4 +1,20 @@
 @media (max-width: 1024px) {
+    .banner-1 {
+        &__image {
+            height: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .banner-2 {
+        &__image {
+            height: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
     .doors {
         &__image {
             height: 100%;
