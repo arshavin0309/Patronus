@@ -885,7 +885,7 @@ section {
     }
 }
 
-.doors {
+.banner-3 {
     z-index: 1;
     position: relative;
     background: var(--liner2);
@@ -950,16 +950,16 @@ section {
             padding-top: 0;
         }
 
-        .doors__box {
+        .banner-3__box {
             padding-top: 105px;
             padding-bottom: 105px;
         }
 
-        .doors__img img {
+        .banner-3__img img {
             object-position: bottom;
         }
 
-        .doors__decor {
+        .banner-3__decor {
             top: -10px;
             left: 60px;
 
@@ -2507,6 +2507,7 @@ section {
     }
 }
 
+// непонятно что
 .open-doors {
     background: var(--liner2);
 
@@ -2997,11 +2998,11 @@ section {
 }
 
 .cryptocurrencies {
-    .doors {
+    .banner-3 {
         &--news {
             background: var(--liner2);
 
-            .doors__decor {
+            .banner-3__decor {
                 top: -7px;
             }
         }
