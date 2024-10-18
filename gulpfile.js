@@ -137,4 +137,5 @@ exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist, building);
+exports.build = series(cleanDist, building);
 exports.default = series(styles, images, scripts, pages, watching);
