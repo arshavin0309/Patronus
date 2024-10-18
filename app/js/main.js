@@ -55,11 +55,11 @@ let swiper5 = new Swiper(".swiper5", {
     loop: true,
     freeMode: true,
 
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    //     pauseOnMouseEnter: true
-    // },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+    },
 
     breakpoints: {
         320: {
