@@ -4,4 +4,20 @@
             grid-template-columns: 2fr 1fr;
         }
     }
+
+    .why-is-it-profitable {
+        &__item {
+            width: 350px;
+
+            h3 {
+                max-width: 100%;
+                gap: 15px;
+
+                &::before {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
 }
