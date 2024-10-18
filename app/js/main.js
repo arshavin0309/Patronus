@@ -69,15 +69,22 @@ let swiper5 = new Swiper(".swiper5", {
                 rows: 2,
             }
         },
-        650: {
+        500: {
             slidesPerView: 2.5,
             spaceBetween: 20,
             grid: {
                 rows: 2,
             }
         },
-        900: {
+        750: {
             slidesPerView: 3.5,
+            spaceBetween: 20,
+            grid: {
+                rows: 2,
+            }
+        },
+        1100: {
+            slidesPerView: 4.5,
             spaceBetween: 20,
             grid: {
                 rows: 2,
