@@ -404,4 +404,20 @@
             gap: 10px;
         }
     }
+
+    .what-are-cryptocurrencies {
+        &__item {
+            &-1 {
+                grid-template-columns: 1fr;
+            }
+
+            &-2 {
+                grid-template-columns: 1fr;
+
+                .what-are-cryptocurrencies__image {
+                    order: 1;
+                }
+            }
+        }
+    }
 }
