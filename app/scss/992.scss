@@ -136,6 +136,17 @@
         }
     }
 
+    .cryptocurrencies-hero {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        &__item {
+            padding: 30px 20px;
+        }
+    }
+
     .indexes-hero {
         &__list {
             width: 100%;

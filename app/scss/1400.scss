@@ -59,4 +59,11 @@
             }
         }
     }
+
+    .benefit {
+        &__item {
+            width: 330px;
+            padding: 30px 20px;
+        }
+    }
 }

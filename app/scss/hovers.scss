@@ -5,6 +5,134 @@
         }
     }
 
+    .accordion {
+        h3 {
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+
+                &::after {
+                    background: url(../images/accordion-bottom-white.svg) var(--blue) center / 20px 10px no-repeat;
+                }
+            }
+        }
+    }
+
+    .major-stock-indexes {
+        &__item {
+            &:hover {
+                .major-stock-indexes__item--hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .platforms {
+        &__webtrader {
+            &:hover::before {
+                background: url(../images/platforms-btn-webtrader-hover.svg) center / contain no-repeat;
+            }
+        }
+
+        &__windows {
+            &:hover::before {
+                background: url(../images/platforms-btn-windows-hover.svg) center / contain no-repeat;
+            }
+        }
+
+        &__appstore {
+            &:hover::before {
+                background: url(../images/platforms-btn-appstore-hover.svg) center / contain no-repeat;
+            }
+        }
+
+        &__googleplay {
+            &:hover::before {
+                background: url(../images/platforms-btn-googleplay-hover.svg) center / contain no-repeat;
+            }
+        }
+    }
+
+    .history {
+        &__border {
+            &:hover {
+                background: var(--white);
+
+                & img {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(49%) saturate(53%) hue-rotate(260deg) brightness(114%) contrast(87%);
+                }
+
+                .history__image::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .values {
+        &__item {
+            &:nth-child(1) {
+                &:hover {
+                    .values__image {
+                        &::before {
+                            background: url(../images/values-item-hover-1.svg) center / 110px no-repeat;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                &:hover .values__image::before {
+                    background: url(../images/values-item-hover-2.svg) center / 110px no-repeat;
+                }
+            }
+
+            &:nth-child(3) {
+                &:hover .values__image::before {
+                    background: url(../images/values-item-hover-3.svg) center / 110px no-repeat;
+                }
+            }
+
+            &:nth-child(4) {
+                &:hover .values__image::before {
+                    background: url(../images/values-item-hover-4.svg) center / 110px no-repeat;
+                }
+            }
+
+            &:hover {
+                background: var(--violet);
+
+                h3 {
+                    color: var(--white);
+                }
+
+                p {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    .in-numbers {
+        &__border {
+            &:hover {
+                background: var(--white);
+
+                .h3 {
+                    color: var(--white);
+                }
+
+                .in-numbers__bg {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
     .header {
         .menu-item {
             a {

@@ -1387,7 +1387,8 @@ section {
     padding-bottom: 120px;
 
     &-overflow {
-        overflow: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
     }
 
     &__content {
@@ -2091,10 +2092,6 @@ section {
             transition: var(--transition);
             background: url(../images/platforms-btn-webtrader.svg) center / contain no-repeat;
         }
-
-        &:hover::before {
-            background: url(../images/platforms-btn-webtrader-hover.svg) center / contain no-repeat;
-        }
     }
 
     &__windows {
@@ -2106,10 +2103,6 @@ section {
             flex: 0 0 auto;
             transition: var(--transition);
             background: url(../images/platforms-btn-windows.svg) center / contain no-repeat;
-        }
-
-        &:hover::before {
-            background: url(../images/platforms-btn-windows-hover.svg) center / contain no-repeat;
         }
     }
 
@@ -2123,10 +2116,6 @@ section {
             transition: var(--transition);
             background: url(../images/platforms-btn-appstore.svg) center / contain no-repeat;
         }
-
-        &:hover::before {
-            background: url(../images/platforms-btn-appstore-hover.svg) center / contain no-repeat;
-        }
     }
 
     &__googleplay {
@@ -2138,10 +2127,6 @@ section {
             flex: 0 0 auto;
             transition: var(--transition);
             background: url(../images/platforms-btn-googleplay.svg) center / contain no-repeat;
-        }
-
-        &:hover::before {
-            background: url(../images/platforms-btn-googleplay-hover.svg) center / contain no-repeat;
         }
     }
 }
@@ -2784,11 +2769,16 @@ section {
 }
 
 .benefit {
+    .swiper {
+        display: none;
+    }
+
     .container {
         padding-bottom: 120px;
     }
 
     &__list {
+        width: 100%;
         display: flex;
         gap: 20px;
         justify-content: center;
@@ -2821,6 +2811,32 @@ section {
         &:nth-child(5) h3::before {
             background: url(../images/benefit-item-5.svg) center / contain no-repeat;
         }
+
+
+
+        
+
+        &:nth-child(6) h3::before {
+            background: url(../images/benefit-item-1.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(7) h3::before {
+            background: url(../images/benefit-item-2.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(8) h3::before {
+            background: url(../images/benefit-item-3.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(9) h3::before {
+            background: url(../images/benefit-item-4.svg) center / contain no-repeat;
+        }
+
+        &:nth-child(10) h3::before {
+            background: url(../images/benefit-item-5.svg) center / contain no-repeat;
+        }
+
+
 
         h3 {
             display: flex;
@@ -2899,6 +2915,10 @@ section {
         margin-bottom: 50px;
     }
 
+    .ui-accordion-header-icon {
+        display: none;
+    }
+
     .accordion {
         position: relative;
 
@@ -2961,16 +2981,6 @@ section {
 
             &:not(:first-child) {
                 margin-top: 30px;
-            }
-
-            &:hover {
-                &::before {
-                    opacity: 1;
-                }
-
-                &::after {
-                    background: url(../images/accordion-bottom-white.svg) var(--blue) center / 20px 10px no-repeat;
-                }
             }
 
             &.ui-accordion-header-active {
@@ -3526,12 +3536,6 @@ section {
                 margin-bottom: 30px;
             }
         }
-
-        &:hover {
-            .major-stock-indexes__item--hover {
-                opacity: 1;
-            }
-        }
     }
 
     &__image {
@@ -3763,18 +3767,6 @@ section {
             height: 40px;
             background: url(../images/ellipsis.svg) center / contain no-repeat;
         }
-
-        &:hover {
-            background: var(--white);
-
-            & img {
-                filter: brightness(0) saturate(100%) invert(100%) sepia(49%) saturate(53%) hue-rotate(260deg) brightness(114%) contrast(87%);
-            }
-
-            .history__image::after {
-                opacity: 1;
-            }
-        }
     }
 
     &__image {
@@ -3887,10 +3879,6 @@ section {
                 background: url(../images/values-item-1.svg) center / 110px no-repeat;
                 border-radius: 50%;
             }
-
-            &:hover .values__image::before {
-                background: url(../images/values-item-hover-1.svg) center / 110px no-repeat;
-            }
         }
 
         &:nth-child(2) {
@@ -3902,10 +3890,6 @@ section {
                 background: url(../images/values-item-2.svg) center / 110px no-repeat;
                 border-radius: 50%;
             }
-
-            &:hover .values__image::before {
-                background: url(../images/values-item-hover-2.svg) center / 110px no-repeat;
-            }
         }
 
         &:nth-child(3) {
@@ -3916,10 +3900,6 @@ section {
                 height: 100%;
                 background: url(../images/values-item-3.svg) center / 110px no-repeat;
                 border-radius: 50%;
-            }
-
-            &:hover .values__image::before {
-                background: url(../images/values-item-hover-3.svg) center / 110px no-repeat;
             }
         }
 
@@ -3933,22 +3913,6 @@ section {
                 height: 100%;
                 background: url(../images/values-item-4.svg) center / 110px no-repeat;
                 border-radius: 50%;
-            }
-
-            &:hover .values__image::before {
-                background: url(../images/values-item-hover-4.svg) center / 110px no-repeat;
-            }
-        }
-
-        &:hover {
-            background: var(--violet);
-
-            h3 {
-                color: var(--white);
-            }
-
-            p {
-                color: var(--white);
             }
         }
     }
@@ -4026,20 +3990,6 @@ section {
         margin: auto;
         margin-bottom: 20px;
         transition: var(--transition);
-
-        &:hover {
-            background: var(--white);
-
-            .h3 {
-                color: var(--white);
-            }
-
-            .in-numbers__bg {
-                &::after {
-                    opacity: 1;
-                }
-            }
-        }
     }
 
     &__bg {

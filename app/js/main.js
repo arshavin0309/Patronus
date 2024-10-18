@@ -64,6 +64,26 @@ let swiper5 = new Swiper(".swiper5", {
     },
 });
 
+let swiper6 = new Swiper('.swiper6', {
+    loop: true,
+    centeredSlides: true,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 10
+        },
+        700: {
+            slidesPerView: 2.5,
+            spaceBetween: 10
+        },
+        900: {
+            slidesPerView: 3.5,
+            spaceBetween: 10
+        }
+    }
+});
+
 let tableBtn = document.querySelectorAll(".table__btn");
 let tableTable = document.querySelectorAll(".table__table");
 
