@@ -113,10 +113,10 @@
 
         .btn {
             width: 100%;
+            margin-top: -10px;
 
             &.mobile {
                 display: inline-block;
-                margin-top: -30px;
             }
 
             &.desktop {
@@ -127,6 +127,21 @@
         h2 {
             &+p {
                 margin-bottom: 0;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            aspect-ratio: initial;
+            margin-bottom: 30px;
+
+            &::before {
+                top: 30px;
+            }
+
+            img {
+                object-position: bottom;
+                transform: none;
             }
         }
     }

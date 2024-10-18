@@ -959,8 +959,8 @@ section {
         }
 
         .banner-3__box {
-            padding-top: 105px;
-            padding-bottom: 105px;
+            //padding-top: 105px;
+            //padding-bottom: 105px;
         }
     }
 
@@ -3061,6 +3061,8 @@ section {
 }
 
 .what-are-cryptocurrencies {
+    z-index: 1;
+    position: relative;
     background: var(--liner3);
 
     &::before {

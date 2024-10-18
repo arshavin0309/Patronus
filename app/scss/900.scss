@@ -15,4 +15,11 @@
             padding-right: 70px;
         }
     }
+
+    .banner-3 {
+        &__image {
+            width: auto;
+            aspect-ratio: 1/1;
+        }
+    }
 }
