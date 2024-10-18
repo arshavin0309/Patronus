@@ -54,14 +54,43 @@ let swiper4 = new Swiper(".swiper4", {
 let swiper5 = new Swiper(".swiper5", {
     loop: true,
     freeMode: true,
-    spaceBetween: 20,
-    slidesPerView: 4,
 
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-    },
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    //     pauseOnMouseEnter: true
+    // },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            grid: {
+                rows: 2,
+            }
+        },
+        650: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+            grid: {
+                rows: 2,
+            }
+        },
+        900: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+            grid: {
+                rows: 2,
+            }
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            grid: {
+                rows: 1,
+            }
+        }
+    }
 });
 
 let swiper6 = new Swiper('.swiper6', {
