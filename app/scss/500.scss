@@ -263,7 +263,7 @@
         }
     }
 
-    .successful-path {
+    .banner-4 {
         .container {
             grid-template-columns: 1fr;
         }
@@ -402,6 +402,13 @@
     .cryptocurrencies-hero {
         &__item {
             gap: 10px;
+        }
+    }
+
+    .what-are-indexes {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
     }
 
