@@ -15,8 +15,10 @@
         }
     }
 
-    .banner-3 {
-        
+    .values {
+        &__item {
+            width: 63%;
+        }
     }
 
     .charts {

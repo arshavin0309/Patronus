@@ -22,4 +22,145 @@
             aspect-ratio: 1/1;
         }
     }
+
+    .values {
+        &__item {
+            width: 60%;
+            border-radius: 67px;
+            padding: 30px 20px;
+
+            p {
+                font-size: 16px;
+                text-align: left;
+            }
+
+            &:nth-child(2n) {
+                padding: 30px 20px;
+            }
+
+            &:nth-child(1) {
+                h3 {
+                    position: relative;
+
+                    &::before {
+                        z-index: 2;
+                        content: '';
+                        width: 60px;
+                        height: 60px;
+                        background: url(../images/values-item-1.svg) center / 40px no-repeat;
+                        box-shadow: 0.68px 1.36px 1.36px 0.68px #00000040;
+                        border-radius: 50%;
+                    }
+
+                    &::after {
+                        z-index: 1;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 60px;
+                        background: var(--liner3);
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                h3 {
+                    position: relative;
+
+                    &::before {
+                        z-index: 2;
+                        content: '';
+                        width: 60px;
+                        height: 60px;
+                        background: url(../images/values-item-2.svg) center / 40px no-repeat;
+                        box-shadow: 0.68px 1.36px 1.36px 0.68px #00000040;
+                        border-radius: 50%;
+                    }
+
+                    &::after {
+                        z-index: 1;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 60px;
+                        background: var(--liner3);
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                h3 {
+                    position: relative;
+
+                    &::before {
+                        z-index: 2;
+                        content: '';
+                        width: 60px;
+                        height: 60px;
+                        background: url(../images/values-item-3.svg) center / 40px no-repeat;
+                        box-shadow: 0.68px 1.36px 1.36px 0.68px #00000040;
+                        border-radius: 50%;
+                    }
+
+                    &::after {
+                        z-index: 1;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 60px;
+                        background: var(--liner3);
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                h3 {
+                    position: relative;
+
+                    &::before {
+                        z-index: 2;
+                        content: '';
+                        width: 60px;
+                        height: 60px;
+                        background: url(../images/values-item-4.svg) center / 40px no-repeat;
+                        box-shadow: 0.68px 1.36px 1.36px 0.68px #00000040;
+                        border-radius: 50%;
+                    }
+
+                    &::after {
+                        z-index: 1;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 60px;
+                        height: 60px;
+                        background: var(--liner3);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        &__image {
+            display: none;
+        }
+
+        h3 {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 15px;
+            align-items: center;
+            text-align: left;
+        }
+    }
 }
