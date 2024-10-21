@@ -3997,6 +3997,7 @@ section {
         }
 
         &::before {
+            z-index: -1;
             content: '';
             position: absolute;
             top: 50%;

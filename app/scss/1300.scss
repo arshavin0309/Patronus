@@ -37,13 +37,17 @@
                 &::after {
                     position: absolute;
                     content: '';
-                    top: 45%;
+                    top: 40%;
                     right: 0;
-                    transform: translate(calc(12px + 5px), -3px);
+                    transform: translateX(calc(12px + 5px));
                     width: 24px;
                     height: 6px;
                     background: url(../images/between-swiper.svg) center / contain no-repeat;
                 }
+            }
+
+            p {
+                height: 90px;
             }
 
             &:nth-child(2) {

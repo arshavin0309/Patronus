@@ -66,4 +66,27 @@
             padding: 30px 20px;
         }
     }
+
+    .in-numbers {
+        h2 {
+            margin-bottom: 55px;
+        }
+
+        &__box {
+            grid-template-columns: 2fr 1fr;
+            gap: 100px;
+        }
+
+        &__border {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+        }
+
+        &__bg {
+            width: 80%;
+            aspect-ratio: 1/1;
+            height: auto;
+        }
+    }
 }

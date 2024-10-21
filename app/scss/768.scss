@@ -208,6 +208,20 @@
         }
     }
 
+    .in-numbers {
+        &__box {
+            gap: 30px;
+        }
+
+        .h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
     .platforms {
         h2 {
             margin-bottom: 20px;

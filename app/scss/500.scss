@@ -280,6 +280,19 @@
         }
     }
 
+    .history {
+        .swiper7 {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        &__item {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
     .about-hero {
         .container {
             grid-template-columns: 1fr;
