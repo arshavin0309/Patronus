@@ -152,6 +152,38 @@
         }
     }
 
+    .in-numbers {
+        &__box {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__item {
+            width: 130px;
+        }
+
+        .swiper8 {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        &__image {
+            img {
+                max-height: 420px;
+                margin: auto;
+            }
+        }
+
+        &__border {
+            width: auto;
+        }
+    }
+
     .start-investing {
         .container {
             grid-template-columns: 1fr;
