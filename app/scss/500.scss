@@ -513,4 +513,27 @@
             width: calc(100% - 40px);
         }
     }
+
+    .pagination {
+        gap: 6px;
+
+        li {
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+            line-height: 14px;
+
+            span {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        a {
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
 }

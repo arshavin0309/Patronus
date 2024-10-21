@@ -298,4 +298,42 @@
             }
         }
     }
+
+    .news {
+        &__item {
+            transition: var(--transition);
+
+            &:hover {
+                transition: var(--transition);
+                border-radius: 15px;
+
+                &::before {
+                    transition: var(--transition);
+                    opacity: 0;
+                }
+
+                .news__image {
+                    &::before {
+                        transition: var(--transition);
+                        opacity: 0;
+                    }
+                }
+
+                h3 {
+                    transition: var(--transition);
+                    color: var(--black);
+                }
+
+                .news__date {
+                    transition: var(--transition);
+                    color: var(--black);
+
+                    &::before {
+                        transition: var(--transition);
+                        filter: brightness(0) saturate(100%) invert(0%) sepia(3%) saturate(1172%) hue-rotate(320deg) brightness(98%) contrast(87%);
+                    }
+                }
+            }
+        }
+    }
 }
