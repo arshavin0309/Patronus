@@ -7,6 +7,7 @@
     .header {
         .container {
             &::before {
+                top: -20px;
                 height: calc(100% + 50px);
             }
         }
@@ -23,10 +24,14 @@
 
         &__mobile-box {
             &.active {
-                height: calc(100vh - 50px);
-                top: 50px;
+                height: calc(100vh - 80px);
+                top: 80px;
                 padding: 0 10px 40px;
             }
+        }
+
+        &__box {
+            padding-top: 30px;
         }
     }
 
@@ -498,6 +503,14 @@
                     order: 1;
                 }
             }
+        }
+    }
+
+    .currencies {
+        &__image {
+            margin-left: 20px;
+            margin-right: 20px;
+            width: calc(100% - 40px);
         }
     }
 }

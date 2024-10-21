@@ -178,7 +178,7 @@ h3,
             width: 100%;
             height: calc(100% + 40px);
             background: image-set(url(../images/body-bg.avif), url(../images/body-bg.webp), url(../images/body-bg.png)) var(--body-bg) center / cover no-repeat;
-            filter: blur(15px);
+            filter: blur(10px);
             border-radius: 50px;
         }
     }

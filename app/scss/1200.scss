@@ -1094,24 +1094,6 @@
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .swiper5 {
         width: 100%;
         height: 100%;
@@ -1134,5 +1116,12 @@
         .swiper-slide:nth-child(2n) {
             transform: translateX(50%);
         }
+    }
+
+    .swiper2 {
+        padding-bottom: 160px;
+        background: image-set(url(../images/clients.avif),
+                url(../images/clients.webp),
+                url(../images/clients.png)) center bottom / 299px 142px no-repeat;
     }
 }

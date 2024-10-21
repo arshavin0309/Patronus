@@ -20,11 +20,11 @@ let swiper2 = new Swiper(".swiper2", {
     spaceBetween: 30,
     centeredSlides: true,
 
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    //     pauseOnMouseEnter: true,
+    // },
 
     pagination: {
         el: ".swiper-pagination",
