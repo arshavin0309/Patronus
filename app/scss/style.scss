@@ -696,6 +696,10 @@ section {
 
     .btn {
         margin-top: 40px;
+
+        &.mobile {
+            display: none;
+        }
     }
 }
 
@@ -740,9 +744,8 @@ section {
             content: '';
             width: 100%;
             aspect-ratio: 1/1;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
 
         img {
@@ -838,9 +841,8 @@ section {
             content: '';
             width: 100%;
             aspect-ratio: 1/1;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
 
         img {
@@ -936,9 +938,8 @@ section {
             right: 0;
             width: 94%;
             aspect-ratio: 1/1;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
 
         img {
@@ -1143,10 +1144,9 @@ section {
             left: 0;
             width: 100%;
             height: 100%;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
             -webkit-animation: rotate 20s linear 0s infinite normal none;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
     }
 }
@@ -1173,6 +1173,11 @@ section {
                 &::after {
                     background: var(--violet);
                 }
+            }
+
+            .btn {
+                color: var(--violet);
+                border: 1px solid var(--violet);
             }
 
             ul {
@@ -1772,9 +1777,8 @@ section {
             content: "";
             width: 100%;
             height: 100%;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-violet.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
         }
     }
 
@@ -1796,9 +1800,8 @@ section {
             content: "";
             width: 100%;
             height: 100%;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-violet.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
         }
     }
 
@@ -1995,9 +1998,8 @@ section {
                     right: 0;
                     width: 100%;
                     height: 100%;
-                    background: url(../images/join-us-decor.svg) center / contain no-repeat;
+                    background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
                     animation: rotate 20s linear 0s infinite normal none;
-                    filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
                 }
             }
 
@@ -2150,10 +2152,9 @@ section {
             content: '';
             width: 100%;
             height: 100%;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-violet.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
             border-radius: initial;
-            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
         }
     }
 
@@ -2172,9 +2173,8 @@ section {
             top: 0;
             width: 100%;
             height: 100%;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-violet.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
         }
     }
 
@@ -3110,9 +3110,8 @@ section {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: url(../images/join-us-decor.svg) center / contain no-repeat;
+                    background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
                     animation: rotate 20s linear 0s infinite normal none;
-                    filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
                 }
 
                 img {
@@ -3242,9 +3241,8 @@ section {
                 left: 0;
                 width: 100%;
                 aspect-ratio: 1/1;
-                background: url(../images/join-us-decor.svg) center / contain no-repeat;
+                background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
                 animation: rotate 20s linear 0s infinite normal none;
-                filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
             }
 
             img {
@@ -3353,9 +3351,8 @@ section {
             aspect-ratio: 1/1;
             bottom: -33%;
             left: 0;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
 
         img {
@@ -3496,9 +3493,8 @@ section {
             height: 100%;
             top: 0;
             left: 0;
-            background: url(../images/join-us-decor.svg) center / contain no-repeat;
+            background: url(../images/join-us-decor-blue.svg) center / contain no-repeat;
             animation: rotate 20s linear 0s infinite normal none;
-            filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(2672%) hue-rotate(205deg) brightness(92%) contrast(92%);
         }
 
         img {

@@ -159,11 +159,11 @@ let swiper8 = new Swiper('.swiper8', {
     slidesPerView: 2.5,
     spaceBetween: 10,
 
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    //     pauseOnMouseEnter: true,
-    // }
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    }
 });
 
 let tableBtn = document.querySelectorAll(".table__btn");

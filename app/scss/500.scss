@@ -76,6 +76,19 @@
         .container {
             grid-template-columns: 1fr;
         }
+
+        .btn {
+            margin-top: 0;
+
+            &.mobile {
+                order: 2;
+                display: inline-block;
+            }
+
+            &.desktop {
+                display: none;
+            }
+        }
     }
 
     .join-us {
@@ -323,6 +336,13 @@
 
         &__image {
             margin-right: -140px;
+        }
+    }
+
+    .banner {
+        picture {
+            margin-left: -23%;
+            margin-right: -23%;
         }
     }
 
