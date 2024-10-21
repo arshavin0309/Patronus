@@ -151,4 +151,42 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .start-investing {
+        .container {
+            grid-template-columns: 1fr;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        &__box {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        &__image {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        h2 {
+            &+p {
+                margin-bottom: 0;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: -30px;
+
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                display: inline-block;
+            }
+        }
+    }
 }

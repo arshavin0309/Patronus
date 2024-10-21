@@ -64,6 +64,10 @@
         .container {
             grid-template-columns: 2fr 1fr;
         }
+
+        .btn {
+            padding: 20px 40px;
+        }
     }
 
     .acquaintance {
@@ -84,6 +88,25 @@
         &__img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    .start-investing {
+        .container {
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        &__box {
+            width: 350px;
+        }
+
+        &__image {
+            width: 400px;
+        }
+
+        .btn {
+            padding: 20px 40px;
         }
     }
 

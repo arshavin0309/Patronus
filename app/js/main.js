@@ -2,7 +2,6 @@ let swiper1 = new Swiper('.swiper1', {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 20,
-    // mousewheel: { eventsTarget: 'body' },
 
     autoplay: {
         delay: 2500,
@@ -103,6 +102,12 @@ let swiper5 = new Swiper(".swiper5", {
 let swiper6 = new Swiper('.swiper6', {
     loop: true,
     centeredSlides: true,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
 
     breakpoints: {
         320: {
