@@ -20,4 +20,49 @@
             }
         }
     }
+
+    .history {
+        &__list {
+            display: none;
+        }
+
+        .swiper7 {
+            display: block;
+        }
+
+        &__item {
+            position: relative;
+
+            &:not(:last-child) {
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 45%;
+                    right: 0;
+                    transform: translate(calc(12px + 5px), -3px);
+                    width: 24px;
+                    height: 6px;
+                    background: url(../images/between-swiper.svg) center / contain no-repeat;
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+
+            &:nth-child(3) {
+                margin-top: 0;
+            }
+
+            &:nth-child(4) {
+                margin-top: 0;
+            }
+        }
+
+        &__border {
+            &::before {
+                display: none;
+            }
+        }
+    }
 }

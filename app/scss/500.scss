@@ -263,6 +263,46 @@
         }
     }
 
+    .about {
+        &__content {
+            grid-template-columns: 1fr;
+            margin-bottom: 30px;
+        }
+
+        &__image {
+            order: 1;
+        }
+
+        .h3 {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .about-hero {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        h1 {
+            &+p {
+                margin-bottom: 0;
+            }
+        }
+
+        .btn {
+            &.desktop {
+                display: none;
+            }
+
+            &.mobile {
+                display: inline-block;
+            }
+        }
+    }
+
     .banner-4 {
         .container {
             grid-template-columns: 1fr;

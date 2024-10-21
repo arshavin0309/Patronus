@@ -231,7 +231,7 @@
 
     h1,
     .h1 {
-        font-size: 40px;
+        font-size: clamp(37px, 10vw, 40px);
     }
 
     h2,
@@ -484,13 +484,52 @@
         .container {
             grid-template-columns: 2fr 1fr;
             gap: 20px;
+            padding-top: 110px;
+            padding-bottom: 100px;
+        }
+    }
+
+    .history {
+        &__border {
+            width: 120px;
+            width: 80%;
+            aspect-ratio: 1/1;
+            height: auto;
+        }
+
+        &__image {
+            width: 76%;
+            height: 76%;
+
+            img {
+                width: 65px;
+                height: 65px;
+            }
         }
     }
 
     .about {
+        margin-bottom: 100px;
+
         &__content {
             grid-template-columns: 1fr 2fr;
             gap: 80px;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+
+            &+p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .h3 {
+            font-weight: 400;
+
+            span {
+                font-size: 40px;
+            }
         }
     }
 

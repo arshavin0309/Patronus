@@ -125,6 +125,32 @@ let swiper6 = new Swiper('.swiper6', {
     }
 });
 
+let swiper7 = new Swiper('.swiper7', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //     pauseOnMouseEnter: true,
+    // },
+    
+    breakpoints: {
+        320: {
+            slidesPerView: 2.5,
+            spaceBetween: 10
+        },
+        600: {
+            slidesPerView: 3.5,
+            spaceBetween: 10
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 10
+        }
+    }
+});
+
 let tableBtn = document.querySelectorAll(".table__btn");
 let tableTable = document.querySelectorAll(".table__table");
 

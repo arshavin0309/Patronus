@@ -91,6 +91,12 @@
         }
     }
 
+    .about {
+        &__content {
+            gap: 30px;
+        }
+    }
+
     .start-investing {
         .container {
             grid-template-columns: 2fr 1fr;
@@ -195,6 +201,13 @@
         }
     }
 
+    .history {
+        &__border {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
     .platforms {
         h2 {
             margin-bottom: 20px;
@@ -217,10 +230,10 @@
             }
 
             &:nth-child(2) {
-                &::before {                            
+                &::before {
                     background: image-set(url(../images/platforms-item-2.avif),
-                    url(../images/platforms-item-2.webp),
-                    url(../images/platforms-item-2.png)) center bottom 60px / 440px no-repeat;
+                            url(../images/platforms-item-2.webp),
+                            url(../images/platforms-item-2.png)) center bottom 60px / 440px no-repeat;
                 }
 
                 .platforms__content {
