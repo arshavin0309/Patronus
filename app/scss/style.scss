@@ -956,18 +956,11 @@ section {
         }
     }
 
-    &--news {
-        background: none;
-
-        .news & .container {
-            padding-top: 0;
-        }
-
-        .banner-3__box {
-            //padding-top: 105px;
-            //padding-bottom: 105px;
-        }
-    }
+    // &--news {
+    //     .news & .container {
+    //         padding-top: 0;
+    //     }
+    // }
 
     .btn {
         &.mobile {
