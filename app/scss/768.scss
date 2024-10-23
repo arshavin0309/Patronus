@@ -58,6 +58,13 @@
                 padding: 10px 0;
                 border-bottom: 1px solid #EFEFEF80;
 
+                &.ui-state-active {
+                    &::after {
+                        transition: var(--transition);
+                        transform: rotate(-180deg);
+                    }
+                }
+
                 &::after {
                     content: '';
                     display: block;
@@ -211,9 +218,8 @@
                 height: 180%;
                 left: 20%;
                 top: -40%;
-                background: url(../images/join-us-decor.svg) center / contain no-repeat;
+                background: url(../images/join-us-decor-violet.svg) center / contain no-repeat;
                 animation: rotate 20s linear 0s infinite normal none;
-                filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(3055%) hue-rotate(216deg) brightness(93%) contrast(98%);
             }
         }
     }

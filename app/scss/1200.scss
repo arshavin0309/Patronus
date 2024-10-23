@@ -510,6 +510,18 @@
 
     .values {
         margin-bottom: 100px;
+
+        &__list {
+            &::before {
+                content: '';
+                left: -140px;
+                bottom: 130px;
+                width: 170px;
+                height: 510px;
+                background: #FFFFFF78;
+                filter: blur(150px);
+            }
+        }
     }
 
     .in-numbers {
@@ -792,6 +804,13 @@
         padding-top: 105px;
         padding-bottom: 100px;
         background: url(../images/section-bg-mobile.svg) center top 10px / 100% 100% no-repeat;
+    }
+
+    .forecasts {
+        .container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
     }
 
     .forecasts-hero {
