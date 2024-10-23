@@ -1,0 +1,96 @@
+<!--=include header.html -->
+
+<main>
+    <section class="analytics">
+        <div class="container">
+            <h1>Аналитика рынка</h1>
+            <p class="text">Ознакомьтесь с&nbsp;последними обновлениями и&nbsp;аналитическими обзорами, которые помогут вам оставаться в&nbsp;курсе текущих трендов и&nbsp;событий, влияющих на&nbsp;мировые рынки.</p>
+
+            <a href="##" class="btn" target="_blank">Открыть счёт</a>
+        </div>
+    </section>
+
+    <section class="state-of-the-market">
+        <div class="container">
+            <h2>Состояние рынка</h2>
+            <p class="text">Следите за&nbsp;текущим состоянием рынка по&nbsp;финансовым инструментам на&nbsp;рынке. Узнавайте цену на&nbsp;конкретное время и&nbsp;следите за&nbsp;её&nbsp;динамикой по&nbsp;различным инструментам, разным периодам</p>
+
+            <div class="widget-box">
+                <script src="https://api.marketcheese.com/widgets/markets/widget.js" data-config='{"language":"ru","orientation":"auto","defaultPeriod":"week","adaptive":true,"devSource":"WDT","groups":[{"name":"Форекс","symbols":"42,48,57,68,87"},{"name":"Товарные фьючерсы","symbols":"127,129,187,188"},{"name":"Акции США","symbols":"11,27,30,35,196"}]}'></script>
+            </div>
+        </div>
+    </section>
+
+    <section class="quotes-online">
+        <div class="container">
+            <h2>Котировки Online</h2>
+
+            <div class="quotes-online__box">
+                <p class="text">Котировки финансовых рынков с&nbsp;дополнительной информацией и&nbsp;графиками</p>
+
+                <a href="##" class="btn" target="_blank">Открыть счет</a>
+            </div>
+
+            <div class="widget-box">
+                <script src="https://api.marketcheese.com/widgets/quotes/widget.js" data-config='{"language":"ru","lastColumn":"todayIncrement","adaptive":true,"devSource":"WDT","groups":[{"name":"Форекс","symbols":"42,48,57,68,87"},{"name":"Товарные фьючерсы","symbols":"127,129,187,188"},{"name":"Акции США","symbols":"11,27,30,35,196"}]}'></script>
+            </div>
+        </div>
+    </section>
+
+    <section class="charts">
+        <div class="container desktop">
+            <div class="charts__item">
+                <h2>Графики Online</h2>
+                <p class="text">Используйте главный инструмент трейдеров&nbsp;&mdash; технический анализ на&nbsp;графике финансового инструмента</p>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"ru","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD","devSource":"WDT"}'></script>
+                </div>
+            </div>
+
+            <div class="charts__item">
+                <h2>Важные события</h2>
+                <p class="text">Узнавайте первыми о&nbsp;главных экономических событиях мира и&nbsp;реакции рынка в&nbsp;реальном времени</p>
+
+                <div class="widget-box">
+                    <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"ru","period":"all","multipleIndicators":true,"adaptive":true,"devSource":"WDT"}'></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mobile">
+            <div class="swiper swiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text2 charts__btn">Графики<br>Online</div>
+                    <div class="swiper-slide text2 charts__btn">Важные<br>события</div>
+                </div>
+            </div>
+
+            <div class="swiper swiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide charts__item">
+                        <h2>Графики Online</h2>
+                        <p class="text">Используйте главный инструмент трейдеров&nbsp;&mdash; технический анализ на&nbsp;графике финансового инструмента</p>
+
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"timeframe":"H1","barStyle":"Candle","offset":30,"colorScheme":"light","language":"ru","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":false,"symbol":"EURUSD","devSource":"WDT"}'></script>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide charts__item">
+                        <h2>Важные события</h2>
+                        <p class="text">Узнавайте первыми о&nbsp;главных экономических событиях мира и&nbsp;реакции рынка в&nbsp;реальном времени</p>
+
+                        <div class="widget-box">
+                            <script src="https://api.marketcheese.com/widgets/notifier/widget.js" data-config='{"language":"ru","period":"all","multipleIndicators":true,"adaptive":true,"devSource":"WDT"}'></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=include banner-2.html -->
+</main>
+
+<!--=include footer.html -->
