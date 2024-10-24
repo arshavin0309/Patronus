@@ -20,11 +20,11 @@ let swiper2 = new Swiper(".swiper2", {
     spaceBetween: 30,
     centeredSlides: true,
 
-    // autoplay: {
-    //     delay: 3500,
-    //     disableOnInteraction: false,
-    //     pauseOnMouseEnter: true,
-    // },
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
 
     pagination: {
         el: ".swiper-pagination",
@@ -271,21 +271,6 @@ for (let i = 0; i < tariffsBtn.length; i++) {
     });
 };
 
-// Установка title, для wp не понадобиться
-if (document.location.pathname === '/') { document.title = 'Главная' };
-if (document.location.pathname === '/404.html') { document.title = 'Страница не найдена' };
-if (document.location.pathname === '/terms-of-trade.html') { document.title = 'Условия торговли' };
-if (document.location.pathname === '/platform.html') { document.title = 'Платформа' };
-if (document.location.pathname === '/analytics.html') { document.title = 'Аналитика рынка' };
-if (document.location.pathname === '/news.html') { document.title = 'Новости рынка' };
-if (document.location.pathname === '/forecasts.html') { document.title = 'Прогнозы рынка' };
-if (document.location.pathname === '/currencies.html') { document.title = 'Валюты' };
-if (document.location.pathname === '/cryptocurrencies.html') { document.title = 'Криптовалюты' };
-if (document.location.pathname === '/stocks.html') { document.title = 'Акции' };
-if (document.location.pathname === '/indexes.html') { document.title = 'Индексы' };
-if (document.location.pathname === '/about.html') { document.title = 'О Patronus Investments' };
-if (document.location.pathname === '/contacts.html') { document.title = 'Контакты' };
-
 // окно с предупреждением о куки
 function getCookie(name) {
     let matches = document.cookie.match(
@@ -428,4 +413,4 @@ for (let i = 0; i < partnersItem.length; i++) {
 
         partnersContainer[i].classList.add("active");
     });
-}
+};
