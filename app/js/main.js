@@ -134,7 +134,7 @@ let swiper7 = new Swiper('.swiper7', {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
-    
+
     breakpoints: {
         0: {
             slidesPerView: 2.14,
@@ -174,38 +174,127 @@ let tableTr = document.querySelectorAll(".table__table tr");
 
 if (tableShow) {
     tableShow.addEventListener("click", () => {
-        if (tableShow.textContent === "Показать еще") {
-            for (let i = 0; i < tableTr.length; i++) {
-                tableTr[i].classList.add("active");
-            }
-            tableShow.textContent = "Скрыть";
-            tableShow.classList.add("active");
-        } else {
-            for (let i = 0; i < tableTr.length; i++) {
-                tableTr[i].classList.remove("active");
-            }
-            tableShow.textContent = "Показать еще";
-            document.getElementById('table').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if ($('html').is(':lang(ru)')) {
 
-            tableShow.classList.remove("active");
+            if (tableShow.textContent === "Показать еще") {
+                for (let i = 0; i < tableTr.length; i++) {
+                    tableTr[i].classList.add("active");
+                }
+                tableShow.textContent = "Скрыть";
+                tableShow.classList.add("active");
+            } else {
+                for (let i = 0; i < tableTr.length; i++) {
+                    tableTr[i].classList.remove("active");
+                }
+                tableShow.textContent = "Показать еще";
+                document.getElementById('table').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                tableShow.classList.remove("active");
+            }
+
+        }
+
+        if ($('html').is(':lang(en)')) {
+
+            if (tableShow.textContent === "Show more") {
+                for (let i = 0; i < tableTr.length; i++) {
+                    tableTr[i].classList.add("active");
+                }
+                tableShow.textContent = "Hide";
+                tableShow.classList.add("active");
+            } else {
+                for (let i = 0; i < tableTr.length; i++) {
+                    tableTr[i].classList.remove("active");
+                }
+                tableShow.textContent = "Show more";
+                document.getElementById('table').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                tableShow.classList.remove("active");
+            }
+
+        }
+
+        if ($('html').is(':lang(sv)')) {
+
+            if (tableShow.textContent === "Visa mer") {
+                for (let i = 0; i < tableTr.length; i++) {
+                    tableTr[i].classList.add("active");
+                }
+                tableShow.textContent = "Dölj";
+                tableShow.classList.add("active");
+            } else {
+                for (let i = 0; i < tableTr.length; i++) {
+                    tableTr[i].classList.remove("active");
+                }
+                tableShow.textContent = "Visa mer";
+                document.getElementById('table').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                tableShow.classList.remove("active");
+            }
+
         }
     });
 }
 
 for (let i = 0; i < tableBtn.length; i++) {
     tableBtn[i].addEventListener("click", () => {
-        if (tableBtn[i].textContent === 'Акции') {
-            tableShow.style = 'display: none;'
-            tableTable[i].classList.add('no-btn');
-        } else {
-            tableShow.style = 'display: flex;';
+        if ($('html').is(':lang(ru)')) {
 
-            for (let b = 0; b < tableTable.length; b++) {
-                tableTable[b].classList.remove('no-btn');
+            if (tableBtn[i].textContent === 'Акции') {
+                tableShow.style = 'display: none;'
+                tableTable[i].classList.add('no-btn');
+            } else {
+                tableShow.style = 'display: flex;';
+
+                for (let b = 0; b < tableTable.length; b++) {
+                    tableTable[b].classList.remove('no-btn');
+                };
             };
-        };
 
-        tableShow.textContent = "Показать еще";
+        }
+
+        if ($('html').is(':lang(en)')) {
+
+            if (tableBtn[i].textContent === 'Stocks') {
+                tableShow.style = 'display: none;'
+                tableTable[i].classList.add('no-btn');
+            } else {
+                tableShow.style = 'display: flex;';
+
+                for (let b = 0; b < tableTable.length; b++) {
+                    tableTable[b].classList.remove('no-btn');
+                };
+            };
+
+        }
+
+        if ($('html').is(':lang(sv)')) {
+
+            if (tableBtn[i].textContent === 'Aktier') {
+                tableShow.style = 'display: none;'
+                tableTable[i].classList.add('no-btn');
+            } else {
+                tableShow.style = 'display: flex;';
+
+                for (let b = 0; b < tableTable.length; b++) {
+                    tableTable[b].classList.remove('no-btn');
+                };
+            };
+
+        }
+
+        if ($('html').is(':lang(ru)')) {
+            tableShow.textContent = "Показать еще";
+        }
+
+        if ($('html').is(':lang(en)')) {
+            tableShow.textContent = "Show more";
+        }
+
+        if ($('html').is(':lang(sv)')) {
+            tableShow.textContent = "Visa mer";
+        }
+
         tableShow.classList.remove('active');
 
         for (let i = 0; i < tableTr.length; i++) {
@@ -242,34 +331,104 @@ let tariffsUl = document.querySelectorAll('.tariffs__list:nth-child(2) ul');
 let tariffsItem = document.querySelectorAll('.tariffs__list:nth-child(2) .tariffs__item');
 let tariffsBtn = document.querySelectorAll('.tariffs__btn');
 
-for (let i = 0; i < tariffsMore.length; i++) {
-    tariffsMore[i].addEventListener('click', () => {
-        if (tariffsMore[i].textContent === 'Подробнее') {
-            tariffsMore[i].textContent = 'Скрыть';
-        } else {
-            tariffsMore[i].textContent = 'Подробнее';
-        };
+if ($('html').is(':lang(ru)')) {
 
-        tariffsMore[i].classList.toggle('active');
-        tariffsUl[i].classList.toggle('active');
-        tariffsItem[i].classList.toggle('active');
-    });
-};
+    for (let i = 0; i < tariffsMore.length; i++) {
+        tariffsMore[i].addEventListener('click', () => {
+            if (tariffsMore[i].textContent === 'Подробнее') {
+                tariffsMore[i].textContent = 'Скрыть';
+            } else {
+                tariffsMore[i].textContent = 'Подробнее';
+            };
 
-for (let i = 0; i < tariffsBtn.length; i++) {
-    tariffsBtn[i].addEventListener('click', () => {
+            tariffsMore[i].classList.toggle('active');
+            tariffsUl[i].classList.toggle('active');
+            tariffsItem[i].classList.toggle('active');
+        });
+    };
 
-        for (let n = 0; n < tariffsMore.length; n++) {
-            tariffsMore[n].textContent = 'Подробнее';
-        }
+    for (let i = 0; i < tariffsBtn.length; i++) {
+        tariffsBtn[i].addEventListener('click', () => {
 
-        for (let n = 0; n < tariffsItem.length; n++) {
-            tariffsMore[n].classList.remove('active');
-            tariffsUl[n].classList.remove('active');
-            tariffsItem[n].classList.remove('active');
-        };
-    });
-};
+            for (let n = 0; n < tariffsMore.length; n++) {
+                tariffsMore[n].textContent = 'Подробнее';
+            }
+
+            for (let n = 0; n < tariffsItem.length; n++) {
+                tariffsMore[n].classList.remove('active');
+                tariffsUl[n].classList.remove('active');
+                tariffsItem[n].classList.remove('active');
+            };
+        });
+    };
+
+}
+
+if ($('html').is(':lang(en)')) {
+
+    for (let i = 0; i < tariffsMore.length; i++) {
+        tariffsMore[i].addEventListener('click', () => {
+            if (tariffsMore[i].textContent === 'Learn more') {
+                tariffsMore[i].textContent = 'Hide';
+            } else {
+                tariffsMore[i].textContent = 'Learn more';
+            };
+
+            tariffsMore[i].classList.toggle('active');
+            tariffsUl[i].classList.toggle('active');
+            tariffsItem[i].classList.toggle('active');
+        });
+    };
+
+    for (let i = 0; i < tariffsBtn.length; i++) {
+        tariffsBtn[i].addEventListener('click', () => {
+
+            for (let n = 0; n < tariffsMore.length; n++) {
+                tariffsMore[n].textContent = 'Learn more';
+            }
+
+            for (let n = 0; n < tariffsItem.length; n++) {
+                tariffsMore[n].classList.remove('active');
+                tariffsUl[n].classList.remove('active');
+                tariffsItem[n].classList.remove('active');
+            };
+        });
+    };
+
+}
+
+if ($('html').is(':lang(sv)')) {
+
+    for (let i = 0; i < tariffsMore.length; i++) {
+        tariffsMore[i].addEventListener('click', () => {
+            if (tariffsMore[i].textContent === 'Lär dig mer') {
+                tariffsMore[i].textContent = 'Dölj';
+            } else {
+                tariffsMore[i].textContent = 'Lär dig mer';
+            };
+
+            tariffsMore[i].classList.toggle('active');
+            tariffsUl[i].classList.toggle('active');
+            tariffsItem[i].classList.toggle('active');
+        });
+    };
+
+    for (let i = 0; i < tariffsBtn.length; i++) {
+        tariffsBtn[i].addEventListener('click', () => {
+
+            for (let n = 0; n < tariffsMore.length; n++) {
+                tariffsMore[n].textContent = 'Lär dig mer';
+            }
+
+            for (let n = 0; n < tariffsItem.length; n++) {
+                tariffsMore[n].classList.remove('active');
+                tariffsUl[n].classList.remove('active');
+                tariffsItem[n].classList.remove('active');
+            };
+        });
+    };
+
+}
 
 // окно с предупреждением о куки
 function getCookie(name) {
