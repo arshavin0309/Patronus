@@ -590,6 +590,23 @@ section {
     }
 }
 
+.wpcf7-list-item {
+    margin: 0;
+
+    label {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        span {
+            color: rgba(17, 17, 17, .5019607843);
+            font-size: 18px;
+            line-height: 100%;
+            font-weight: 400;
+        }
+    }
+}
+
 .reviews {
     z-index: 1;
     position: relative;
