@@ -2129,6 +2129,7 @@ section {
             flex: 0 0 auto;
             transition: var(--transition);
             background: url(../images/platforms-btn-appstore.svg) center / contain no-repeat;
+            transform: translateY(-3px);
         }
     }
 
